@@ -113,20 +113,7 @@ body {
   letter-spacing: normal;
   line-height: 1.4;
   margin: 0 0 0.9rem;
-  color: var(--fg); /* fallback */
-  animation: fadeIn 0.6s ease-in-out, float 7s ease-in-out infinite;
-}
-
-@supports (background-clip: text) or (-webkit-background-clip: text) {
-  .content h1.site-name,
-  .site-name {
-    background-image: linear-gradient(90deg, #282828, #9a8f8f, #282828);
-    background-size: 200% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: fadeIn 0.6s ease-in-out, float 7s ease-in-out infinite, gradShift 8s linear infinite;
-  }
+  color: var(--fg2); /* very slightly softer than body ink (#504945 vs #282828) */
 }
 
 /* ---------- announcement pill row ---------- */
@@ -272,28 +259,6 @@ main.content.page {
   font-size: 13px;
   color: var(--fg4);
   text-align: center;
-}
-
-/* ---------- animations ---------- */
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes float {
-  0%   { transform: translateY(2.5px); }
-  50%  { transform: translateY(-2.5px); }
-  100% { transform: translateY(2.5px); }
-}
-
-@keyframes gradShift {
-  0%   { background-position: 0% 0; }
-  100% { background-position: 200% 0; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .site-name, .site-name::after { animation: none; }
 }
 
 /* ---------- mobile ---------- */
