@@ -6,8 +6,8 @@ Static site. **No build step, no dependencies, no node needed.** Edit files, pus
 
 - Hosted on **GitHub Pages** from the `main` branch of `Wethedarkness/skyyang.net` (root folder).
 - Every `git push` to `main` auto-deploys to https://skyyang.net in ~1 minute.
-- Domain `skyyang.net` is registered at **Hostinger**; DNS A records point the apex
-  at GitHub Pages (185.199.108-111.153), `www` CNAME points at `wethedarkness.github.io`.
+- Domain `skyyang.net` is registered at **Hostinger**; apex ALIAS + `www` CNAME point at
+  `wethedarkness.github.io`.
 - The `CNAME` file in this repo pins the custom domain. **Never delete it.**
 - Email `sky@skyyang.net` runs on Titan Email via Hostinger MX records.
   **Never touch DNS MX/TXT records** — only A/AAAA/CNAME belong to the website.
@@ -15,27 +15,43 @@ Static site. **No build step, no dependencies, no node needed.** Edit files, pus
 ## Workflow
 
 ```bash
-# edit index.html / styles.css, then:
+# edit files, then:
 git add -A && git commit -m "describe change" && git push
 ```
 
-Preview locally by opening index.html in a browser (it is plain HTML):
-`open index.html`
+Preview locally by opening index.html in a browser: `open index.html`
 
-## Design system (ported from neolee.xyz)
+## Design system (v2 — "Thinking Machines" style, current)
 
-- Font: EB Garamond (Google Fonts), serif everywhere
-- Colors: paper `#f0eee6` (bg), ink `#2b2620` (text), accent `#9c6b30` (link underlines), hairline `#dbd7cb`
-- Layout: single centered column, max-width 42rem, generous top margin (8rem desktop)
-- Links: underlined with 60% accent color, full accent on hover
-- Lists: square bullets
-- Keep it minimal: no nav bars, no hero images, no JS unless truly needed
+Ported from thinkingmachines.ai:
 
-## Files
+- Background: white. Text: `#282828` (`--fg`), grays `--fg1..--fg5`.
+- Body: **Iowan Old Style** (macOS system font) / Georgia serif, 17px, line-height 1.6.
+- Brand font: **Chakra Petch** (Google Fonts) — big uppercase hero wordmark with an
+  animated rotating gradient (`.logo::after`, mix-blend-mode: screen) + gentle float.
+- Nav: fixed top bar, right-aligned sans links (15px): Main, Blog.
+- Content column: 660px (`--content-max`), centered.
+- Links: underlined with 30% gray decoration, darken on hover.
+- "NEW" pill + announcement line under the hero wordmark (`.home-announcement`).
 
-- `index.html` — the entire homepage (content lives here)
-- `styles.css` — design tokens + all styling
+## Pages
+
+- `index.html` — homepage (hero wordmark + bio)
+- `blog/index.html` — blog catalog, currently empty. To add a post:
+  1. Create `blog/my-post/index.html` (copy blog/index.html structure, put content in the article)
+  2. Add `<li><a href="/blog/my-post/">Title</a><span class="post-date">Mon YYYY</span></li>`
+     to the `.post-list` in `blog/index.html` and remove the `.empty-state` paragraph.
 - `404.html` — not-found page
-- `icon.svg` — favicon (SY monogram)
-- `CNAME` — custom domain binding for GitHub Pages (do not remove)
-- `.nojekyll` — tells GitHub Pages to skip Jekyll processing
+
+## Rollback to v1 (neolee.xyz style)
+
+The previous cream/EB Garamond version is preserved as git tag `v1-neolee-style`
+(also branch `neolee-style`). To roll back the look:
+
+```bash
+git checkout v1-neolee-style -- index.html styles.css 404.html
+git rm -r --cached blog && rm -rf blog   # v1 had no blog
+git commit -m "roll back to v1 neolee style" && git push
+```
+
+Or to just compare: `git diff v1-neolee-style -- styles.css`
