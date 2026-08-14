@@ -27,8 +27,8 @@ Ported from thinkingmachines.ai:
 
 - Background: white. Text: `#282828` (`--fg`), grays `--fg1..--fg5`.
 - Body: **Iowan Old Style** (macOS system font) / Georgia serif, 17px, line-height 1.6.
-- Brand font: **Chakra Petch** (Google Fonts) — big uppercase hero wordmark with an
-  animated rotating gradient (`.logo::after`, mix-blend-mode: screen) + gentle float.
+- Brand font: **Chakra Petch** (Google Fonts) — small uppercase "SKY YANG" top line (neolee-style placement) with an
+  animated gradient shimmer (background-clip: text + gradShift keyframe) + gentle float (.site-name).
 - Nav: fixed top bar, right-aligned sans links (15px): Main, Blog.
 - Content column: 660px (`--content-max`), centered.
 - Links: underlined with 30% gray decoration, darken on hover.
