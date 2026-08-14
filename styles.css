@@ -1,0 +1,93 @@
+/* Design tokens — ported from neolee.xyz */
+:root {
+  --paper: #f0eee6;      /* background */
+  --ink: #2b2620;        /* text */
+  --accent: #9c6b30;     /* link underline */
+  --hairline: #dbd7cb;   /* borders */
+  --code-bg: #e9e6dc;    /* code blocks */
+}
+
+* { box-sizing: border-box; }
+
+html {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: "EB Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  min-width: 360px;
+  color-scheme: light;
+}
+
+body {
+  margin: 4rem auto;          /* mt-16 mb-16 */
+  max-width: 42rem;           /* max-w-2xl */
+  padding: 0 1rem;            /* px-4 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 0 0.5rem;          /* px-2 */
+}
+
+@media (min-width: 768px) {
+  body { margin-top: 8rem; }  /* md:mt-32 */
+  main { padding: 0; }        /* md:px-0 */
+}
+
+h1 {
+  font-size: 1.5rem;          /* text-2xl */
+  line-height: 2rem;
+  font-weight: 500;           /* font-medium */
+  margin: 0 0 2rem;           /* mb-8 */
+  letter-spacing: normal;
+}
+
+.prose {
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.prose p {
+  margin: 1rem 0;
+  color: var(--ink);
+}
+
+.prose ul {
+  list-style-type: square;
+  margin: 1rem 0;
+  padding-left: 1.25rem;
+}
+
+.prose li {
+  margin: 0.25rem 0;
+  padding-left: 0.25rem;
+  line-height: 1.65;
+}
+
+.prose a {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-color: color-mix(in srgb, var(--accent) 60%, transparent);
+  text-underline-offset: 2px;
+  text-decoration-thickness: 0.08em;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.prose a:hover {
+  text-decoration-color: var(--accent);
+}
+
+.prose code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Courier New", monospace;
+  font-size: 0.875rem;
+  background: var(--code-bg);
+  border: 1px solid var(--hairline);
+  border-radius: 0.25rem;
+  padding: 0.1rem 0.3rem;
+}
