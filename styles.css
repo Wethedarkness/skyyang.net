@@ -104,10 +104,11 @@ body {
 
 /* ---------- site name (subtle top line, neolee placement + gentle motion) ---------- */
 
+.content h1.site-name,
 .site-name {
   display: inline-block;
   font-family: var(--font-serif); /* same as content, like neolee.xyz */
-  font-size: 1.3rem;              /* just a little bigger than 17px body */
+  font-size: 1.35rem;             /* just a little bigger than 17px body */
   font-weight: 600;
   letter-spacing: normal;
   line-height: 1.4;
@@ -117,6 +118,7 @@ body {
 }
 
 @supports (background-clip: text) or (-webkit-background-clip: text) {
+  .content h1.site-name,
   .site-name {
     background-image: linear-gradient(90deg, #282828, #9a8f8f, #282828);
     background-size: 200% 100%;
