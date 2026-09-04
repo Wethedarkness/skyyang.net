@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Fusion 3 Salon · Aveda Concept Salon in Downtown Pleasanton</title>
+<meta name="description" content="Team-based Aveda and Davines salon on Main Street in downtown Pleasanton since 2000. Cuts, color, highlights, blow-dry styling and waxing. Book online or call (925) 600-0080.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7fafb;--bg2:#eaf2f3;--ink:#16232a;--muted:#586a72;--accent:#1b7f9a;--accent-ink:#ffffff;--line:#d9e5e8;--card:#ffffff;--display:'Cormorant Garamond',serif;--body:'Raleway',system-ui,sans-serif;--radius:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.wrap.narrow{max-width:820px}
+.preview-bar{background:#111;color:#fff;font:500 13px/1.4 var(--body);text-align:center;padding:8px 12px}
+.preview-bar a{color:#fff}
+header.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:.2px;text-decoration:none;display:flex;align-items:center;gap:10px}
+.brand .mark{width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:17px}
+nav.links{display:flex;gap:22px;font-size:15px}
+nav.links a{text-decoration:none;color:var(--muted)}
+nav.links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:12px 20px;border-radius:999px;border:1px solid transparent;transition:.15s}
+.btn:hover{filter:brightness(.95)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.small{padding:9px 16px;font-size:14px}
+.hero{position:relative;min-height:620px;display:grid;align-items:end;color:#fff;isolation:isolate}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.35) 45%,rgba(0,0,0,.75) 100%);z-index:-1}
+.hero .wrap{padding-top:96px;padding-bottom:64px}
+.hero .eyebrow{color:#fff;opacity:.9}
+.hero h1{font-family:var(--display);font-size:clamp(38px,6vw,72px);line-height:1.02;margin:0 0 14px;max-width:16ch;font-weight:700;text-wrap:balance}
+.hero p.sub{font-size:clamp(17px,2vw,21px);max-width:56ch;margin:0 0 28px;opacity:.95}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero .btn.ghost{color:#fff;border-color:rgba(255,255,255,.6)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:28px;font-size:14px;opacity:.9}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:700;color:var(--accent);margin:0 0 10px}
+.section{padding:88px 0}
+.section.alt{background:var(--bg2)}
+.section h2{font-family:var(--display);font-size:clamp(30px,4vw,44px);line-height:1.1;margin:0 0 18px;font-weight:700;text-wrap:balance}
+.lead{font-size:18px;color:var(--muted);max-width:62ch}
+.highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:-56px;position:relative;z-index:2}
+.hl{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.hl-icon{font-size:26px;margin-bottom:10px}
+.hl h3{margin:0 0 6px;font-size:18px}
+.hl p{margin:0;color:var(--muted);font-size:15px}
+.two{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
+.groups{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;margin-top:36px}
+.group-title{font-family:var(--display);font-size:24px;margin:0 0 6px}
+.group-note{margin:0 0 12px;color:var(--muted);font-size:14px}
+ul.items{list-style:none;margin:0;padding:0}
+ul.items li{padding:14px 0;border-bottom:1px dashed var(--line)}
+.item-head{display:flex;align-items:baseline;gap:10px}
+.item-name{font-weight:600}
+.dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px)}
+.item-price{font-weight:600;white-space:nowrap}
+.item-desc{margin:4px 0 0;color:var(--muted);font-size:15px}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
+.review{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.review .stars{color:#e0a100;letter-spacing:2px;font-size:15px}
+.review blockquote{margin:12px 0 14px;font-size:16.5px;line-height:1.55}
+.review figcaption{font-weight:600;font-size:14px}
+.review figcaption span{color:var(--muted);font-weight:400}
+.rating-line{margin-top:14px;color:var(--muted);font-size:15px}
+.about-facts{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.about-facts li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:2px}
+.about-facts strong{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.about-facts span{font-weight:600}
+ul.checks{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px}
+ul.checks li{padding-left:30px;position:relative}
+ul.checks li::before{content:"✓";position:absolute;left:0;top:0;color:var(--accent);font-weight:700}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+table.hours{border-collapse:collapse;width:100%;margin-top:14px}
+table.hours th{text-align:left;font-weight:600;padding:10px 0;border-bottom:1px solid var(--line);width:40%}
+table.hours td{padding:10px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+.map{border:0;width:100%;height:100%;min-height:380px;border-radius:var(--radius);filter:saturate(.9)}
+.contact-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;margin-top:22px}
+.contact-card p{margin:6px 0}
+.contact-card a{text-decoration:none;font-weight:600}
+.cta-band{background:var(--accent);color:var(--accent-ink);padding:72px 0;text-align:center}
+.cta-band h2{font-family:var(--display);font-size:clamp(28px,4vw,40px);margin:0 0 12px}
+.cta-band p{margin:0 auto 24px;max-width:56ch;opacity:.92;font-size:18px}
+.cta-band .btn{background:var(--accent-ink);color:var(--accent)}
+footer{padding:36px 0;font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer .socials{display:flex;gap:16px}
+footer a{text-decoration:none}
+.mobile-cta{display:none}
+@media (max-width:860px){
+  nav.links{display:none}
+  .highlights,.reviews,.groups,.two,.visit,.about-facts{grid-template-columns:1fr}
+  .highlights{margin-top:24px}
+  .hero{min-height:540px}
+  .section{padding:64px 0}
+  .map{min-height:300px}
+  .item-price{white-space:normal;text-align:right;max-width:58%}
+  .brand{font-size:19px;line-height:1.1}
+  .nav .btn.small{white-space:nowrap;padding:8px 12px;font-size:13px}
+  .mobile-cta{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:30;background:var(--card);border-top:1px solid var(--line);padding:10px 14px;gap:10px}
+  .mobile-cta .btn{flex:1;justify-content:center}
+  body{padding-bottom:64px}
+}
+</style>
+</head>
+<body>
+<div class="preview-bar">Design preview built by Sky Yang for Fusion 3 Salon · photos are placeholders until your own are added · <a href="tel:6505188626">650-518-8626</a></div>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="#top"><span class="mark">✿</span>Fusion 3 Salon</a>
+  <nav class="links"><a href="#services">Services &amp; pricing</a><a href="#about">About</a><a href="#experience">Your visit</a><a href="#reviews">Reviews</a><a href="#visit">Hours &amp; location</a></nav>
+  <a class="btn small" href="https://fusion3.bookedby.com/">Book online</a>
+</div></header>
+
+<section class="hero" id="top">
+  <img src="hero.jpg" alt="Bright salon interior with styling chairs, round mirrors and a view onto Main Street" fetchpriority="high">
+  <div class="wrap">
+    <p class="eyebrow">Downtown Pleasanton since February 2000</p>
+    <h1>Feel amazing. Looking great is a given.</h1>
+    <p class="sub">A team-based Aveda and Davines salon on Main Street. See whichever stylist fits your schedule, and every cut comes with a stress-relieving treatment, a luxurious shampoo and a blow-dry style.</p>
+    <div class="cta"><a class="btn" href="https://fusion3.bookedby.com/">Book online</a><a class="btn ghost" href="tel:9256000080">Call (925) 600-0080</a></div>
+    <div class="meta"><span>Aveda + Davines</span><span>Team-based salon</span><span>Open 7 days, as early as 6 AM</span><span>Free new-guest consultation</span><span>Money-back promise</span></div>
+  </div>
+</section>
+
+<div class="wrap"><div class="highlights">
+      <div class="hl">
+        <div class="hl-icon">✂️</div>
+        <h3>One team, not one stylist</h3>
+        <p>Unlike commission and rental salons, we work as a team. See multiple stylists, reschedule without stress, and know that every stylist has completed our in-house training program.</p>
+      </div>
+      <div class="hl">
+        <div class="hl-icon">🌿</div>
+        <h3>Plant-derived color</h3>
+        <p>Aveda demi-permanent color has no ammonia and is 99% plant and flower derived, and we highlight with Aveda plant and flower derived color too. We also carry Davines.</p>
+      </div>
+      <div class="hl">
+        <div class="hl-icon">💆</div>
+        <h3>Every visit is a little spa</h3>
+        <p>A stress-relieving neck and shoulder massage, a luxurious shampoo, a hand massage and a blow-dry style come with your service, along with a cup of Aveda comforting tea.</p>
+      </div></div></div>
+
+<section id="services" class="section">
+  <div class="wrap">
+    <p class="eyebrow">Services &amp; pricing</p>
+    <h2>Cuts, color, styling and waxing</h2>
+    <p class="lead">Prices below are from our online booking page; ranges depend on the stylist. New guests start with a complimentary 15-minute consultation so we can find out what you really want and need.</p>
+    <div class="groups">
+      <div class="group">
+        <h3 class="group-title">Cut &amp; style</h3>
+        
+        <ul class="items">
+          <li>
+            <div class="item-head"><span class="item-name">Hair cut</span><span class="dots"></span><span class="item-price">$79–$99</span></div>
+            <p class="item-desc">45 minutes. Includes a complimentary Stress-Relieving Treatment, luxurious shampoo, light conditioning and a blow-dry style.</p>
+          </li><li>
+            <div class="item-head"><span class="item-name">Men's hair cut</span><span class="dots"></span><span class="item-price">$96</span></div>
+            <p class="item-desc">45 minutes.</p>
+          </li><li>
+            <div class="item-head"><span class="item-name">Child's hair cut</span><span class="dots"></span><span class="item-price">$68</span></div>
+            <p class="item-desc">30 minutes.</p>
+          </li><li>
+            <div class="item-head"><span class="item-name">Cut with same-day color</span><span class="dots"></span><span class="item-price">$70–$92</span></div>
+            <p class="item-desc">Discounted price when you have color the same day.</p>
+          </li><li>
+            <div class="item-head"><span class="item-name">Blow dry style</span><span class="dots"></span><span class="item-price">$53–$68</span></div>
+            <p class="item-desc">Consultation, complimentary beverages and seasonal treats, neck and shoulder massage, shampoo and condition, hand massage, and a beautiful blow-dry style.</p>
+          </li><li>
+            <div class="item-head"><span class="item-name">Special event up-style</span><span class="dots"></span><span class="item-price">$146</span></div>
+            <p class="item-desc">45 minutes. Bridal and event services are also available through our event coordinator.</p>
+          </li><li>
+            <div class="item-head"><span class="item-name">Bang trim</span><span class="dots"></span><span class="item-price">Free</span></div>
+            <p class="item-desc">Complimentary for existing guests.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <h3 class="group-title">Color &amp; treatments</h3>
+        
+        <ul class="items">
+          <li>
+            <div class="item-head"><span class="item-name">Partial highlight</span><span class="dots"></span><span class="item-price">$123–$168</span></div>
+            <p class="item-desc">Aveda plant and flower derived color.</p>
+          </li><li>
+            <div class="item-head"><span class="item-name">Full highlight</span><span class="dots"></span><span class="item-price">$182–$249</span></div>
+            
+          </li><li>
+            <div class="item-head"><span class="item-name">Full highlight + permanent color touch-up</span><span class="dots"></span><span class="item-price">$223–$340</span></div>
+            
+          </li><li>
+            <div class="item-head"><span class="item-name">Permanent color touch-up</span><span class="dots"></span><span class="item-price">$80–$109</span></div>
+            
+          </li><li>
+            <div class="item-head"><span class="item-name">Demi-permanent glaze, all over</span><span class="dots"></span><span class="item-price">$133–$205</span></div>
+            <p class="item-desc">No ammonia, 99% plant and flower derived, with the aroma of lavender.</p>
+          </li><li>
+            <div class="item-head"><span class="item-name">Deep conditioning treatment</span><span class="dots"></span><span class="item-price">$102–$110</span></div>
+            <p class="item-desc">Intensive and customized, 60 minutes.</p>
+          </li><li>
+            <div class="item-head"><span class="item-name">Pramasana scalp treatment</span><span class="dots"></span><span class="item-price">$80</span></div>
+            <p class="item-desc">60 minutes.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <h3 class="group-title">Waxing &amp; consultations</h3>
+        
+        <ul class="items">
+          <li>
+            <div class="item-head"><span class="item-name">Brow arch</span><span class="dots"></span><span class="item-price">$28</span></div>
+            <p class="item-desc">New guests $36 for a 30-minute first visit.</p>
+          </li><li>
+            <div class="item-head"><span class="item-name">Lip wax</span><span class="dots"></span><span class="item-price">$17</span></div>
+            
+          </li><li>
+            <div class="item-head"><span class="item-name">Chin or cheek wax</span><span class="dots"></span><span class="item-price">$21 each</span></div>
+            
+          </li><li>
+            <div class="item-head"><span class="item-name">New guest consultation</span><span class="dots"></span><span class="item-price">Free</span></div>
+            <p class="item-desc">15 minutes. Please start here if you have never visited our salon.</p>
+          </li><li>
+            <div class="item-head"><span class="item-name">Great Lengths extensions consultation</span><span class="dots"></span><span class="item-price">$65</span></div>
+            <p class="item-desc">30 minutes.</p>
+          </li><li>
+            <div class="item-head"><span class="item-name">Wedding consultation</span><span class="dots"></span><span class="item-price">$50</span></div>
+            <p class="item-desc">45 minutes.</p>
+          </li>
+        </ul>
+      </div></div>
+    <p class="group-note" style="margin-top:22px">New here? Here's $20 on us to try a service you've never had before. Refer a friend and receive $50 F3 Salon credit. Gift cards are available online. Corrective color, extensions, Brazilian Blowout and perms require a consultation.</p>
+  </div>
+</section>
+
+<section id="about" class="section alt">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">About us</p>
+      <h2>Twenty-six years on Main Street</h2>
+      <p>Fusion 3 Salon opened in downtown Pleasanton in February 2000 and has been serving guests from Pleasanton and the surrounding area ever since. Owner Larry came to hairdressing when his wife was studying to become a hairdresser: he went along for orientation and decided he wanted to study it too.</p><p>We are an Aveda concept salon that also carries Davines. Unlike commission and rental salons, we're not solely focused on top-line sales. We welcome and encourage you to see multiple stylists, rescheduling is never a problem because our entire team is available to you, and every one of our stylists has completed our in-house training program.</p><p>Our promise is simple: if you don't receive the best salon service you've ever had, we'll refund your money with no questions asked.</p>
+    </div>
+    <div>
+      <ul class="about-facts"><li><strong>Established</strong><span>February 2000</span></li><li><strong>Products</strong><span>Aveda + Davines</span></li><li><strong>Model</strong><span>Team-based salon</span></li><li><strong>Guarantee</strong><span>Money-back promise</span></li><li><strong>Location</strong><span>Main Street, downtown Pleasanton</span></li><li><strong>Text us</strong><span>(925) 303-4874</span></li></ul>
+    </div>
+  </div>
+</section>
+
+
+    <section id="experience" class="section ">
+      <div class="wrap narrow">
+        <p class="eyebrow">The Fusion 3 experience</p>
+        <h2>What's included with every visit</h2>
+        <p class="lead">Every service starts with a thorough consultation, and we build in the small rituals that make a salon visit feel like time off.</p>
+        <ul class="checks"><li>A cup of Aveda comforting tea, complimentary beverages and seasonal treats</li><li>Stress-relieving scalp, neck and shoulder massage</li><li>Warm aromatic towel and Elemental Nature aromas</li><li>Luxurious shampoo, conditioning and a blow-dry style with every cut</li><li>Hand massage, plus product and maintenance recommendations</li><li>Makeup finishing touch or Pure-Fume application</li><li>Good to know: new guests book a consultation with their first appointment, we ask for 24 hours' notice to cancel or reschedule, and it's service dogs only, please</li></ul>
+      </div>
+    </section>
+
+<section id="reviews" class="section">
+  <div class="wrap">
+    <p class="eyebrow">Reviews</p>
+    <h2>What our guests say</h2>
+    <div class="reviews">
+      <figure class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“Fusion 3 makes you feel valued as soon as you walk in the door. All of the staff are welcoming. My stylist, Tiffany, is highly skilled... It is absolutely amazing to me to be told that there is no competition between stylists... they work together as a team.”</blockquote>
+        <figcaption>Mary B. <span>· Yelp, Dec 2025</span></figcaption>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“Every stylist knows her color theory. My color formula(s) are on file and every stylist can help me. I've been a client for over 17 years and I love the attitude, approach and knowledge of this entire staff.”</blockquote>
+        <figcaption>Robin D. <span>· Google</span></figcaption>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“I was truly blown away by the salon (front desk), the service, and Alysha's incredible skill... the service was top-notch at an affordable price. My hair looks beautiful, I absolutely love my color and cut. True balayage style.”</blockquote>
+        <figcaption>May V. <span>· Yelp, Jul 2025</span></figcaption>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“Five stars isn't enough! Alysha is hands down the best. The shop is spotless and the team is welcoming. Highly recommended.”</blockquote>
+        <figcaption>Suzanne B. <span>· BookedBy, Mar 2026</span></figcaption>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“Happy customer for the past 10 years. Consistent hair color with quality plant derived products, great customer service and friendly team of stylists.”</blockquote>
+        <figcaption>Akila V. <span>· Google</span></figcaption>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“I have been going here for nearly 14 years, always a great experience. They listen to what I want, give great advice and I always come out of there feeling pampered!”</blockquote>
+        <figcaption>Caroline M. <span>· Facebook</span></figcaption>
+      </figure></div>
+    <p class="rating-line">4.8 stars on Google (210 reviews) · 4.4 stars on Yelp (301 reviews) · 98% recommend on Facebook (52 reviews)</p>
+  </div>
+</section>
+
+<section id="visit" class="section alt">
+  <div class="wrap visit">
+    <div>
+      <p class="eyebrow">Hours &amp; location</p>
+      <h2>Open seven days a week</h2>
+      <table class="hours"><tbody><tr><th>Monday</th><td>8:00 am – 6:00 pm</td></tr><tr><th>Tuesday</th><td>6:00 am – 8:00 pm</td></tr><tr><th>Wednesday</th><td>7:00 am – 8:00 pm</td></tr><tr><th>Thursday</th><td>6:00 am – 8:00 pm</td></tr><tr><th>Friday</th><td>6:00 am – 4:00 pm</td></tr><tr><th>Saturday</th><td>6:00 am – 5:00 pm</td></tr><tr><th>Sunday</th><td>8:00 am – 5:00 pm</td></tr></tbody></table>
+      <p class="group-note" style="margin-top:10px">Walk-ins welcome when the schedule allows; booking online is the surest way to get your preferred stylist and time. Call (925) 600-0080 or text (925) 303-4874.</p>
+      <div class="contact-card">
+        <p><strong>Fusion 3 Salon</strong></p>
+        <p>722 Main Street, Pleasanton, CA 94566</p>
+        <p><a href="tel:9256000080">(925) 600-0080</a> · <a href="mailto:pleasanton@fusion3salon.com">pleasanton@fusion3salon.com</a></p>
+        <p style="margin-top:14px"><a class="btn small" href="https://www.google.com/maps/search/?api=1&query=Fusion%203%20Salon%2C%20722%20Main%20Street%2C%20Pleasanton%2C%20CA%2094566" target="_blank" rel="noopener">Get directions</a></p>
+      </div>
+    </div>
+    <iframe class="map" title="Map to Fusion 3 Salon" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Fusion%203%20Salon%2C%20722%20Main%20Street%2C%20Pleasanton%2C%20CA%2094566&output=embed"></iframe>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Ready to feel amazing?</h2>
+    <p>Book online any time, or call or text the front desk and we'll find you a time with a stylist who fits your schedule.</p>
+    <a class="btn" href="https://fusion3.bookedby.com/">Book online</a>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div>© 2026 Fusion 3 Salon · 722 Main Street, Pleasanton, CA 94566</div>
+  <div class="socials"><a href="https://www.instagram.com/fusion3salon/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/Fusion3Salons/" target="_blank" rel="noopener">Facebook</a><a href="https://www.yelp.com/biz/fusion-3-salon-pleasanton" target="_blank" rel="noopener">Yelp</a><a href="https://fusion3.bookedby.com/" target="_blank" rel="noopener">Book online</a></div>
+</div></footer>
+
+<div class="mobile-cta"><a class="btn" href="tel:9256000080">Call</a><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Fusion%203%20Salon%2C%20722%20Main%20Street%2C%20Pleasanton%2C%20CA%2094566" target="_blank" rel="noopener">Directions</a></div>
+</body>
+</html>
