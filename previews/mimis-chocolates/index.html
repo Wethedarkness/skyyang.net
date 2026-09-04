@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mimi's Chocolates · Handcrafted Chocolates &amp; Caramel Apples in Dublin, CA</title>
+<meta name="description" content="Mimi's Chocolates: handcrafted caramel apples, chocolate-covered strawberries, bonbons, gift boxes and ice cream, made from scratch in Dublin, CA since 2016.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fffaf6;--bg2:#f8ede6;--ink:#2b1a14;--muted:#6e5a52;--accent:#c2185b;--accent-ink:#ffffff;--line:#eadbd2;--card:#ffffff;--display:'Playfair Display',serif;--body:'Nunito',system-ui,sans-serif;--radius:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.wrap.narrow{max-width:820px}
+.preview-bar{background:#111;color:#fff;font:500 13px/1.4 var(--body);text-align:center;padding:8px 12px}
+.preview-bar a{color:#fff}
+header.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:.2px;text-decoration:none;display:flex;align-items:center;gap:10px}
+.brand .mark{width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:17px}
+nav.links{display:flex;gap:22px;font-size:15px}
+nav.links a{text-decoration:none;color:var(--muted)}
+nav.links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:12px 20px;border-radius:999px;border:1px solid transparent;transition:.15s}
+.btn:hover{filter:brightness(.95)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.small{padding:9px 16px;font-size:14px}
+.hero{position:relative;min-height:620px;display:grid;align-items:end;color:#fff;isolation:isolate}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.35) 45%,rgba(0,0,0,.75) 100%);z-index:-1}
+.hero .wrap{padding-top:96px;padding-bottom:64px}
+.hero .eyebrow{color:#fff;opacity:.9}
+.hero h1{font-family:var(--display);font-size:clamp(38px,6vw,72px);line-height:1.02;margin:0 0 14px;max-width:16ch;font-weight:700;text-wrap:balance}
+.hero p.sub{font-size:clamp(17px,2vw,21px);max-width:56ch;margin:0 0 28px;opacity:.95}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero .btn.ghost{color:#fff;border-color:rgba(255,255,255,.6)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:28px;font-size:14px;opacity:.9}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:700;color:var(--accent);margin:0 0 10px}
+.section{padding:88px 0}
+.section.alt{background:var(--bg2)}
+.section h2{font-family:var(--display);font-size:clamp(30px,4vw,44px);line-height:1.1;margin:0 0 18px;font-weight:700;text-wrap:balance}
+.lead{font-size:18px;color:var(--muted);max-width:62ch}
+.highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:-56px;position:relative;z-index:2}
+.hl{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.hl-icon{font-size:26px;margin-bottom:10px}
+.hl h3{margin:0 0 6px;font-size:18px}
+.hl p{margin:0;color:var(--muted);font-size:15px}
+.two{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
+.groups{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;margin-top:36px}
+.group-title{font-family:var(--display);font-size:24px;margin:0 0 6px}
+.group-note{margin:0 0 12px;color:var(--muted);font-size:14px}
+ul.items{list-style:none;margin:0;padding:0}
+ul.items li{padding:14px 0;border-bottom:1px dashed var(--line)}
+.item-head{display:flex;align-items:baseline;gap:10px}
+.item-name{font-weight:600}
+.dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px)}
+.item-price{font-weight:600;white-space:nowrap}
+.item-desc{margin:4px 0 0;color:var(--muted);font-size:15px}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
+.review{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.review .stars{color:#e0a100;letter-spacing:2px;font-size:15px}
+.review blockquote{margin:12px 0 14px;font-size:16.5px;line-height:1.55}
+.review figcaption{font-weight:600;font-size:14px}
+.review figcaption span{color:var(--muted);font-weight:400}
+.rating-line{margin-top:14px;color:var(--muted);font-size:15px}
+.about-facts{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.about-facts li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:2px}
+.about-facts strong{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.about-facts span{font-weight:600}
+ul.checks{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px}
+ul.checks li{padding-left:30px;position:relative}
+ul.checks li::before{content:"✓";position:absolute;left:0;top:0;color:var(--accent);font-weight:700}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+table.hours{border-collapse:collapse;width:100%;margin-top:14px}
+table.hours th{text-align:left;font-weight:600;padding:10px 0;border-bottom:1px solid var(--line);width:40%}
+table.hours td{padding:10px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+.map{border:0;width:100%;height:100%;min-height:380px;border-radius:var(--radius);filter:saturate(.9)}
+.contact-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;margin-top:22px}
+.contact-card p{margin:6px 0}
+.contact-card a{text-decoration:none;font-weight:600}
+.cta-band{background:var(--accent);color:var(--accent-ink);padding:72px 0;text-align:center}
+.cta-band h2{font-family:var(--display);font-size:clamp(28px,4vw,40px);margin:0 0 12px}
+.cta-band p{margin:0 auto 24px;max-width:56ch;opacity:.92;font-size:18px}
+.cta-band .btn{background:var(--accent-ink);color:var(--accent)}
+footer{padding:36px 0;font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer .socials{display:flex;gap:16px}
+footer a{text-decoration:none}
+.mobile-cta{display:none}
+@media (max-width:860px){
+  nav.links{display:none}
+  .highlights,.reviews,.groups,.two,.visit,.about-facts{grid-template-columns:1fr}
+  .highlights{margin-top:24px}
+  .hero{min-height:540px}
+  .section{padding:64px 0}
+  .map{min-height:300px}
+  .mobile-cta{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:30;background:var(--card);border-top:1px solid var(--line);padding:10px 14px;gap:10px}
+  .mobile-cta .btn{flex:1;justify-content:center}
+  body{padding-bottom:64px}
+}
+</style>
+</head>
+<body>
+<div class="preview-bar">Design preview built by Sky Yang for Mimi's Chocolates · photos are placeholders until your own are added · <a href="tel:6505188626">650-518-8626</a></div>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="#top"><span class="mark">M</span>Mimi's Chocolates</a>
+  <nav class="links"><a href="#menu">Menu</a><a href="#about">Our story</a><a href="#custom">Custom orders</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a></nav>
+  <a class="btn small" href="https://mimischocolates.com/shop">Shop online</a>
+</div></header>
+
+<section class="hero" id="top">
+  <img src="hero.jpg" alt="Assorted hand-dipped chocolates and bonbons in a gift box" fetchpriority="high">
+  <div class="wrap">
+    <p class="eyebrow">Handcrafted in Dublin, CA · since 2016</p>
+    <h1>Chocolate is always the answer.</h1>
+    <p class="sub">Caramel apples in 15+ flavors, hand-dipped strawberries, bonbons, brownies and gift boxes, all made from scratch with our own caramel recipe. Ships anywhere, or pick up in the shop.</p>
+    <div class="cta"><a class="btn" href="https://mimischocolates.com/shop">Shop online</a><a class="btn ghost" href="sms:5105086727">Text us a custom order</a></div>
+    <div class="meta"><span>Open Mon–Fri 12–7 · Sat 1–8</span><span>6601 Dublin Blvd, Suite N</span><span>Nationwide shipping</span><span>Custom &amp; themed orders</span></div>
+  </div>
+</section>
+
+<div class="wrap"><div class="highlights">
+      <div class="hl">
+        <div class="hl-icon">🍎</div>
+        <h3>Famous caramel apples</h3>
+        <p>Our best seller. The caramel is our specialty, made from our own recipe, then dressed in Oreo, Apple Pie, S'more, Snickers, Rocky Road and more.</p>
+      </div>
+      <div class="hl">
+        <div class="hl-icon">🍫</div>
+        <h3>Made from scratch, in house</h3>
+        <p>Everything is hand-dipped on site. Watch it happen through the production window when you stop in.</p>
+      </div>
+      <div class="hl">
+        <div class="hl-icon">🎁</div>
+        <h3>Gifts that travel</h3>
+        <p>Curated boxes like The Golden Hour Box and The Signature Birthday Box, digital gift cards, and shipping anywhere in the world.</p>
+      </div></div></div>
+
+<section id="menu" class="section">
+  <div class="wrap">
+    <p class="eyebrow">Menu</p>
+    <h2>What's in the case</h2>
+    <p class="lead">The case has no labels on purpose, so we can walk you through it. Here is a taste of what you'll find; the full lineup is in the online shop.</p>
+    <div class="groups">
+      <div class="group">
+        <h3 class="group-title">Signatures</h3>
+        
+        <ul class="items">
+          <li>
+            <div class="item-head"><span class="item-name">Caramel apples</span><span class="dots"></span><span class="item-price">from $9.25</span></div>
+            <p class="item-desc">Plain, Chocolate, Nuts (almond, pecan or peanut), Oreo, Apple Pie, M&amp;M, Snickers, Heath, Strawberry Shortcake, S'more, Bacon, Rocky Road.</p>
+          </li><li>
+            <div class="item-head"><span class="item-name">Chocolate-covered strawberries</span><span class="dots"></span><span class="item-price">from $2.85</span></div>
+            <p class="item-desc">Milk, dark or white, with sprinkles, Oreo, shortcake crumb, coconut or almond. Add color, glitter, or an alcohol- or apple-cider infusion.</p>
+          </li><li>
+            <div class="item-head"><span class="item-name">Caramel shortbreads &amp; caramel Oreos</span><span class="dots"></span><span class="item-price">$3.10</span></div>
+            <p class="item-desc">Buttery shortbread or a classic Oreo, wrapped in house caramel and dipped in chocolate.</p>
+          </li><li>
+            <div class="item-head"><span class="item-name">Chocolate-covered bacon</span><span class="dots"></span><span class="item-price">$3.55</span></div>
+            <p class="item-desc">Crisp bacon in milk or dark chocolate. A cult favorite in our reviews.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <h3 class="group-title">More sweets</h3>
+        
+        <ul class="items">
+          <li>
+            <div class="item-head"><span class="item-name">Bonbons, truffles &amp; dipped treats</span><span class="dots"></span><span class="item-price">$2.25 – $8.50</span></div>
+            <p class="item-desc">Pretzels, marshmallows, Rice Krispie treats, s'mores, turtle squares and brownies (caramel, pecan or turtle) in milk, dark or white chocolate.</p>
+          </li><li>
+            <div class="item-head"><span class="item-name">Gift boxes</span><span class="dots"></span><span class="item-price">$30 – $39.85</span></div>
+            <p class="item-desc">The Golden Hour Box, The Crumble Box, The Pretty in Pink Box and The Signature Birthday Box.</p>
+          </li><li>
+            <div class="item-head"><span class="item-name">Ice cream &amp; shakes</span><span class="dots"></span><span class="item-price">$4.75 – $9.75</span></div>
+            <p class="item-desc">Rich, creamy scoops, milkshakes and affogato (espresso poured over ice cream).</p>
+          </li><li>
+            <div class="item-head"><span class="item-name">Hot chocolate bombs</span><span class="dots"></span><span class="item-price">$6.55 – $6.75</span></div>
+            <p class="item-desc">Milk, white, dark or cookies &amp; cream. Seasonal, November through February.</p>
+          </li>
+        </ul>
+      </div></div>
+    <p class="group-note" style="margin-top:22px">Prices shown are our in-store menu; online prices may vary slightly.</p>
+  </div>
+</section>
+
+<section id="about" class="section alt">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">Our story</p>
+      <h2>From a farmers-market table to a Dublin storefront</h2>
+      <p>Mimi's Chocolates began in 2016 when Chef Mia D. Jenkins, a Bay Area native and Johnson &amp; Wales culinary graduate, started selling her caramel confections on Instagram, at pop-ups and at the San Ramon farmers market.</p><p>Her mother Natalie joined as co-owner in 2018, the kitchen moved to Berkeley, and in 2022 the family opened its own storefront on Dublin Boulevard.</p><p>We specialize in handcrafted confections, rooted in tradition but elevated with detail, soul and grace. And we don't have customers, we have friends and family.</p>
+    </div>
+    <div>
+      <ul class="about-facts"><li><strong>Founded</strong><span>2016</span></li><li><strong>Storefront</strong><span>Dublin, CA since 2022</span></li><li><strong>Chocolatier</strong><span>Chef Mia D. Jenkins</span></li><li><strong>Co-owner</strong><span>Natalie, Mia's mom</span></li><li><strong>Specialty</strong><span>House-made caramel</span></li><li><strong>Recognized by</strong><span>City of Dublin Small Business Spotlight</span></li></ul>
+    </div>
+  </div>
+</section>
+
+
+    <section id="custom" class="section ">
+      <div class="wrap narrow">
+        <p class="eyebrow">Custom orders</p>
+        <h2>Themed apples, party favors and corporate gifts</h2>
+        <p class="lead">Call, text or email us for custom orders: themed caramel apples, dozens of custom strawberries for a shower or a wedding, or gift boxes for the whole office. Order online, have it shipped, or pick up in the shop.</p>
+        <ul class="checks"><li>Custom and themed caramel apples and strawberries</li><li>Gift boxes and bundles, including a 10-apple Caramel Apple Bundle</li><li>Digital gift cards</li><li>Delivery through your favorite local delivery service, in-store pickup, or shipping anywhere in the world</li></ul>
+      </div>
+    </section>
+
+<section id="reviews" class="section">
+  <div class="wrap">
+    <p class="eyebrow">Reviews</p>
+    <h2>Sweet words from Dublin and beyond</h2>
+    <div class="reviews">
+      <figure class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“The oreo was crispy, the caramel was gooey, and the chocolate was not hard at all... such a cute little shop and Mimi was super sweet!”</blockquote>
+        <figcaption>Sadie S. <span>· Yelp</span></figcaption>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“I'm obsessed with their caramel apples, chocolate covered rice crispies, caramels, strawberries (and boozy strawberries) and chocolate covered licorice!”</blockquote>
+        <figcaption>Jenna V. <span>· Yelp</span></figcaption>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“Called ahead to reserve some and they had it packaged in a pretty box. Reasonable price. Big strawberries and tastes good.”</blockquote>
+        <figcaption>Christy H. <span>· Google</span></figcaption>
+      </figure></div>
+    <p class="rating-line">4.9 stars on Yelp (123 reviews) · 4.8 stars on Google (67 reviews) · 100% recommend on Facebook</p>
+  </div>
+</section>
+
+<section id="visit" class="section alt">
+  <div class="wrap visit">
+    <div>
+      <p class="eyebrow">Visit the shop</p>
+      <h2>Hours &amp; location</h2>
+      <table class="hours"><tbody><tr><th>Monday</th><td>12:00 pm – 7:00 pm</td></tr><tr><th>Tuesday</th><td>12:00 pm – 7:00 pm</td></tr><tr><th>Wednesday</th><td>12:00 pm – 7:00 pm</td></tr><tr><th>Thursday</th><td>12:00 pm – 7:00 pm</td></tr><tr><th>Friday</th><td>12:00 pm – 7:00 pm</td></tr><tr><th>Saturday</th><td>1:00 pm – 8:00 pm</td></tr><tr><th>Sunday</th><td>Closed</td></tr></tbody></table>
+      <p class="group-note" style="margin-top:10px">In the Tralee Village shopping district on Dublin Boulevard.</p>
+      <div class="contact-card">
+        <p><strong>Mimi's Chocolates</strong></p>
+        <p>6601 Dublin Blvd, Suite N, Dublin, CA 94568</p>
+        <p><a href="tel:5105086727">(510) 508-6727</a> · <a href="mailto:fleury.m@mimischocolates.com">fleury.m@mimischocolates.com</a></p>
+        <p style="margin-top:14px"><a class="btn small" href="https://www.google.com/maps/search/?api=1&query=Mimi's%20Chocolates%2C%206601%20Dublin%20Blvd%20Suite%20N%2C%20Dublin%2C%20CA%2094568" target="_blank" rel="noopener">Get directions</a></p>
+      </div>
+    </div>
+    <iframe class="map" title="Map to Mimi's Chocolates" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Mimi's%20Chocolates%2C%206601%20Dublin%20Blvd%20Suite%20N%2C%20Dublin%2C%20CA%2094568&output=embed"></iframe>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Something sweet, shipped or picked up</h2>
+    <p>Order online for shipping or pickup, or text us to start a custom order for your next celebration.</p>
+    <a class="btn" href="https://mimischocolates.com/shop">Shop online</a>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div>© 2026 Mimi's Chocolates · 6601 Dublin Blvd, Suite N, Dublin, CA 94568</div>
+  <div class="socials"><a href="https://www.instagram.com/mimis_chocolates" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/MimisChocolatess/" target="_blank" rel="noopener">Facebook</a><a href="https://www.tiktok.com/@mimis_chocolates" target="_blank" rel="noopener">TikTok</a><a href="https://www.yelp.com/biz/mimis-chocolates-dublin" target="_blank" rel="noopener">Yelp</a></div>
+</div></footer>
+
+<div class="mobile-cta"><a class="btn" href="tel:5105086727">Call</a><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Mimi's%20Chocolates%2C%206601%20Dublin%20Blvd%20Suite%20N%2C%20Dublin%2C%20CA%2094568" target="_blank" rel="noopener">Directions</a></div>
+</body>
+</html>
