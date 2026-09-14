@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#111214">
+<title>Westside Racing: professional motorcycle road racing team (design preview)</title>
+<meta name="description" content="Design preview by Sky Yang. A first-draft website for a professional motorcycle racing team: riders, results, schedule, partners and a sponsorship inquiry section.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --asphalt:#111214; --asphalt-2:#1A1B1F; --asphalt-3:#25272C;
+  --pit:#F4F3EE; --pit-2:#E4E2DA; --grey:#A3A5AC; --grey-2:#6E7077;
+  --flag:#F6C90E; --flag-ink:#1A1400;
+  --curb:#C8102E; --purple:#8B5CF6; --green:#22C55E;
+  --display:"Big Shoulders Display",system-ui,sans-serif;
+  --body:"IBM Plex Sans",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+  --max:1280px; --gutter:clamp(20px,4vw,60px);
+}
+*{box-sizing:border-box} html{color-scheme:dark;-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--asphalt);color:var(--pit);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;touch-action:manipulation}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:.95;letter-spacing:-.005em;margin:0;text-wrap:balance;text-transform:uppercase}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter)}
+:focus-visible{outline:3px solid var(--flag);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--flag);color:var(--flag-ink);padding:8px 12px;z-index:50;font-weight:500}
+.skip:focus{left:8px}
+.muted{color:var(--grey)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* preview bar */
+.preview{background:#000;color:#CFCFC8;font-size:13px;padding:7px var(--gutter);display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap;border-bottom:1px solid #2A2A2A}
+.preview a{color:#fff;text-decoration-thickness:1px;text-underline-offset:3px}
+
+/* curbing stripe: the one decorative motif */
+.curb{height:10px;background:repeating-linear-gradient(-55deg,var(--curb) 0 22px,var(--pit) 22px 44px)}
+
+/* nav */
+.nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0 16px;border-bottom:1px solid var(--asphalt-3)}
+.mark{font-family:var(--display);font-weight:800;font-size:26px;letter-spacing:.01em;text-decoration:none;text-transform:uppercase;display:flex;align-items:baseline;gap:12px;line-height:1}
+.mark small{font-family:var(--body);font-weight:400;font-size:12.5px;color:var(--grey-2);text-transform:none;letter-spacing:0}
+.nav ul{list-style:none;display:flex;gap:26px;margin:0;padding:0;font-weight:500;font-size:16px;align-items:center}
+.nav ul a{text-decoration:none;color:var(--grey)}
+.nav ul a:hover{color:var(--pit)}
+.btn{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:.03em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;padding:14px 24px;border-radius:2px;border:0;cursor:pointer;transition:background-color .18s ease,color .18s ease,transform .18s ease}
+.btn-flag{background:var(--flag);color:var(--flag-ink)}
+.btn-flag:hover{background:#FFD83A}
+.btn-flag:active{transform:translateY(1px)}
+.btn-ghost{background:transparent;color:var(--pit);box-shadow:inset 0 0 0 2px var(--pit-2)}
+.btn-ghost:hover{background:var(--pit);color:var(--asphalt)}
+.nav .btn{font-size:17px;padding:10px 16px}
+.preview .short{display:none}
+@media (max-width:820px){.nav ul li:not(.cta){display:none}.mark{font-size:22px;white-space:nowrap}.mark small{display:none}.nav .btn{font-size:15px;padding:9px 12px;white-space:nowrap}.preview .long{display:none}.preview .short{display:inline}.preview{font-size:12.5px}}
+
+/* next-round timing strip */
+.strip{border-bottom:1px solid var(--asphalt-3);background:var(--asphalt-2)}
+.strip .wrap{display:flex;gap:0;align-items:stretch;font-size:14.5px;overflow-x:auto;scrollbar-width:none}
+.strip .wrap::-webkit-scrollbar{display:none}
+.strip div{padding:11px 22px 11px 0;border-right:1px solid var(--asphalt-3);white-space:nowrap;color:var(--grey)}
+.strip div + div{padding-left:22px}
+.strip div:last-child{border-right:0}
+.strip b{color:var(--pit);font-weight:500}
+.strip .live{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green);margin-right:8px;vertical-align:1px}
+
+/* hero */
+.hero{position:relative;min-height:min(88vh,860px);display:grid;align-items:end;isolation:isolate}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 45%;z-index:-2}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(17,18,20,.15) 0%,rgba(17,18,20,.25) 45%,rgba(17,18,20,.92) 100%)}
+.hero .num{position:absolute;right:var(--gutter);top:6%;font-family:var(--display);font-weight:800;font-size:clamp(160px,30vw,420px);line-height:.8;color:transparent;-webkit-text-stroke:2px rgba(244,243,238,.28);z-index:-1;user-select:none;pointer-events:none}
+.hero .wrap{padding-top:clamp(96px,13vw,170px);padding-bottom:clamp(40px,6vw,72px);width:100%}
+.hero h1{font-size:clamp(64px,10vw,152px);max-width:12ch;color:var(--pit)}
+.hero h1 em{font-style:normal;color:var(--flag)}
+.hero .lede{font-size:clamp(18px,1.5vw,21px);color:var(--pit-2);max-width:48ch;margin-top:22px}
+.hero .actions{display:flex;gap:16px;align-items:center;margin-top:30px;flex-wrap:wrap}
+.hero .cap{position:absolute;left:var(--gutter);top:calc(100% - 0px);transform:translateY(-100%)}
+
+/* season ruled strip */
+.season{border-top:1px solid var(--asphalt-3);border-bottom:1px solid var(--asphalt-3)}
+.season .grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.season .grid div{padding:24px 20px 24px 0;border-right:1px solid var(--asphalt-3)}
+.season .grid div + div{padding-left:20px}
+.season .grid div:last-child{border-right:0}
+.season b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(40px,4.4vw,64px);line-height:1;color:var(--pit);font-variant-numeric:tabular-nums}
+.season b i{font-style:normal;color:var(--flag);font-size:.5em;vertical-align:.6em;margin-left:4px}
+.season span{display:block;color:var(--grey);font-size:15px;margin-top:8px}
+.season .note{font-size:13.5px;color:var(--grey-2);padding:10px 0 14px}
+@media (max-width:760px){.season .grid{grid-template-columns:1fr 1fr}.season .grid div{border-right:0;border-bottom:1px solid var(--asphalt-3);padding-left:0}.season .grid div + div{padding-left:0}.season .grid div:nth-child(odd){border-right:1px solid var(--asphalt-3);padding-right:14px}.season .grid div:nth-child(even){padding-left:14px}}
+
+/* sections */
+section{padding:clamp(56px,7vw,104px) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(20px,4vw,64px);align-items:end;margin-bottom:clamp(28px,4vw,48px)}
+.sec-head h2{font-size:clamp(44px,5.6vw,84px);color:var(--pit)}
+.sec-head p{color:var(--grey);font-size:18px;max-width:54ch}
+@media (max-width:760px){.sec-head{grid-template-columns:1fr}}
+
+/* results: timing tower */
+.tower{width:100%;border-collapse:collapse;font-size:16px}
+.tower caption{text-align:left;font-family:var(--mono);font-size:14px;color:var(--grey);padding:0 0 12px}
+.tower th,.tower td{text-align:left;padding:13px 14px 13px 0;border-top:1px solid var(--asphalt-3);vertical-align:middle}
+.tower th{font-weight:500;color:var(--grey-2);font-size:13.5px;border-top:0;padding-top:0;font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em}
+.tower td.pos{font-family:var(--display);font-weight:800;font-size:34px;line-height:1;width:64px;color:var(--pit)}
+.tower td.pos.p1{color:var(--flag)}
+.tower td.t{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.tower td .cell{display:inline-block;padding:3px 8px;border-radius:2px}
+.tower td .fl{background:var(--purple);color:#fff}
+.tower td .pb{background:var(--green);color:#052E16}
+.tower tbody tr:last-child td{border-bottom:1px solid var(--pit-2)}
+.tower .circuit{color:var(--grey)}
+.legend{display:flex;gap:22px;flex-wrap:wrap;margin-top:16px;font-size:14px;color:var(--grey)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:8px;vertical-align:-1px}
+@media (max-width:760px){.tower th:nth-child(4),.tower td:nth-child(4),.tower th:nth-child(6),.tower td:nth-child(6){display:none}.tower td.pos{font-size:28px;width:48px}.tower td:nth-child(3){white-space:nowrap}}
+
+/* riders */
+.riders{background:var(--asphalt-2);border-top:1px solid var(--asphalt-3);border-bottom:1px solid var(--asphalt-3)}
+.rider-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,80px);align-items:start}
+.portrait{position:relative;margin:0;border-left:8px solid var(--flag)}
+.portrait img{width:100%;aspect-ratio:2/3;object-fit:cover;object-position:50% 30%}
+.portrait figcaption{position:absolute;left:0;bottom:0;background:var(--flag);color:var(--flag-ink);font-size:13.5px;padding:8px 12px;max-width:85%}
+.roster{border-top:1px solid var(--pit-2)}
+.roster article{display:grid;grid-template-columns:96px minmax(0,1fr);gap:22px;padding:26px 0;border-bottom:1px solid var(--asphalt-3)}
+.roster .no{font-family:var(--display);font-weight:800;font-size:72px;line-height:.85;color:var(--flag);font-variant-numeric:tabular-nums}
+.roster h3{font-size:34px;color:var(--pit);margin-bottom:8px}
+.roster p{color:var(--grey);font-size:16.5px;max-width:52ch}
+.roster dl{display:flex;gap:28px;flex-wrap:wrap;margin:14px 0 0;font-size:15px}
+.roster dt{color:var(--grey-2);display:inline;margin-right:6px}
+.roster dd{display:inline;margin:0;color:var(--pit)}
+@media (max-width:880px){.rider-grid{grid-template-columns:1fr}.portrait{border-left:0;border-top:8px solid var(--flag)}.portrait img{aspect-ratio:4/3;object-position:50% 20%}.roster article{grid-template-columns:64px minmax(0,1fr);gap:16px}.roster .no{font-size:52px}}
+
+/* program */
+.program .grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,5vw,80px);align-items:center}
+.program img{width:100%;aspect-ratio:3/2;object-fit:cover;clip-path:polygon(0 0,100% 0,100% 100%,6% 100%,0 88%)}
+.program h2{font-size:clamp(44px,5.2vw,78px);color:var(--pit);margin-bottom:20px}
+.program p{color:var(--grey);font-size:18px;max-width:52ch}
+.program p + p{margin-top:14px}
+.program ul{margin:22px 0 0;padding:0;list-style:none;border-top:1px solid var(--pit-2)}
+.program li{padding:12px 0;border-bottom:1px solid var(--asphalt-3);display:grid;grid-template-columns:minmax(0,.6fr) minmax(0,1.4fr);gap:16px;font-size:16px}
+.program li b{font-weight:500;color:var(--pit)}
+.program li span{color:var(--grey)}
+@media (max-width:880px){.program .grid{grid-template-columns:1fr}}
+
+/* schedule */
+.sched{width:100%;border-collapse:collapse;font-size:16.5px}
+.sched th,.sched td{text-align:left;padding:15px 14px 15px 0;border-top:1px solid var(--asphalt-3);vertical-align:top}
+.sched th{font-weight:500;color:var(--grey-2);font-size:13.5px;border-top:0;padding-top:0;font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em}
+.sched td.rd{font-family:var(--display);font-weight:800;font-size:30px;line-height:1;color:var(--pit);width:80px}
+.sched td.date{font-family:var(--mono);white-space:nowrap;font-variant-numeric:tabular-nums}
+.sched td.state{color:var(--grey)}
+.sched td.state.next{color:var(--flag);font-weight:500}
+.sched tbody tr:last-child td{border-bottom:1px solid var(--pit-2)}
+.sched .textlink{color:var(--flag)}
+@media (max-width:760px){.sched th:nth-child(4),.sched td:nth-child(4){display:none}}
+
+/* partners */
+.partners{background:var(--pit);color:var(--asphalt)}
+.partners .sec-head h2{color:var(--asphalt)}
+.partners .sec-head p{color:#4B4D55}
+.tier{display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px;padding:26px 0;border-top:1px solid #C9C7BE;align-items:center}
+.tier:last-of-type{border-bottom:1px solid var(--asphalt)}
+.tier h3{font-size:26px;color:var(--asphalt)}
+.tier h3 small{display:block;font-family:var(--body);font-weight:400;font-size:14px;color:#6A6C74;text-transform:none;margin-top:6px;letter-spacing:0}
+.logos{display:flex;gap:14px;flex-wrap:wrap}
+.logos span{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:20px;color:#5B5D66;border:1.5px dashed #B9B7AE;padding:14px 22px;min-width:150px;text-align:center}
+.tier.title .logos span{font-size:28px;padding:22px 34px;min-width:220px;color:var(--asphalt);border-color:var(--asphalt)}
+.partners .note{font-size:14px;color:#6A6C74;margin-top:14px}
+@media (max-width:760px){.tier{grid-template-columns:1fr;gap:14px}}
+
+/* sponsorship band */
+.sponsor{background:var(--flag);color:var(--flag-ink)}
+.sponsor .grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,5vw,80px);align-items:start}
+.sponsor h2{font-size:clamp(52px,6.8vw,104px);color:var(--flag-ink);max-width:11ch}
+.sponsor .lede{font-size:19px;margin-top:20px;max-width:46ch;color:#3A3000}
+.sponsor ul{margin:26px 0 0;padding:0;list-style:none;border-top:2px solid var(--flag-ink)}
+.sponsor li{padding:12px 0;border-bottom:1px solid rgba(26,20,0,.25);font-size:16.5px;display:grid;grid-template-columns:minmax(0,.55fr) minmax(0,1.45fr);gap:16px}
+.sponsor li b{font-weight:500}
+.form{background:var(--asphalt);color:var(--pit);padding:clamp(22px,3vw,36px);border-top:8px solid var(--asphalt-3)}
+.form h3{font-size:30px;color:var(--pit);margin-bottom:6px}
+.form p{color:var(--grey);font-size:15.5px}
+.form label{display:block;font-size:14px;color:var(--grey);margin:18px 0 6px}
+.form input,.form textarea,.form select{width:100%;font:inherit;font-size:16px;color:var(--pit);background:var(--asphalt-2);border:1px solid var(--asphalt-3);border-radius:2px;padding:12px 14px}
+.form input:focus,.form textarea:focus,.form select:focus{border-color:var(--flag);outline:none;box-shadow:0 0 0 3px rgba(246,201,14,.25)}
+.form textarea{min-height:110px;resize:vertical}
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form .btn{width:100%;margin-top:22px}
+.form .fine{font-size:13px;color:var(--grey-2);margin-top:12px}
+@media (max-width:880px){.sponsor .grid{grid-template-columns:1fr}.form .row{grid-template-columns:1fr}}
+
+/* follow */
+.follow .grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--pit-2)}
+.follow article{padding:26px 26px 30px 0;border-right:1px solid var(--asphalt-3);border-bottom:1px solid var(--asphalt-3)}
+.follow article + article{padding-left:26px}
+.follow article:last-child{border-right:0}
+.follow h3{font-size:30px;color:var(--pit);margin-bottom:12px}
+.follow p{color:var(--grey);font-size:16.5px}
+.follow a.textlink{display:inline-block;margin-top:14px;color:var(--flag);text-underline-offset:5px;text-decoration-thickness:1.5px;font-weight:500}
+@media (max-width:760px){.follow .grid{grid-template-columns:1fr}.follow article{border-right:0;padding-left:0}.follow article + article{padding-left:0}}
+
+footer{padding:34px 0 44px;font-size:15px;color:var(--grey);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--asphalt-3)}
+footer .mark{font-size:20px;color:var(--pit)}
+footer a{color:var(--pit)}
+
+/* one orchestrated entrance, hero only */
+@media (prefers-reduced-motion:no-preference){
+  .hero .wrap > *{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+  .hero .lede{animation-delay:.1s}
+  .hero .actions{animation-delay:.18s}
+  @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="preview" role="note">
+  <span class="long">Design preview built by Sky Yang for a professional motorcycle racing team. First draft: team name, riders, results and partner marks are placeholders until I get yours; photos are placeholders too.</span><span class="short">Design preview by Sky Yang. First draft: name, riders, results, partners and photos are placeholders.</span>
+  <a href="mailto:skyyang333@gmail.com">skyyang333@gmail.com</a>
+</div>
+<div class="curb" aria-hidden="true"></div>
+
+<header class="wrap">
+  <nav class="nav" aria-label="Primary">
+    <a class="mark" href="#top">Westside Racing <small>placeholder name</small></a>
+    <ul>
+      <li><a href="#riders">Riders</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#partners">Partners</a></li>
+      <li class="cta"><a class="btn btn-flag" href="#partner">Partner with us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="strip" aria-label="Next round">
+  <div class="wrap">
+    <div><span class="live" aria-hidden="true"></span><b>Next round</b></div>
+    <div>Round 9 of 10 <b>Circuit name here</b></div>
+    <div><span class="mono">Sat Oct 3</span> practice and qualifying</div>
+    <div><span class="mono">Sun Oct 4</span> race 1 and race 2</div>
+    <div>Example round; the real calendar replaces this line</div>
+  </div>
+</div>
+
+<main id="main">
+<section class="hero" id="top" style="padding:0">
+  <img src="hero.jpg" alt="Superbike leaned into a fast corner at golden hour, red and white curbing in the foreground" width="1800" height="1200" fetchpriority="high">
+  <div class="num" aria-hidden="true">27</div>
+  <div class="wrap">
+    <h1>Built for the <em>front row.</em></h1>
+    <p class="lede">A professional motorcycle road racing program: two riders, one garage, a full national calendar, and partners who get seen every time the lights go out.</p>
+    <div class="actions">
+      <a class="btn btn-flag" href="#partner">Partner with the team</a>
+      <a class="btn btn-ghost" href="#results">See this season's results</a>
+    </div>
+  </div>
+</section>
+
+<div class="season">
+  <div class="wrap">
+    <div class="grid">
+      <div><b>3<i>rd</i></b><span>in the championship after round 8</span></div>
+      <div><b>6</b><span>podiums this season</span></div>
+      <div><b>2</b><span>race wins</span></div>
+      <div><b>4</b><span>fastest laps</span></div>
+    </div>
+    <p class="note">Example figures. The real season stats go here and update after every round.</p>
+  </div>
+</div>
+
+<section id="results">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Results</h2>
+      <p>Laid out like the timing tower in the pit box: position, grid, best lap and the gap to the leader, round by round. Purple is the fastest lap of the race, green a personal best.</p>
+    </div>
+    <table class="tower">
+      <caption>2026 season, rider no. 27. Sample data</caption>
+      <thead>
+        <tr><th scope="col">Pos</th><th scope="col">Round</th><th scope="col">Race</th><th scope="col">Grid</th><th scope="col">Best lap</th><th scope="col">Gap</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="pos p1">1</td><td>Rd 8 <span class="circuit">Circuit name</span></td><td>Race 2</td><td class="t">P2</td><td class="t"><span class="cell fl">1:34.812</span></td><td class="t">Winner</td></tr>
+        <tr><td class="pos">2</td><td>Rd 8 <span class="circuit">Circuit name</span></td><td>Race 1</td><td class="t">P2</td><td class="t">1:35.104</td><td class="t">+0.618</td></tr>
+        <tr><td class="pos">4</td><td>Rd 7 <span class="circuit">Circuit name</span></td><td>Race 2</td><td class="t">P5</td><td class="t"><span class="cell pb">1:41.377</span></td><td class="t">+3.290</td></tr>
+        <tr><td class="pos">3</td><td>Rd 7 <span class="circuit">Circuit name</span></td><td>Race 1</td><td class="t">P5</td><td class="t">1:41.902</td><td class="t">+2.115</td></tr>
+        <tr><td class="pos p1">1</td><td>Rd 6 <span class="circuit">Circuit name</span></td><td>Race 2</td><td class="t">P1</td><td class="t"><span class="cell fl">1:28.455</span></td><td class="t">Winner</td></tr>
+        <tr><td class="pos">5</td><td>Rd 6 <span class="circuit">Circuit name</span></td><td>Race 1</td><td class="t">P1</td><td class="t">1:28.990</td><td class="t">+6.402</td></tr>
+      </tbody>
+    </table>
+    <div class="legend"><span><i style="background:var(--purple)"></i>Fastest lap of the race</span><span><i style="background:var(--green)"></i>Personal best lap</span><span><i style="background:var(--flag)"></i>Race win</span></div>
+  </div>
+</section>
+
+<section class="riders" id="riders">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Riders</h2>
+      <p>Two riders, one program. Each gets a page with a bio, career results, a photo set for media and a direct line for interview requests.</p>
+    </div>
+    <div class="rider-grid">
+      <figure class="portrait">
+        <img src="pitlane.jpg" alt="Rider in black leathers walking down pit lane at sunrise, helmet in hand" width="733" height="1100" loading="lazy">
+        <figcaption>Placeholder photo. Your rider portraits go here.</figcaption>
+      </figure>
+      <div class="roster">
+        <article>
+          <div class="no" aria-hidden="true">27</div>
+          <div>
+            <h3>Rider name</h3>
+            <p>Team leader in the premier class. Sample bio: three seasons with the program, two wins this year, the rider partners bring to sponsor hospitality on race weekends.</p>
+            <dl><div><dt>Class</dt><dd>Superbike</dd></div><div><dt>Hometown</dt><dd>City, ST</dd></div><div><dt>Since</dt><dd>2024</dd></div></dl>
+          </div>
+        </article>
+        <article>
+          <div class="no" aria-hidden="true">64</div>
+          <div>
+            <h3>Rider name</h3>
+            <p>Second seat in the supporting class. Sample bio: rookie season, first podium at round 6, the development rider the team is building the next two years around.</p>
+            <dl><div><dt>Class</dt><dd>Supersport</dd></div><div><dt>Hometown</dt><dd>City, ST</dd></div><div><dt>Since</dt><dd>2026</dd></div></dl>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="program">
+  <div class="wrap">
+    <div class="grid">
+      <img src="garage.jpg" alt="Race bike on paddock stands with fairings off, two mechanics working under garage lights" width="1400" height="933" loading="lazy">
+      <div>
+        <h2>The program</h2>
+        <p>What a partner is actually buying: a crew that turns the bike around between sessions, the data to make Sunday faster than Saturday, and a paddock presence that looks the part on television and in the hospitality unit.</p>
+        <ul>
+          <li><b>Crew</b><span>Crew chief, two technicians per bike, data engineer, tire and fuel strategist</span></li>
+          <li><b>Machines</b><span>Two race bikes plus a spare per rider, built and maintained in-house</span></li>
+          <li><b>Base</b><span>Los Angeles workshop; transporter and hospitality unit travel to every round</span></li>
+          <li><b>Content</b><span>Photographer and video at every round; partners receive edited assets within 48 hours</span></li>
+        </ul>
+        <p class="muted" style="font-size:14px;margin-top:14px">Sample details. I will swap in the real crew, machines and base.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="schedule">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>2026 schedule</h2>
+      <p>Every round with dates, circuit and what happened. Fans see where to watch; partners see when their activation is coming up.</p>
+    </div>
+    <table class="sched">
+      <thead><tr><th scope="col">Rd</th><th scope="col">Dates</th><th scope="col">Circuit</th><th scope="col">Location</th><th scope="col">Status</th></tr></thead>
+      <tbody>
+        <tr><td class="rd">06</td><td class="date">Aug 8-9</td><td>Circuit name</td><td class="muted">City, ST</td><td class="state">Win and P5. <a class="textlink" href="#results">Results</a></td></tr>
+        <tr><td class="rd">07</td><td class="date">Aug 22-23</td><td>Circuit name</td><td class="muted">City, ST</td><td class="state">P3 and P4</td></tr>
+        <tr><td class="rd">08</td><td class="date">Sep 12-13</td><td>Circuit name</td><td class="muted">City, ST</td><td class="state">Win and P2</td></tr>
+        <tr><td class="rd">09</td><td class="date">Oct 3-4</td><td>Circuit name</td><td class="muted">City, ST</td><td class="state next">Next round. Tickets and TV times</td></tr>
+        <tr><td class="rd">10</td><td class="date">Oct 24-25</td><td>Circuit name</td><td class="muted">City, ST</td><td class="state">Season finale</td></tr>
+      </tbody>
+    </table>
+    <p class="muted" style="font-size:14px;margin-top:14px">Sample calendar. The real series calendar drops in here.</p>
+  </div>
+</section>
+
+<section class="partners" id="partners">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Partners</h2>
+      <p>Partners are listed by tier, each with a link and a line on what they do for the team. The boxes below are stand-ins for your logos.</p>
+    </div>
+    <div class="tier title"><h3>Title partner <small>Naming rights, primary livery, leathers and pit wall</small></h3><div class="logos"><span>Your logo</span></div></div>
+    <div class="tier"><h3>Technical partners <small>Tires, brakes, suspension, fuel and lubricants</small></h3><div class="logos"><span>Partner logo</span><span>Partner logo</span><span>Partner logo</span><span>Partner logo</span></div></div>
+    <div class="tier"><h3>Supporting partners <small>Local businesses and personal sponsors</small></h3><div class="logos"><span>Partner logo</span><span>Partner logo</span><span>Partner logo</span><span>Partner logo</span><span>Partner logo</span></div></div>
+    <p class="note">Sample tiers. I will set these up with your actual partner list and links.</p>
+  </div>
+</section>
+
+<section class="sponsor" id="partner">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <h2>Put your brand on the bike.</h2>
+        <p class="lede">Racing partners get placement that shows up on broadcast, in the paddock and in the content the team publishes all week. Tell us what you want to reach and we will send the partner deck with options and pricing.</p>
+        <ul>
+          <li><b>On the bike</b><span>Fairing, tail, front number board and swingarm positions by tier</span></li>
+          <li><b>On the rider</b><span>Leathers, helmet and team wear seen in every podium photo and interview</span></li>
+          <li><b>In the paddock</b><span>Pit wall, garage banners, transporter and hospitality for your guests</span></li>
+          <li><b>All week</b><span>Race-weekend content, social features, product placement and a page on this site</span></li>
+        </ul>
+      </div>
+      <form class="form" action="#" onsubmit="event.preventDefault();this.querySelector('.fine').textContent='Design preview: the live site will send this to the team.'">
+        <h3>Request the partner deck</h3>
+        <p>A real reply from the team, usually within two business days.</p>
+        <div class="row">
+          <div><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+          <div><label for="f-co">Company</label><input id="f-co" name="company" type="text" autocomplete="organization"></div>
+        </div>
+        <label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required>
+        <label for="f-int">What are you interested in?</label>
+        <select id="f-int" name="interest"><option>Title or primary partnership</option><option>Technical partnership</option><option>Supporting partnership</option><option>Hospitality for a race weekend</option><option>Not sure yet, send the deck</option></select>
+        <label for="f-msg">Anything we should know</label><textarea id="f-msg" name="message"></textarea>
+        <button class="btn btn-flag" type="submit">Request the partner deck</button>
+        <p class="fine">Or email the team directly. The live site will use your address here.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="follow">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Follow the team</h2>
+      <p>Race reports after every round, the media kit for journalists, and a small shop for team wear. Each is a real page on the finished site.</p>
+    </div>
+    <div class="grid">
+      <article><h3>Race reports</h3><p>A short write-up and photo set within 24 hours of the checkered flag, written for fans and forwardable to partners.</p><a class="textlink" href="#results">Latest report</a></article>
+      <article><h3>Media kit</h3><p>Rider bios, headshots, team facts and logos in one download for journalists and series broadcasters.</p><a class="textlink" href="#partner">Request the kit</a></article>
+      <article><h3>Team shop</h3><p>Team wear and replica hats, fulfilled by a print partner so nobody on the crew is packing boxes on a race week.</p><a class="textlink" href="#partner">Shop opens with the site</a></article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <a class="mark" href="#top">Westside Racing</a>
+  <span>Professional motorcycle road racing team, Los Angeles. Placeholder name and details; design preview by <a href="mailto:skyyang333@gmail.com">Sky Yang</a>.</span>
+</footer>
+</body>
+</html>
