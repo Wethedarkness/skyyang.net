@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#173E35">
+<title>Little Yotei Snow School: kids' ski lessons and snow-play care in Niseko (design preview)</title>
+<meta name="description" content="Design preview by Sky Yang. A mobile-first first draft for a family snow school in Niseko: lessons for ages 3 to 12, snow-play care, how the day goes, prices, FAQ and a date-first booking form.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --spruce:#173E35; --spruce-2:#1F5247; --spruce-3:#2C6A5B;
+  --snow:#F6F8FA; --white:#FFFFFF; --birch:#EFE8DB; --sky:#D9EAF5;
+  --ink:#14263B; --ink-2:#3D4F63; --ink-3:#6B7A8C;
+  --rule:#D7DEE5; --rule-2:#C4CDD6;
+  --bib:#F26B1D; --bib-2:#D9581A; --bib-ink:#1F1206;
+  --display:"Outfit",system-ui,sans-serif;
+  --body:"Nunito Sans",system-ui,sans-serif;
+  --max:1200px; --gutter:clamp(18px,4vw,56px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--snow);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;touch-action:manipulation;padding-bottom:0}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.02;letter-spacing:-.015em;margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter)}
+:focus-visible{outline:3px solid var(--bib);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--bib);color:var(--bib-ink);padding:8px 12px;z-index:60;font-weight:700;text-decoration:none}
+.skip:focus{left:8px}
+.muted{color:var(--ink-3)}
+.fine{font-size:13.5px;color:var(--ink-3);line-height:1.5}
+
+/* preview bar */
+.preview{background:#0F1C18;color:#C9D3CF;font-size:13px;padding:7px var(--gutter);display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap;line-height:1.45}
+.preview a{color:#fff;text-decoration-thickness:1px;text-underline-offset:3px;white-space:nowrap}
+.preview .short{display:none}
+
+/* nav */
+header{background:var(--white);border-bottom:1px solid var(--rule);position:sticky;top:0;z-index:40}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+.mark{display:flex;align-items:center;gap:11px;text-decoration:none;font-family:var(--display);font-weight:700;font-size:21px;letter-spacing:-.01em;line-height:1;color:var(--spruce)}
+.mark .peak{width:30px;height:26px;flex:none}
+.mark small{display:block;font-family:var(--body);font-weight:600;font-size:12px;color:var(--ink-3);letter-spacing:.01em;margin-top:4px}
+.nav ul{list-style:none;display:flex;gap:24px;margin:0;padding:0;font-weight:600;font-size:15.5px;align-items:center}
+.nav ul a{text-decoration:none;color:var(--ink-2)}
+.nav ul a:hover{color:var(--spruce)}
+.btn{font-family:var(--display);font-weight:600;font-size:17px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:10px;border:0;cursor:pointer;line-height:1;transition:background-color .18s ease,color .18s ease,transform .18s ease,box-shadow .18s ease}
+.btn-bib{background:var(--bib);color:var(--bib-ink)}
+.btn-bib:hover{background:var(--bib-2)}
+.btn-bib:active{transform:translateY(1px)}
+.btn-ghost{background:transparent;color:var(--spruce);box-shadow:inset 0 0 0 2px var(--spruce)}
+.btn-ghost:hover{background:var(--spruce);color:#fff}
+.btn-light{background:#fff;color:var(--spruce)}
+.btn-light:hover{background:var(--sky)}
+.nav .btn{font-size:15.5px;padding:11px 16px}
+@media (max-width:860px){.nav ul li:not(.cta){display:none}.mark{font-size:19px}.mark small{display:none}.preview .long{display:none}.preview .short{display:inline}.preview{font-size:12.5px}}
+
+/* hero */
+.hero{background:var(--white);border-bottom:1px solid var(--rule)}
+.hero .grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,72px);align-items:center;padding:clamp(36px,5vw,72px) 0}
+.hero h1{font-size:clamp(40px,5.6vw,76px);max-width:12ch;color:var(--spruce)}
+.hero .lede{font-size:clamp(17px,1.35vw,20px);color:var(--ink-2);max-width:46ch;margin-top:20px}
+.hero .actions{display:flex;gap:14px;align-items:center;margin-top:28px;flex-wrap:wrap}
+.hero .textlink{font-weight:600;color:var(--spruce);text-underline-offset:5px;text-decoration-thickness:1.5px}
+.photo{position:relative;margin:0}
+.photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:55% 45%;border-radius:14px 14px 14px 0}
+.photo::after{content:"";position:absolute;left:0;bottom:-10px;width:56%;height:8px;background:var(--bib);border-radius:0 4px 4px 0}
+.photo figcaption{position:absolute;left:14px;top:14px;background:rgba(255,255,255,.92);color:var(--spruce);font-size:13px;font-weight:600;padding:7px 10px;border-radius:6px;max-width:80%}
+@media (max-width:860px){.hero .grid{grid-template-columns:1fr;gap:22px;padding:22px 0 34px}.photo{order:-1}.photo img{aspect-ratio:16/11;border-radius:12px}.photo::after{display:none}.hero .actions .btn{flex:1 1 100%}}
+
+/* facts: ruled definition list */
+.facts{border-bottom:1px solid var(--rule);background:var(--white)}
+.facts dl{display:grid;grid-template-columns:repeat(4,1fr);margin:0;padding:0}
+.facts div{padding:18px 20px 18px 0;border-right:1px solid var(--rule)}
+.facts div + div{padding-left:20px}
+.facts div:last-child{border-right:0}
+.facts dt{font-size:13.5px;color:var(--ink-3);font-weight:600}
+.facts dd{margin:4px 0 0;font-family:var(--display);font-weight:600;font-size:20px;color:var(--spruce);line-height:1.2}
+@media (max-width:760px){.facts dl{grid-template-columns:1fr 1fr}.facts div{border-right:0;border-bottom:1px solid var(--rule);padding-left:0}.facts div + div{padding-left:0}.facts div:nth-child(odd){border-right:1px solid var(--rule);padding-right:14px}.facts div:nth-child(even){padding-left:14px}.facts div:nth-last-child(-n+2){border-bottom:0}}
+
+/* availability form: the date-first ask */
+.avail{background:var(--sky);border-bottom:1px solid var(--rule)}
+.avail .inner{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(20px,4vw,56px);align-items:center;padding:clamp(26px,3.5vw,44px) 0}
+.avail h2{font-size:clamp(26px,3vw,38px);color:var(--spruce)}
+.avail p{color:var(--ink-2);margin-top:10px;max-width:44ch}
+form.check{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;align-items:end}
+form.check label{display:block;font-size:13.5px;font-weight:700;color:var(--ink-2);margin-bottom:6px}
+form.check input,form.check select{width:100%;font:inherit;font-size:16px;padding:12px 12px;border:1px solid var(--rule-2);border-radius:8px;background:#fff;color:var(--ink);min-height:48px}
+form.check .btn{width:100%;min-height:48px}
+form.check .fine{grid-column:1/-1}
+@media (max-width:860px){.avail .inner{grid-template-columns:1fr}form.check{grid-template-columns:1fr 1fr}form.check .go{grid-column:1/-1}}
+
+/* sections */
+section{padding:clamp(52px,6.5vw,96px) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(18px,4vw,56px);align-items:end;margin-bottom:clamp(26px,3.5vw,44px)}
+.sec-head h2{font-size:clamp(32px,4.2vw,56px);color:var(--spruce)}
+.sec-head p{color:var(--ink-2);font-size:18px;max-width:52ch}
+@media (max-width:760px){.sec-head{grid-template-columns:1fr;gap:12px}}
+
+/* programs: ruled columns */
+.programs{background:var(--snow)}
+.cols{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--spruce)}
+.cols article{padding:22px 22px 26px 0;border-right:1px solid var(--rule)}
+.cols article + article{padding-left:22px}
+.cols article:last-child{border-right:0}
+.cols .age{font-family:var(--display);font-weight:700;font-size:15px;color:var(--bib-2)}
+.cols h3{font-size:24px;color:var(--spruce);margin:8px 0 12px}
+.cols p{color:var(--ink-2);font-size:16px}
+.cols ul{margin:14px 0 0;padding:0;list-style:none;font-size:15.5px;color:var(--ink-2)}
+.cols li{padding:7px 0;border-top:1px solid var(--rule)}
+.cols .from{margin-top:16px;font-weight:700;color:var(--spruce);font-size:16px}
+.cols .from span{font-weight:400;color:var(--ink-3);font-size:14px}
+@media (max-width:980px){.cols{grid-template-columns:1fr 1fr}.cols article{border-right:0;border-bottom:1px solid var(--rule);padding-left:0}.cols article + article{padding-left:0}.cols article:nth-child(odd){border-right:1px solid var(--rule);padding-right:18px}.cols article:nth-child(even){padding-left:18px}}
+@media (max-width:600px){.cols{grid-template-columns:1fr}.cols article:nth-child(odd){border-right:0;padding-right:0}.cols article:nth-child(even){padding-left:0}}
+
+/* the day: full-bleed spruce band with a timeline */
+.day{background:var(--spruce);color:#E6EFEB}
+.day .sec-head h2{color:#fff}
+.day .sec-head p{color:#CFE0D8}
+.timeline{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(8,1fr);position:relative}
+.timeline::before{content:"";position:absolute;left:0;right:0;top:9px;height:3px;background:var(--bib);border-radius:2px}
+.timeline li{position:relative;padding:32px 14px 0 0}
+.timeline li::before{content:"";position:absolute;left:0;top:2px;width:17px;height:17px;border-radius:50%;background:var(--spruce);border:3px solid var(--bib)}
+.timeline time{display:block;font-family:var(--display);font-weight:700;font-size:20px;color:#fff;font-variant-numeric:tabular-nums}
+.timeline b{display:block;font-weight:700;color:#fff;margin-top:6px;font-size:15.5px}
+.timeline span{display:block;color:#BBD1C8;font-size:14.5px;margin-top:4px;line-height:1.45}
+.day .fine{color:#A9C2B8;margin-top:26px}
+@media (max-width:980px){.timeline{grid-template-columns:repeat(4,1fr);row-gap:26px}.timeline::before{display:none}.timeline li::after{content:"";position:absolute;left:20px;right:0;top:9px;height:3px;background:var(--bib)}.timeline li:nth-child(4n)::after{right:0}}
+@media (max-width:600px){.timeline{grid-template-columns:1fr;row-gap:0}.timeline li{padding:0 0 22px 34px}.timeline li::before{left:0;top:4px}.timeline li::after{left:7px;top:22px;right:auto;width:3px;height:calc(100% - 20px)}.timeline li:last-child::after{display:none}}
+
+/* why: photo + reasons */
+.why .grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(26px,5vw,72px);align-items:center}
+.why img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:14px}
+.why h2{font-size:clamp(32px,4.2vw,56px);color:var(--spruce);margin-bottom:8px}
+.reasons{list-style:none;margin:18px 0 0;padding:0;border-top:1px solid var(--rule)}
+.reasons li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;padding:16px 0;border-bottom:1px solid var(--rule)}
+.reasons .ico{width:36px;height:36px;border-radius:50%;background:var(--birch);display:grid;place-items:center;color:var(--spruce)}
+.reasons b{display:block;font-weight:700;color:var(--ink)}
+.reasons span{color:var(--ink-2);font-size:16px}
+@media (max-width:860px){.why .grid{grid-template-columns:1fr}}
+
+/* good to know: two ruled lists + lodge photo */
+.know{background:var(--birch)}
+.know .grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(26px,5vw,72px);align-items:start}
+.know h2{font-size:clamp(32px,4.2vw,56px);color:var(--spruce)}
+.know .lists{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,3vw,40px);margin-top:26px}
+.know h3{font-size:19px;color:var(--spruce);padding-bottom:10px;border-bottom:2px solid var(--spruce)}
+.know ul{list-style:none;margin:0;padding:0;font-size:16px;color:var(--ink-2)}
+.know li{padding:10px 0;border-bottom:1px solid rgba(23,62,53,.18)}
+.know img{width:100%;aspect-ratio:5/6;object-fit:cover;border-radius:14px}
+.know .weather{margin-top:24px;padding:16px 18px;background:#fff;border-radius:12px;font-size:15.5px;color:var(--ink-2)}
+.know .weather b{color:var(--spruce)}
+@media (max-width:860px){.know .grid{grid-template-columns:1fr}.know img{aspect-ratio:16/11}}
+@media (max-width:520px){.know .lists{grid-template-columns:1fr}}
+
+/* prices: ruled table */
+.prices table{width:100%;border-collapse:collapse;font-size:16.5px}
+.prices caption{text-align:left;color:var(--ink-3);font-size:14px;padding:0 0 12px}
+.prices th,.prices td{text-align:left;padding:15px 14px 15px 0;border-top:1px solid var(--rule);vertical-align:top}
+.prices th{font-weight:700;color:var(--ink-3);font-size:13.5px;border-top:0;padding-top:0}
+.prices td.p{font-family:var(--display);font-weight:700;color:var(--spruce);white-space:nowrap;font-variant-numeric:tabular-nums;font-size:19px}
+.prices td .sub{display:block;color:var(--ink-3);font-size:14.5px;margin-top:3px}
+.prices tbody tr:last-child td{border-bottom:2px solid var(--spruce)}
+.prices .fine{margin-top:14px}
+@media (max-width:640px){.prices th:nth-child(3),.prices td:nth-child(3){display:none}}
+
+/* reviews */
+.reviews{background:var(--white);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.reviews .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,56px)}
+.reviews blockquote{margin:0;padding:0 0 0 22px;border-left:4px solid var(--bib);font-size:clamp(19px,1.7vw,23px);line-height:1.45;color:var(--ink);font-family:var(--display);font-weight:600;letter-spacing:-.01em}
+.reviews figcaption{margin-top:14px;font-size:15px;color:var(--ink-3);padding-left:26px}
+@media (max-width:760px){.reviews .grid{grid-template-columns:1fr}}
+
+/* faq */
+.faq details{border-top:1px solid var(--rule)}
+.faq details:last-of-type{border-bottom:1px solid var(--rule)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;padding:18px 0;font-family:var(--display);font-weight:600;font-size:19px;color:var(--spruce)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:26px;line-height:1;color:var(--bib-2);flex:none}
+.faq details[open] summary::after{content:"\2013"}
+.faq details p{padding:0 0 20px;color:var(--ink-2);max-width:70ch}
+
+/* contact */
+.contact .grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,56px);align-items:start}
+.contact h2{font-size:clamp(32px,4.2vw,56px);color:var(--spruce)}
+.contact address{font-style:normal;margin-top:18px;font-size:17px;color:var(--ink-2);line-height:1.7}
+.contact address b{color:var(--ink);display:block}
+.contact address a{color:var(--spruce);font-weight:600;text-underline-offset:4px}
+.contact .hours{margin-top:18px;border-top:1px solid var(--rule)}
+.contact .hours div{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--rule);font-size:15.5px}
+.contact iframe{width:100%;aspect-ratio:4/3;border:0;border-radius:14px;display:block;background:var(--sky)}
+@media (max-width:860px){.contact .grid{grid-template-columns:1fr}}
+
+footer{padding:30px 0 40px;font-size:15px;color:var(--ink-3);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--rule)}
+footer a{color:var(--spruce)}
+
+/* phone-only sticky action bar: the thumb-reach part */
+.bar{display:none}
+@media (max-width:760px){
+  body{padding-bottom:78px}
+  .bar{display:grid;grid-template-columns:1fr auto;gap:10px;position:fixed;left:0;right:0;bottom:0;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-top:1px solid var(--rule);z-index:50}
+  .bar .btn{min-height:48px}
+}
+
+/* one orchestrated entrance, hero only */
+@media (prefers-reduced-motion:no-preference){
+  .hero .copy > *{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+  .hero .lede{animation-delay:.08s}
+  .hero .actions{animation-delay:.16s}
+  .hero .photo{animation:rise .7s cubic-bezier(.2,.7,.2,1) .1s both}
+  @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="preview" role="note">
+  <span class="long">Design preview built by Sky Yang, mobile first, for a family snow school in Niseko. First draft: the school name, prices, times and photos are stand-ins until I have the real ones.</span><span class="short">Design preview by Sky Yang. First draft: name, prices, times and photos are stand-ins.</span>
+  <a href="mailto:skyyang333@gmail.com">skyyang333@gmail.com</a>
+</div>
+
+<header>
+  <div class="wrap">
+    <nav class="nav" aria-label="Primary">
+      <a class="mark" href="#top" aria-label="Little Yotei Snow School, home">
+        <svg class="peak" viewBox="0 0 30 26" aria-hidden="true"><path d="M1 25 15 2l14 23Z" fill="#173E35"/><path d="M15 2l-4.2 7 2.2 1.6 2-1.6 2 1.6 2.2-1.6Z" fill="#fff"/><path d="M1 25 15 2l14 23" fill="none" stroke="#173E35" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <span>Little Yotei Snow School<small>Placeholder name, Hirafu, Niseko</small></span>
+      </a>
+      <ul>
+        <li><a href="#programs">Lessons</a></li>
+        <li><a href="#day">The day</a></li>
+        <li><a href="#know">Good to know</a></li>
+        <li><a href="#prices">Prices</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li class="cta"><a class="btn btn-bib" href="#dates">Check dates</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top" style="padding:0">
+  <div class="wrap">
+    <div class="grid">
+      <div class="copy">
+        <h1>Their first powder day, sorted.</h1>
+        <p class="lede">Small-group ski and snowboard lessons for ages 3 to 12 in Hirafu, plus snow-play care for the little ones. English-speaking coaches, five kids per group at most, and a day that runs on time so yours does too.</p>
+        <div class="actions">
+          <a class="btn btn-bib" href="#dates">Check dates and book</a>
+          <a class="textlink" href="#day">See how a day goes</a>
+        </div>
+      </div>
+      <figure class="photo">
+        <img src="hero.jpg" alt="Three small children in orange ski-school bibs sliding down a gentle powder slope toward the birch forest, Mount Yotei behind them" width="1800" height="1200" fetchpriority="high">
+        <figcaption>Placeholder photo. Your real slope, your real kids' club.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<div class="facts">
+  <div class="wrap">
+    <dl>
+      <div><dt>Ages</dt><dd>3 to 12</dd></div>
+      <div><dt>Group size</dt><dd>5 kids at most</dd></div>
+      <div><dt>Meeting point</dt><dd>Hirafu, 2 min from the gondola</dd></div>
+      <div><dt>Coaches speak</dt><dd>English and Japanese</dd></div>
+    </dl>
+  </div>
+</div>
+
+<div class="avail" id="dates">
+  <div class="wrap">
+    <div class="inner">
+      <div>
+        <h2>Check your dates first</h2>
+        <p>Tell us when you are in Niseko and how old the kids are. We reply the same day with what is open, so you can plan the grown-up skiing around it.</p>
+      </div>
+      <form class="check" action="#" method="get" onsubmit="return false">
+        <div><label for="from">First lesson day</label><input id="from" name="from" type="date"></div>
+        <div><label for="to">Last lesson day</label><input id="to" name="to" type="date"></div>
+        <div><label for="kids">How many kids</label><select id="kids" name="kids"><option>1</option><option>2</option><option>3</option><option>4 or more</option></select></div>
+        <div class="go"><label for="ages">Their ages</label><input id="ages" name="ages" type="text" inputmode="numeric" placeholder="e.g. 4 and 7"></div>
+        <div class="go"><button class="btn btn-bib" type="submit">Check availability</button></div>
+        <p class="fine">Under a minute, no payment yet. Peak weeks (late December to mid February) fill six to eight weeks ahead. Example wording; the live form sends to your inbox or booking system.</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<section class="programs" id="programs">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Pick the day that fits your kid</h2>
+      <p>Four ways to do it, all run from the same Hirafu base. Mix them across the week: a full day of lessons on Monday, snow play on Tuesday while you chase the fresh snow, a family private on Friday.</p>
+    </div>
+    <div class="cols">
+      <article>
+        <p class="age">Ages 5 to 12</p>
+        <h3>Kids ski school</h3>
+        <p>Full or half days, grouped by ability on the first morning, the same coach all week wherever we can.</p>
+        <ul><li>Skis or snowboard (board from age 7)</li><li>Lunch and hot chocolate on full days</li><li>Bib with a tracker, photos at pickup</li></ul>
+        <p class="from">From ¥15,500 a day <span>sample price</span></p>
+      </article>
+      <article>
+        <p class="age">Ages 3 to 5</p>
+        <h3>First skis</h3>
+        <p>Ninety minutes on the magic carpet, one coach for one or two little ones, all play: penguin walks, snow snakes, a first tiny slide.</p>
+        <ul><li>Private or two-kid semi-private</li><li>Indoor warm-up room right at the carpet</li><li>Stops when they are done, not when the clock says</li></ul>
+        <p class="from">From ¥14,000 <span>sample price</span></p>
+      </article>
+      <article>
+        <p class="age">Ages 2 to 6</p>
+        <h3>Snow-play care</h3>
+        <p>A whole day for the ones who are not skiing yet, or for the hours after a half-day lesson. Sledding, snow forts, stories, a nap for the smallest.</p>
+        <ul><li>Half or full days, lunch on full days</li><li>Two carers for every eight kids</li><li>Message updates during the day</li></ul>
+        <p class="from">From ¥9,500 a half day <span>sample price</span></p>
+      </article>
+      <article>
+        <p class="age">Any age, any level</p>
+        <h3>Family private</h3>
+        <p>One coach, your whole family, your pace. Good for a first day together, or for finally getting everyone down the same run.</p>
+        <ul><li>Two hours to a full day</li><li>Up to five people, mixed levels welcome</li><li>Meet at your accommodation on request</li></ul>
+        <p class="from">From ¥32,000 for two hours <span>sample price</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="day" id="day">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>How a full day goes</h2>
+      <p>Parents ask for this more than anything else, so it sits on the page. Drop off, ski, eat, ski, pick up with photos. Times shift a little with the weather and the group.</p>
+    </div>
+    <ol class="timeline">
+      <li><time>8:30</time><b>Drop-off</b><span>Boot and helmet check, name tag on the bib, a quick word about your kid's day.</span></li>
+      <li><time>9:00</time><b>Warm-up</b><span>Games on the magic carpet, then the group finds its level for the day.</span></li>
+      <li><time>10:30</time><b>Hot chocolate</b><span>Twenty minutes inside, mittens on the dryer.</span></li>
+      <li><time>11:00</time><b>Second block</b><span>First chairlift for the bigger kids, more carpet laps for the small ones.</span></li>
+      <li><time>12:15</time><b>Lunch</b><span>Warm lunch at the base, allergies handled from your booking notes.</span></li>
+      <li><time>13:15</time><b>Afternoon runs</b><span>The part of the day where it clicks. Coaches film a short clip for you.</span></li>
+      <li><time>14:45</time><b>Wind-down</b><span>Stretch, stickers, gear back in the bag.</span></li>
+      <li><time>15:15</time><b>Pickup</b><span>Two-minute recap from the coach, the day's photos sent to your phone.</span></li>
+    </ol>
+    <p class="fine">Sample day for illustration. The finished site prints your real timetable and the half-day version.</p>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <div class="grid">
+      <img src="lesson.jpg" alt="A coach kneeling in the snow helps a small child in an orange bib step into a short ski beside the magic carpet" width="1000" height="666" loading="lazy">
+      <div>
+        <h2>Why parents book with us</h2>
+        <p class="muted">Sample reasons in the school's voice. The real ones come from your reviews and your coaches.</p>
+        <ul class="reasons">
+          <li><span class="ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.6"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 20c0-2.6 1.6-4.6 4-5"/></svg></span><div><b>Five kids per group, never more</b><span>Small enough that the shy one gets talked to and the fast one gets pushed.</span></div></li>
+          <li><span class="ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 7h16v13H4zM8 4v3M16 4v3M4 11h16"/></svg></span><div><b>The same coach all week</b><span>Book several days and we keep your kid with the coach they started with.</span></div></li>
+          <li><span class="ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 12a8 8 0 1 0 16 0 8 8 0 0 0-16 0Z"/><path d="M12 8v4l3 2"/></svg></span><div><b>Weather calls by 7 am</b><span>If the top lifts are on wind hold or it is minus fifteen, you get a message before breakfast, not at the meeting point.</span></div></li>
+          <li><span class="ico" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 8h4l2-3h4l2 3h4v11H4z"/><circle cx="12" cy="13" r="3"/></svg></span><div><b>Photos and a clip every day</b><span>Sent to your phone at pickup, so the grandparents see the first turns the same evening.</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="know" id="know">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <h2>Good to know before you land</h2>
+        <div class="lists">
+          <div>
+            <h3>Bring</h3>
+            <ul><li>Helmet and goggles (we can rent both)</li><li>Mittens, not gloves, and a spare pair</li><li>Neck warmer instead of a scarf</li><li>Sunscreen, even on grey days</li><li>A small snack they actually like</li></ul>
+          </div>
+          <div>
+            <h3>We handle</h3>
+            <ul><li>Skis, boots and poles sized on day one</li><li>Lift tickets for lesson hours</li><li>Lunch and hot chocolate on full days</li><li>The tracker bib and a name tag</li><li>Shuttle from Hirafu accommodation on request</li></ul>
+          </div>
+        </div>
+        <div class="weather"><b>January mornings run around minus eight to minus twelve.</b> Kids do fine in it when they are dressed in layers and move a lot, which is the whole plan. On the rare very cold or very windy morning we stay low on the carpet or go inside, and we tell you by 7 am.</div>
+      </div>
+      <img src="lodge.jpg" alt="Small mittens and knit hats drying on a rack beside a lodge window while heavy snow falls outside, a mug of hot chocolate on a birch table" width="1000" height="838" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="prices" id="prices">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Prices</h2>
+      <p>Everything in yen, everything including tax. Multi-day bookings get the same coach and a lower day rate from the third day.</p>
+    </div>
+    <table>
+      <caption>Example figures for the layout. Your real price list replaces them.</caption>
+      <thead><tr><th scope="col">Lesson</th><th scope="col">Price</th><th scope="col">Includes</th></tr></thead>
+      <tbody>
+        <tr><td>Kids ski school, full day<span class="sub">Ages 5 to 12, 8:30 to 15:15</span></td><td class="p">¥15,500</td><td>Lift ticket for lesson hours, lunch, hot chocolate, photos</td></tr>
+        <tr><td>Kids ski school, half day<span class="sub">Morning or afternoon, 3 hours</span></td><td class="p">¥9,800</td><td>Lift ticket for lesson hours, hot chocolate, photos</td></tr>
+        <tr><td>First skis, 90 minutes<span class="sub">Ages 3 to 5, one or two kids</span></td><td class="p">¥14,000</td><td>Coach, carpet access, warm room</td></tr>
+        <tr><td>Snow-play care, full day<span class="sub">Ages 2 to 6, 8:30 to 15:15</span></td><td class="p">¥17,000</td><td>Lunch, snacks, all play gear, updates during the day</td></tr>
+        <tr><td>Family private, two hours<span class="sub">Up to five people</span></td><td class="p">¥32,000</td><td>One coach for the family, meet at your door on request</td></tr>
+      </tbody>
+    </table>
+    <p class="fine">Third day onwards: minus ten percent on lesson days. Rentals are extra and booked through our rental partner at drop-off. Cancellation free up to 48 hours before, full credit for weather closures.</p>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <div class="grid">
+      <figure>
+        <blockquote>Our five-year-old refused to put skis on at home. Day two here she was asking to go back after lunch. The daily photos were the best part of our trip.</blockquote>
+        <figcaption>Sample review, written for the layout. Real reviews go here with the parent's first name and where they came from.</figcaption>
+      </figure>
+      <figure>
+        <blockquote>Same coach all four days, a text at 6:50 when the gondola was on wind hold, and a plan B already sorted. That is what you pay for.</blockquote>
+        <figcaption>Sample review, written for the layout.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Questions parents ask</h2>
+      <p>Short answers here, the long version in your booking confirmation.</p>
+    </div>
+    <details><summary>My kid has never seen snow. Is a full day too much?</summary><p>Usually yes for a first day under six. Start with First skis or a half day, then move to full days once they ask for more. We will tell you honestly at pickup.</p></details>
+    <details><summary>Can two kids of different ages be in the same group?</summary><p>Groups are by ability, not age, so a seven-year-old and a nine-year-old who are both starting out will often ski together. Under-fives stay in First skis.</p></details>
+    <details><summary>What happens on a very cold or windy day?</summary><p>We message you by 7 am. Lessons stay low on the carpet with more indoor breaks, or switch to snow play, or we credit the day. You are never charged for a day we cancel.</p></details>
+    <details><summary>Do you speak English?</summary><p>All coaches teach in English. Several also speak Japanese, and we can arrange Mandarin or Cantonese for private lessons with notice.</p></details>
+    <details><summary>How far ahead should we book?</summary><p>For late December to mid February, six to eight weeks. Shoulder weeks often have space a few days out. Check your dates above and we will tell you the same day.</p></details>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <h2>Find us in Hirafu</h2>
+        <address>
+          <b>Little Yotei Snow School (placeholder)</b>
+          Hirafu Village, Kutchan, Hokkaido<br>
+          Two minutes on foot from the Hirafu gondola, next to the beginner carpet.<br>
+          <a href="tel:+81000000000">+81 (0)00 000 0000</a> (placeholder)<br>
+          <a href="mailto:hello@example.com">hello@example.com</a> (placeholder)<br>
+          WhatsApp and LINE for booked families, so you can reach the coach from the lift.
+        </address>
+        <div class="hours">
+          <div><span>Winter season desk</span><span>8:00 to 17:00, every day</span></div>
+          <div><span>Drop-off</span><span>8:30, half-day afternoons 12:30</span></div>
+          <div><span>Pickup</span><span>15:15, half-day mornings 11:45</span></div>
+        </div>
+        <p class="fine" style="margin-top:14px">Sample hours. The finished site prints your real season dates and times.</p>
+      </div>
+      <iframe title="Map of Hirafu Village, Kutchan, Hokkaido" src="https://www.google.com/maps?q=Hirafu+Village+Kutchan+Hokkaido&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <span>Little Yotei Snow School is a placeholder name for this first draft. Design preview by <a href="mailto:skyyang333@gmail.com">Sky Yang</a>, San Francisco.</span>
+  <a href="#top">Back to top</a>
+</footer>
+
+<div class="bar" aria-label="Quick actions">
+  <a class="btn btn-bib" href="#dates">Check dates</a>
+  <a class="btn btn-ghost" href="tel:+81000000000" aria-label="Call the school">Call</a>
+</div>
+</body>
+</html>
