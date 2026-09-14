@@ -4,282 +4,332 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Reno Buggie Barn · Volkswagen Repair in Reno, NV, since 1972</title>
+<meta name="theme-color" content="#E8E1D2">
+<title>Reno Buggie Barn: Volkswagen Repair in Reno, NV, since 1972</title>
 <meta name="description" content="Reno Buggie Barn is a family owned Volkswagen repair shop in Reno, NV, established in 1972. Air-cooled and water-cooled VW service, Porsche 914, engine and transmission rebuilds, in-house machine shop, restorations and sandrails. (775) 329-0940.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f6f7f9;--bg2:#e9edf3;--ink:#1b2230;--muted:#586170;--accent:#2b3f66;--accent-ink:#ffffff;--line:#d7dde7;--card:#ffffff;--display:'Barlow Condensed',serif;--body:'Barlow',system-ui,sans-serif;--radius:10px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font-family:var(--body);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
+:root{
+  --dune:#E8E1D2; --paper:#F4F0E6; --sea:#2E5578; --sea-2:#3B6A93; --ruby:#9E2A2B; --ink:#22242A; --ink-2:#5A5C63; --rule:#D3CBB9;
+  --font:"Jost",system-ui,sans-serif; --max:1220px; --gutter:clamp(18px,4vw,56px);
+}
+*{box-sizing:border-box} html{color-scheme:light;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--dune);color:var(--ink);font-family:var(--font);font-size:17.5px;line-height:1.55;-webkit-font-smoothing:antialiased;touch-action:manipulation;padding-bottom:64px}
+@media (min-width:761px){body{padding-bottom:0}}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-.wrap.narrow{max-width:820px}
-.preview-bar{background:#111;color:#fff;font:500 13px/1.4 var(--body);text-align:center;padding:8px 12px}
-.preview-bar a{color:#fff}
-header.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
-.brand{font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:.2px;text-decoration:none;display:flex;align-items:center;gap:10px}
-.brand .mark{width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:17px}
-nav.links{display:flex;gap:22px;font-size:15px}
-nav.links a{text-decoration:none;color:var(--muted)}
-nav.links a:hover{color:var(--ink)}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:12px 20px;border-radius:999px;border:1px solid transparent;transition:.15s}
-.btn:hover{filter:brightness(.95)}
-.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
-.btn.small{padding:9px 16px;font-size:14px}
-.hero{position:relative;min-height:620px;display:grid;align-items:end;color:#fff;isolation:isolate}
-.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.35) 45%,rgba(0,0,0,.75) 100%);z-index:-1}
-.hero .wrap{padding-top:96px;padding-bottom:64px}
-.hero .eyebrow{color:#fff;opacity:.9}
-.hero h1{font-family:var(--display);font-size:clamp(38px,6vw,72px);line-height:1.02;margin:0 0 14px;max-width:16ch;font-weight:700;text-wrap:balance}
-.hero p.sub{font-size:clamp(17px,2vw,21px);max-width:56ch;margin:0 0 28px;opacity:.95}
-.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
-.hero .btn.ghost{color:#fff;border-color:rgba(255,255,255,.6)}
-.hero .meta{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:28px;font-size:14px;opacity:.9}
-.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:700;color:var(--accent);margin:0 0 10px}
-.section{padding:88px 0}
-.section.alt{background:var(--bg2)}
-.section h2{font-family:var(--display);font-size:clamp(30px,4vw,44px);line-height:1.1;margin:0 0 18px;font-weight:700;text-wrap:balance}
-.lead{font-size:18px;color:var(--muted);max-width:62ch}
-.highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:-56px;position:relative;z-index:2}
-.hl{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
-.hl-icon{font-size:26px;margin-bottom:10px}
-.hl h3{margin:0 0 6px;font-size:18px}
-.hl p{margin:0;color:var(--muted);font-size:15px}
-.two{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
-.groups{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;margin-top:36px}
-.group-title{font-family:var(--display);font-size:24px;margin:0 0 6px}
-.group-note{margin:0 0 12px;color:var(--muted);font-size:14px}
-ul.items{list-style:none;margin:0;padding:0}
-ul.items li{padding:14px 0;border-bottom:1px dashed var(--line)}
-.item-head{display:flex;align-items:baseline;gap:10px}
-.item-name{font-weight:600}
-.dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px)}
-.item-price{font-weight:600;white-space:nowrap}
-.item-desc{margin:4px 0 0;color:var(--muted);font-size:15px}
-.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
-.review{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
-.review .stars{color:#e0a100;letter-spacing:2px;font-size:15px}
-.review blockquote{margin:12px 0 14px;font-size:16.5px;line-height:1.55}
-.review figcaption{font-weight:600;font-size:14px}
-.review figcaption span{color:var(--muted);font-weight:400}
-.rating-line{margin-top:14px;color:var(--muted);font-size:15px}
-.about-facts{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.about-facts li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:2px}
-.about-facts strong{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
-.about-facts span{font-weight:600}
-ul.checks{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px}
-ul.checks li{padding-left:30px;position:relative}
-ul.checks li::before{content:"✓";position:absolute;left:0;top:0;color:var(--accent);font-weight:700}
-.visit{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
-table.hours{border-collapse:collapse;width:100%;margin-top:14px}
-table.hours th{text-align:left;font-weight:600;padding:10px 0;border-bottom:1px solid var(--line);width:40%}
-table.hours td{padding:10px 0;border-bottom:1px solid var(--line);color:var(--muted)}
-.map{border:0;width:100%;height:100%;min-height:380px;border-radius:var(--radius);filter:saturate(.9)}
-.contact-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;margin-top:22px}
-.contact-card p{margin:6px 0}
-.contact-card a{text-decoration:none;font-weight:600}
-.cta-band{background:var(--accent);color:var(--accent-ink);padding:72px 0;text-align:center}
-.cta-band h2{font-family:var(--display);font-size:clamp(28px,4vw,40px);margin:0 0 12px}
-.cta-band p{margin:0 auto 24px;max-width:56ch;opacity:.92;font-size:18px}
-.cta-band .btn{background:var(--accent-ink);color:var(--accent)}
-footer{padding:36px 0;font-size:14px;color:var(--muted)}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-footer .socials{display:flex;gap:16px}
-footer a{text-decoration:none}
-.mobile-cta{display:none}
-@media (max-width:860px){
-  nav.links{display:none}
-  .highlights,.reviews,.groups,.two,.visit,.about-facts{grid-template-columns:1fr}
-  .highlights{margin-top:24px}
-  .hero{min-height:540px}
-  .section{padding:64px 0}
-  .map{min-height:300px}
-  .item-price{white-space:normal;text-align:right;max-width:58%}
-  .brand{font-size:19px;line-height:1.1}
-  .nav .btn.small{white-space:nowrap;padding:8px 12px;font-size:13px}
-  .mobile-cta{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:30;background:var(--card);border-top:1px solid var(--line);padding:10px 14px;gap:10px}
-  .mobile-cta .btn{flex:1;justify-content:center}
-  body{padding-bottom:64px}
+h1,h2,h3{font-weight:600;line-height:1.05;letter-spacing:-.015em;margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter)}
+:focus-visible{outline:3px solid var(--ruby);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--sea);color:#fff;padding:8px 12px;z-index:50}
+.skip:focus{left:8px}
+
+.preview{background:var(--ink);color:#D9D4C8;font-size:13px;padding:7px var(--gutter);display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap}
+.preview a{color:#fff;text-underline-offset:3px;text-decoration-thickness:1px}
+
+.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0 18px;border-bottom:1px solid var(--rule)}
+.mark{text-decoration:none;font-weight:700;font-size:23px;letter-spacing:-.01em;color:var(--sea)}
+.mark small{display:block;font-weight:500;font-size:13.5px;color:var(--ink-2);letter-spacing:0;margin-top:2px}
+.nav ul{list-style:none;display:flex;gap:26px;margin:0;padding:0;font-weight:500;font-size:16px}
+.nav ul a{text-decoration:none;color:var(--ink-2)}
+.nav ul a:hover{color:var(--sea)}
+.nav .call{text-decoration:none;font-weight:600;color:var(--sea)}
+@media (max-width:880px){.nav ul{display:none}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:center;padding:clamp(40px,6vw,84px) 0 clamp(28px,4vw,52px)}
+.hero h1{font-size:clamp(38px,5.4vw,76px);color:var(--sea);max-width:16ch}
+.hero .lede{font-size:clamp(17px,1.4vw,20px);color:var(--ink-2);max-width:50ch;margin-top:22px}
+.actions{display:flex;gap:16px;align-items:center;margin-top:30px;flex-wrap:wrap}
+.btn{text-decoration:none;font-weight:600;font-size:17px;display:inline-flex;align-items:center;padding:14px 24px;border-radius:3px;transition:background-color .18s ease,color .18s ease,transform .18s ease}
+.btn-solid{background:var(--sea);color:#fff}
+.btn-solid:hover{background:var(--sea-2)}
+.btn:active{transform:translateY(1px)}
+.textlink{font-weight:500;color:var(--sea);text-underline-offset:5px;text-decoration-thickness:1.5px}
+.textlink:hover{color:var(--ruby)}
+.mount{position:relative;margin:0;padding:14px;border:1px solid var(--sea);background:var(--paper)}
+.mount::after{content:"";position:absolute;inset:6px;border:1px solid var(--rule);pointer-events:none}
+.mount img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.mount figcaption{font-size:13.5px;color:var(--ink-2);padding:10px 2px 0;display:flex;justify-content:space-between;gap:12px}
+@media (max-width:880px){.hero{grid-template-columns:1fr}}
+
+/* paint chips */
+.chips{border-top:1px solid var(--sea);border-bottom:1px solid var(--rule);padding:18px 0 22px}
+.chips p{font-size:15px;color:var(--ink-2);margin-bottom:12px}
+.chip-row{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.chip{display:block}
+.chip i{display:block;height:54px;border:1px solid rgba(0,0,0,.18)}
+.chip b{display:block;font-weight:600;font-size:14px;margin-top:7px;color:var(--ink)}
+.chip span{display:block;font-size:13px;color:var(--ink-2)}
+@media (max-width:760px){.chip-row{grid-template-columns:repeat(3,1fr)}}
+
+section{padding:clamp(52px,7vw,96px) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(20px,4vw,64px);align-items:end;margin-bottom:clamp(24px,3vw,40px)}
+.sec-head h2{font-size:clamp(32px,4.2vw,56px);color:var(--sea)}
+.sec-head p{color:var(--ink-2);font-size:18px;max-width:54ch}
+@media (max-width:760px){.sec-head{grid-template-columns:1fr}}
+
+/* services: two ruled columns */
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,56px);border-top:1px solid var(--sea)}
+.svc h3{font-size:24px;color:var(--sea);padding:20px 0 6px}
+.svc table{width:100%;border-collapse:collapse}
+.svc td{padding:11px 0;border-top:1px solid var(--rule);vertical-align:top;font-size:16.5px}
+.svc tr:first-child td{border-top:0}
+.svc td:first-child{font-weight:600;width:42%;padding-right:18px}
+.svc td:last-child{color:var(--ink-2)}
+.svc-foot{margin-top:22px;color:var(--ink-2);font-size:15.5px;border-top:1px solid var(--rule);padding-top:14px}
+@media (max-width:760px){.svc{grid-template-columns:1fr}}
+
+/* machine shop band */
+.machine{background:var(--sea);color:#fff}
+.machine .inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:center}
+.machine h2{font-size:clamp(34px,4.6vw,62px);color:#fff}
+.machine p{color:#CFDCE8;font-size:18px;margin-top:18px;max-width:50ch}
+.machine ul{list-style:none;margin:0;padding:0;font-size:17px;columns:2;column-gap:28px}
+.machine li{padding:10px 0;border-top:1px solid rgba(255,255,255,.22);break-inside:avoid}
+.machine img{width:100%;aspect-ratio:3/2;object-fit:cover;margin-top:26px}
+@media (max-width:880px){.machine .inner{grid-template-columns:1fr}.machine ul{columns:1}}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:start}
+.about h2{font-size:clamp(32px,4.2vw,56px);color:var(--sea);margin-bottom:18px}
+.about p{color:var(--ink-2);font-size:17.5px}
+.about p + p{margin-top:12px}
+.kv{width:100%;border-collapse:collapse;margin-top:22px;font-size:16px}
+.kv td{padding:9px 0;border-top:1px solid var(--rule)}
+.kv td:first-child{color:var(--ink-2);width:34%}
+.kv tr:last-child td{border-bottom:1px solid var(--sea)}
+.about img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.year{font-weight:700;font-size:clamp(64px,8vw,120px);line-height:.9;color:var(--ruby);letter-spacing:-.04em;margin:0 0 6px}
+.year + p{font-size:15px;color:var(--ink-2);margin-bottom:22px}
+@media (max-width:880px){.about{grid-template-columns:1fr}}
+
+/* reviews */
+.quotes{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--sea)}
+.quotes blockquote{margin:0;padding:24px 28px 26px 0;border-bottom:1px solid var(--rule);font-size:clamp(18px,1.5vw,21px);line-height:1.4}
+.quotes blockquote:nth-child(odd){border-right:1px solid var(--rule)}
+.quotes blockquote:nth-child(even){padding-left:28px;padding-right:0}
+.quotes footer{margin-top:12px;font-size:15px;color:var(--ink-2)}
+.rating{margin-top:20px;color:var(--ink-2);font-size:15px}
+@media (max-width:760px){.quotes{grid-template-columns:1fr}.quotes blockquote{border-right:0!important;padding-left:0!important;padding-right:0!important}}
+
+/* visit */
+.visit{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,4vw,64px);align-items:start}
+.visit h2{font-size:clamp(32px,4.2vw,56px);color:var(--sea);margin-bottom:18px}
+.hours{width:100%;border-collapse:collapse;font-size:16px;font-variant-numeric:tabular-nums}
+.hours td{padding:8px 0;border-top:1px solid var(--rule)}
+.hours td:last-child{text-align:right}
+.hours tr:last-child td{border-bottom:1px solid var(--sea)}
+.visit .note{color:var(--ink-2);font-size:15.5px;margin-top:16px}
+.map{width:100%;aspect-ratio:4/3;border:0}
+.addr{margin-top:12px;font-size:16px}
+@media (max-width:880px){.visit{grid-template-columns:1fr}}
+
+.final{border-top:1px solid var(--sea);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(20px,4vw,64px);align-items:center;padding:clamp(40px,5vw,72px) 0}
+.final h2{font-size:clamp(34px,4.4vw,60px);color:var(--sea)}
+.final p{color:var(--ink-2);font-size:18px;margin-top:14px;max-width:46ch}
+.final .btns{display:flex;flex-direction:column;gap:12px}
+.final .btn{justify-content:center}
+.btn-ghost{border:1.5px solid var(--sea);color:var(--sea)}
+.btn-ghost:hover{background:var(--sea);color:#fff}
+@media (max-width:880px){.final{grid-template-columns:1fr}}
+
+footer.site{padding:26px 0 40px;font-size:15px;color:var(--ink-2);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:1px solid var(--rule)}
+footer.site nav{display:flex;gap:16px;flex-wrap:wrap}
+
+.callbar{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr;background:var(--sea);z-index:40;padding-bottom:env(safe-area-inset-bottom)}
+.callbar a{color:#fff;text-decoration:none;font-weight:600;text-align:center;padding:16px 10px;font-size:16px}
+.callbar a + a{border-left:1px solid rgba(255,255,255,.25)}
+@media (min-width:761px){.callbar{display:none}}
+
+@media (prefers-reduced-motion:no-preference){
+  .hero > *{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+  .mount{animation-delay:.12s}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 }
 </style>
 </head>
 <body>
-<div class="preview-bar">Design preview built by Sky Yang for Reno Buggie Barn · photos are placeholders until your own are added · <a href="tel:6505188626">650-518-8626</a></div>
-<header class="nav"><div class="wrap">
-  <a class="brand" href="#top"><span class="mark">🪲</span>Reno Buggie Barn</a>
-  <nav class="links"><a href="#services">Services</a><a href="#about">About</a><a href="#machine-shop">Machine shop</a><a href="#reviews">Reviews</a><a href="#visit">Hours &amp; location</a></nav>
-  <a class="btn small" href="tel:7753290940">Call (775) 329-0940</a>
-</div></header>
+<a class="skip" href="#main">Skip to content</a>
+<div class="preview" role="note">
+  <span>Design preview built by Sky Yang for Reno Buggie Barn. Everything comes from your public listings; photos are placeholders until we get yours.</span>
+  <a href="mailto:skyyang333@gmail.com">skyyang333@gmail.com</a>
+</div>
 
-<section class="hero" id="top">
-  <img src="hero.jpg" alt="A classic Volkswagen Beetle on a lift inside a tidy repair shop, with a vintage VW bus in the next bay" fetchpriority="high">
-  <div class="wrap">
-    <p class="eyebrow">Family owned and operated since 1972</p>
-    <h1>From your '56 oval window to your 2013 Jetta.</h1>
-    <p class="sub">Reno Buggie Barn is one of the oldest Volkswagen repair shops in the Reno area. We specialize in both air-cooled and water-cooled VWs, with tune-ups, brakes, complete engine and transmission rebuilds, an in-house machine shop and full restorations.</p>
-    <div class="cta"><a class="btn" href="tel:7753290940">Call (775) 329-0940</a><a class="btn ghost" href="mailto:renobuggiebarn@att.net">Email the shop</a></div>
-    <div class="meta"><span>Established 1972</span><span>Air-cooled &amp; water-cooled VW</span><span>Porsche 914</span><span>In-house machine shop</span><span>Free estimates</span><span>Mon–Fri 7:30 am – 4:30 pm</span></div>
-  </div>
-</section>
+<header class="wrap">
+  <nav class="nav" aria-label="Primary">
+    <a class="mark" href="#top">Reno Buggie Barn<small>Volkswagen repair, Reno, since 1972</small></a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#machine-shop">Machine shop</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#visit">Hours and location</a></li>
+    </ul>
+    <a class="call" href="tel:7753290940">(775) 329-0940</a>
+  </nav>
+</header>
 
-<div class="wrap"><div class="highlights">
-      <div class="hl">
-        <div class="hl-icon">🔧</div>
-        <h3>Volkswagen specialists</h3>
-        <p>Everything from a '56 oval window Beetle to a 2013 Jetta. Over 70 years of combined experience on air-cooled and water-cooled VWs, plus the Porsche 914.</p>
-      </div>
-      <div class="hl">
-        <div class="hl-icon">⚙️</div>
-        <h3>Machine shop in-house</h3>
-        <p>Line boring, valve grinding, head machining and drum and rotor turning are done right here, so engine work doesn't wait on an outside shop.</p>
-      </div>
-      <div class="hl">
-        <div class="hl-icon">🏜️</div>
-        <h3>Sandrails and restorations</h3>
-        <p>Custom fabrication for sandrails and dune buggies, complete restorations, wiring and engine building, along with a full range of VW parts.</p>
-      </div></div></div>
-
-<section id="services" class="section">
-  <div class="wrap">
-    <p class="eyebrow">Services</p>
-    <h2>Everything a Volkswagen needs</h2>
-    <p class="lead">Routine maintenance, diagnostics and the big jobs, all under one roof. Free estimates. Call the shop or send an email to set up a time.</p>
-    <div class="groups">
-      <div class="group">
-        <h3 class="group-title">Maintenance &amp; repair</h3>
-        
-        <ul class="items">
-          <li>
-            <div class="item-head"><span class="item-name">Tune-ups</span></div>
-            <p class="item-desc">Keep your VW running the way it should, air-cooled or water-cooled.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Brakes</span></div>
-            <p class="item-desc">Brake service and repair, including drum and rotor turning in our own machine shop.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Oil changes &amp; routine maintenance</span></div>
-            <p class="item-desc">Scheduled service to keep older and newer Volkswagens reliable.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Charging, cooling &amp; fuel systems</span></div>
-            <p class="item-desc">Charging system, cooling system and fuel system repairs.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Code scanning &amp; diagnostics</span></div>
-            <p class="item-desc">Check-engine lights and electrical faults traced and fixed.</p>
-          </li>
-        </ul>
-      </div>
-      <div class="group">
-        <h3 class="group-title">Engines, transmissions &amp; builds</h3>
-        
-        <ul class="items">
-          <li>
-            <div class="item-head"><span class="item-name">Complete engine rebuilds</span></div>
-            <p class="item-desc">Engine building and rebuilding for air-cooled and water-cooled VWs.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Transmission repair &amp; rebuilds</span></div>
-            <p class="item-desc">Transmission service, leak inspection, repair and complete rebuilds.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Wiring</span></div>
-            <p class="item-desc">Harness repair and rewiring for classics and customs.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Complete restoration</span></div>
-            <p class="item-desc">Bring a classic back, from mechanical work to the details.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Custom fabrication</span></div>
-            <p class="item-desc">Custom-built sandrails and dune buggies.</p>
-          </li>
-        </ul>
-      </div></div>
-    <p class="group-note" style="margin-top:22px">Free estimates. Full range of Volkswagen parts available. Credit cards accepted.</p>
-  </div>
-</section>
-
-<section id="about" class="section alt">
-  <div class="wrap two">
+<main id="main" class="wrap">
+  <section class="hero" id="top" style="padding-bottom:0">
     <div>
-      <p class="eyebrow">About</p>
+      <h1>From your '56 oval window to your 2013 Jetta.</h1>
+      <p class="lede">Reno Buggie Barn is one of the oldest Volkswagen repair shops in the Reno area. We specialize in both air-cooled and water-cooled VWs, with tune-ups, brakes, complete engine and transmission rebuilds, an in-house machine shop and full restorations.</p>
+      <div class="actions">
+        <a class="btn btn-solid" href="tel:7753290940">Call (775) 329-0940</a>
+        <a class="textlink" href="mailto:renobuggiebarn@att.net">Email the shop</a>
+      </div>
+    </div>
+    <figure class="mount">
+      <img src="hero.jpg" width="1800" height="1200" alt="A classic Volkswagen Beetle on a lift inside a tidy repair shop, with a vintage VW bus in the next bay" fetchpriority="high">
+      <figcaption><span>Placeholder photo. Your shop and your customers' cars go here.</span><span>295 Gentry Way, Suite 12</span></figcaption>
+    </figure>
+  </section>
+
+  <div class="chips" aria-label="Volkswagen factory colors we see every week" style="margin-top:clamp(28px,4vw,48px)">
+    <p>A few of the factory colors that roll through the shop, air-cooled and water-cooled alike.</p>
+    <div class="chip-row">
+      <span class="chip"><i style="background:#F2EEE3"></i><b>L87</b><span>Pearl White</span></span>
+      <span class="chip"><i style="background:#2E5578"></i><b>L360</b><span>Sea Blue</span></span>
+      <span class="chip"><i style="background:#9E2A2B"></i><b>L456</b><span>Ruby Red</span></span>
+      <span class="chip"><i style="background:#C9B48A"></i><b>L620</b><span>Savanna Beige</span></span>
+      <span class="chip"><i style="background:#E9B426"></i><b>L13M</b><span>Saturn Yellow</span></span>
+      <span class="chip"><i style="background:#1A1A1C"></i><b>L41</b><span>Black</span></span>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="sec-head">
+      <h2>Everything a Volkswagen needs</h2>
+      <p>Routine maintenance, diagnostics and the big jobs, all under one roof. Free estimates. Call the shop or send an email to set up a time.</p>
+    </div>
+    <div class="svc">
+      <div>
+        <h3>Maintenance and repair</h3>
+        <table>
+          <tr><td>Tune-ups</td><td>Keep your VW running the way it should, air-cooled or water-cooled.</td></tr>
+          <tr><td>Brakes</td><td>Brake service and repair, including drum and rotor turning in our own machine shop.</td></tr>
+          <tr><td>Oil changes and routine maintenance</td><td>Scheduled service to keep older and newer Volkswagens reliable.</td></tr>
+          <tr><td>Charging, cooling and fuel systems</td><td>Charging system, cooling system and fuel system repairs.</td></tr>
+          <tr><td>Code scanning and diagnostics</td><td>Check-engine lights and electrical faults traced and fixed.</td></tr>
+        </table>
+      </div>
+      <div>
+        <h3>Engines, transmissions and builds</h3>
+        <table>
+          <tr><td>Complete engine rebuilds</td><td>Engine building and rebuilding for air-cooled and water-cooled VWs.</td></tr>
+          <tr><td>Transmission repair and rebuilds</td><td>Transmission service, leak inspection, repair and complete rebuilds.</td></tr>
+          <tr><td>Wiring</td><td>Harness repair and rewiring for classics and customs.</td></tr>
+          <tr><td>Complete restoration</td><td>Bring a classic back, from mechanical work to the details.</td></tr>
+          <tr><td>Custom fabrication</td><td>Custom-built sandrails and dune buggies.</td></tr>
+        </table>
+      </div>
+    </div>
+    <p class="svc-foot">Free estimates. Full range of Volkswagen parts available. Credit cards accepted.</p>
+  </section>
+</main>
+
+<section class="machine" id="machine-shop">
+  <div class="wrap inner">
+    <div>
+      <h2>The heavy work happens here</h2>
+      <p>Most shops send machine work out. Ours is in-house, which means engine builds, head work and brake machining are done by the same people who know your car, on our schedule rather than someone else's.</p>
+      <img src="img-2.jpg" width="1400" height="933" alt="A rebuilt air-cooled Volkswagen flat-four engine on a stand with fresh black tinware" loading="lazy">
+    </div>
+    <ul>
+      <li>Line boring</li>
+      <li>Valve grinding</li>
+      <li>Head machining</li>
+      <li>Drum and rotor turning</li>
+      <li>Engine building and complete rebuilds</li>
+      <li>Custom fabrication: sandrails and dune buggies</li>
+      <li>Complete restorations</li>
+    </ul>
+  </div>
+</section>
+
+<main class="wrap" aria-label="About, reviews and hours">
+  <section class="about" id="about">
+    <div>
+      <p class="year">1972</p>
+      <p>Family owned and operated ever since</p>
       <h2>A Reno VW shop since 1972</h2>
-      <p>Reno Buggie Barn has been a family owned and operated business since 1972, making it one of the oldest Volkswagen repair shops in the Reno area. We specialize in both air-cooled and water-cooled Volkswagen cars, everything from your '56 oval window to your 2013 Jetta.</p><p>You'll find Spencer at the front desk. Customers who have brought their Bugs, buses, Ghias and 914s here for decades say the same things: the work is first class, and the shop explains what it did and why.</p><p>We started on East 2nd Street and are now at 295 Gentry Way, Suite 12, with over 70 years of combined experience in the shop and a machine shop in-house.</p>
+      <p>Reno Buggie Barn has been a family owned and operated business since 1972, making it one of the oldest Volkswagen repair shops in the Reno area. We specialize in both air-cooled and water-cooled Volkswagen cars, everything from your '56 oval window to your 2013 Jetta.</p>
+      <p>You'll find Spencer at the front desk. Customers who have brought their Bugs, buses, Ghias and 914s here for decades say the same things: the work is first class, and the shop explains what it did and why.</p>
+      <p>We started on East 2nd Street and are now at 295 Gentry Way, Suite 12, with over 70 years of combined experience in the shop and a machine shop in-house.</p>
+      <table class="kv">
+        <tr><td>Established</td><td>1972</td></tr>
+        <tr><td>Ownership</td><td>Family owned and operated</td></tr>
+        <tr><td>Specialty</td><td>Air-cooled and water-cooled Volkswagen, Porsche 914</td></tr>
+        <tr><td>In-house</td><td>Machine shop, fabrication, restoration</td></tr>
+        <tr><td>Experience</td><td>Over 70 years combined</td></tr>
+        <tr><td>Estimates</td><td>Free</td></tr>
+      </table>
     </div>
-    <div>
-      <ul class="about-facts"><li><strong>Established</strong><span>1972</span></li><li><strong>Ownership</strong><span>Family owned and operated</span></li><li><strong>Specialty</strong><span>Air-cooled &amp; water-cooled Volkswagen, Porsche 914</span></li><li><strong>In-house</strong><span>Machine shop, fabrication, restoration</span></li><li><strong>Experience</strong><span>Over 70 years combined</span></li><li><strong>Estimates</strong><span>Free</span></li></ul>
+    <img src="img-3.jpg" width="1400" height="933" alt="A custom tube-frame sandrail parked on Nevada desert sand at dusk" loading="lazy">
+  </section>
+
+  <section id="reviews">
+    <div class="sec-head">
+      <h2>What VW owners say</h2>
+      <p>Bugs, Ghias, 914s and Tiguans, some of them coming back for 25 years.</p>
     </div>
-  </div>
-</section>
+    <div class="quotes">
+      <blockquote>“Spencer and his son are the best. They've done maintenance and repair on three of my bugs over the past 25 years. The work is always top notch. I wouldn't go anywhere else.”<footer>Big J, Google</footer></blockquote>
+      <blockquote>“Buggie Barn has been my 'go to' resource to keep my Karman Ghia and Porsche 914 on the road for over a decade. I appreciate Spencer's guidance and recommendations. The work is always first class.”<footer>James K., Yelp</footer></blockquote>
+      <blockquote>“Spencer had the answers to all my questions. He got my car I had just purchased right in and went over it thoroughly. He pointed out the good and the bad. A pleasure to work with, won't bring my bug anywhere else.”<footer>Robert P., Yelp</footer></blockquote>
+      <blockquote>“When I picked up the Tiguan, Spencer had the parts he had replaced, and explained the repair to me. WOW, imagine that, a mechanic that explains the repair work to you!”<footer>Mel J., Yelp</footer></blockquote>
+    </div>
+    <p class="rating">4.8 stars on Yelp (47 reviews). 4.7 stars on Google (41 reviews). Established 1972.</p>
+  </section>
 
-
-    <section id="machine-shop" class="section alt">
-      <div class="wrap narrow">
-        <p class="eyebrow">Machine shop &amp; fabrication</p>
-        <h2>The heavy work happens here</h2>
-        <p class="lead">Most shops send machine work out. Ours is in-house, which means engine builds, head work and brake machining are done by the same people who know your car, on our schedule rather than someone else's.</p>
-        <ul class="checks"><li>Line boring</li><li>Valve grinding</li><li>Head machining</li><li>Drum and rotor turning</li><li>Engine building and complete rebuilds</li><li>Custom fabrication: sandrails and dune buggies</li><li>Complete restorations</li></ul>
-      </div>
-    </section>
-
-<section id="reviews" class="section">
-  <div class="wrap">
-    <p class="eyebrow">Reviews</p>
-    <h2>What VW owners say</h2>
-    <div class="reviews">
-      <figure class="review">
-        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <blockquote>“Spencer and his son are the best. They've done maintenance and repair on three of my bugs over the past 25 years. The work is always top notch. I wouldn't go anywhere else.”</blockquote>
-        <figcaption>Big J <span>· Google</span></figcaption>
-      </figure>
-      <figure class="review">
-        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <blockquote>“Buggie Barn has been my 'go to' resource to keep my Karman Ghia and Porsche 914 on the road for over a decade. I appreciate Spencer's guidance and recommendations. The work is always first class.”</blockquote>
-        <figcaption>James K. <span>· Yelp</span></figcaption>
-      </figure>
-      <figure class="review">
-        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <blockquote>“Spencer had the answers to all my questions. He got my car I had just purchased right in and went over it thoroughly. He pointed out the good and the bad. A pleasure to work with, won't bring my bug anywhere else.”</blockquote>
-        <figcaption>Robert P. <span>· Yelp</span></figcaption>
-      </figure>
-      <figure class="review">
-        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <blockquote>“When I picked up the Tiguan, Spencer had the parts he had replaced, and explained the repair to me. WOW, imagine that, a mechanic that explains the repair work to you!”</blockquote>
-        <figcaption>Mel J. <span>· Yelp</span></figcaption>
-      </figure></div>
-    <p class="rating-line">4.8 stars on Yelp (47 reviews) · 4.7 stars on Google (41 reviews) · Established 1972</p>
-  </div>
-</section>
-
-<section id="visit" class="section alt">
-  <div class="wrap visit">
+  <section class="visit" id="visit">
     <div>
-      <p class="eyebrow">Hours &amp; location</p>
       <h2>Find us on Gentry Way</h2>
-      <table class="hours"><tbody><tr><th>Monday</th><td>7:30 am – 4:30 pm</td></tr><tr><th>Tuesday</th><td>7:30 am – 4:30 pm</td></tr><tr><th>Wednesday</th><td>7:30 am – 4:30 pm</td></tr><tr><th>Thursday</th><td>7:30 am – 4:30 pm</td></tr><tr><th>Friday</th><td>7:30 am – 4:30 pm</td></tr><tr><th>Saturday</th><td>Closed</td></tr><tr><th>Sunday</th><td>Closed</td></tr></tbody></table>
-      <p class="group-note" style="margin-top:10px">Suite 12 at 295 Gentry Way, Reno.</p>
-      <div class="contact-card">
-        <p><strong>Reno Buggie Barn</strong></p>
-        <p>295 Gentry Way, Suite 12, Reno, NV 89502</p>
-        <p><a href="tel:7753290940">(775) 329-0940</a> · <a href="mailto:renobuggiebarn@att.net">renobuggiebarn@att.net</a></p>
-        <p style="margin-top:14px"><a class="btn small" href="https://www.google.com/maps/search/?api=1&query=Reno%20Buggie%20Barn%2C%20295%20Gentry%20Way%20%2312%2C%20Reno%2C%20NV%2089502" target="_blank" rel="noopener">Get directions</a></p>
-      </div>
+      <table class="hours">
+        <tr><td>Monday</td><td>7:30 am – 4:30 pm</td></tr>
+        <tr><td>Tuesday</td><td>7:30 am – 4:30 pm</td></tr>
+        <tr><td>Wednesday</td><td>7:30 am – 4:30 pm</td></tr>
+        <tr><td>Thursday</td><td>7:30 am – 4:30 pm</td></tr>
+        <tr><td>Friday</td><td>7:30 am – 4:30 pm</td></tr>
+        <tr><td>Saturday</td><td>Closed</td></tr>
+        <tr><td>Sunday</td><td>Closed</td></tr>
+      </table>
+      <p class="note">Suite 12 at 295 Gentry Way, Reno.</p>
     </div>
-    <iframe class="map" title="Map to Reno Buggie Barn" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Reno%20Buggie%20Barn%2C%20295%20Gentry%20Way%20%2312%2C%20Reno%2C%20NV%2089502&output=embed"></iframe>
+    <div>
+      <iframe class="map" title="Map to Reno Buggie Barn" src="https://www.google.com/maps?q=Reno%20Buggie%20Barn%2C%20295%20Gentry%20Way%20%2312%2C%20Reno%2C%20NV%2089502&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <p class="addr">295 Gentry Way, Suite 12, Reno, NV 89502. <a href="tel:7753290940">(775) 329-0940</a>. <a href="mailto:renobuggiebarn@att.net">renobuggiebarn@att.net</a></p>
+    </div>
+  </section>
+
+  <div class="final">
+    <div>
+      <h2>Bug, bus, Ghia or Jetta?</h2>
+      <p>Call (775) 329-0940 or email renobuggiebarn@att.net for a free estimate.</p>
+    </div>
+    <div class="btns">
+      <a class="btn btn-solid" href="tel:7753290940">Call (775) 329-0940</a>
+      <a class="btn btn-ghost" href="mailto:renobuggiebarn@att.net">Email the shop</a>
+    </div>
   </div>
-</section>
+</main>
 
-<section class="cta-band">
-  <div class="wrap">
-    <h2>Bug, bus, Ghia or Jetta?</h2>
-    <p>Call (775) 329-0940 or email renobuggiebarn@att.net for a free estimate.</p>
-    <a class="btn" href="tel:7753290940">Call (775) 329-0940</a>
-  </div>
-</section>
+<footer class="wrap site">
+  <span>Reno Buggie Barn, 295 Gentry Way, Suite 12, Reno, NV 89502</span>
+  <nav aria-label="Reviews">
+    <a href="https://www.yelp.com/biz/reno-buggie-barn-reno">Yelp</a>
+    <a href="https://www.google.com/maps/search/Reno%20Buggie%20Barn%20295%20Gentry%20Way%20Reno%20NV/">Google reviews</a>
+  </nav>
+  <span>Design preview by Sky Yang</span>
+</footer>
 
-<footer><div class="wrap">
-  <div>© 2026 Reno Buggie Barn · 295 Gentry Way, Suite 12, Reno, NV 89502</div>
-  <div class="socials"><a href="https://www.yelp.com/biz/reno-buggie-barn-reno" target="_blank" rel="noopener">Yelp</a><a href="https://www.google.com/maps/search/Reno%20Buggie%20Barn%20295%20Gentry%20Way%20Reno%20NV/" target="_blank" rel="noopener">Google reviews</a></div>
-</div></footer>
-
-<div class="mobile-cta"><a class="btn" href="tel:7753290940">Call</a><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Reno%20Buggie%20Barn%2C%20295%20Gentry%20Way%20%2312%2C%20Reno%2C%20NV%2089502" target="_blank" rel="noopener">Directions</a></div>
+<div class="callbar" aria-label="Quick actions">
+  <a href="tel:7753290940">Call the shop</a>
+  <a href="mailto:renobuggiebarn@att.net">Email</a>
+</div>
 </body>
 </html>
