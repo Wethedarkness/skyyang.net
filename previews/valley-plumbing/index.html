@@ -4,280 +4,349 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Valley Plumbing Home Center · Plumbing, Repipes, Remodels &amp; Showroom in Pleasanton, CA</title>
+<meta name="theme-color" content="#F4F1EC">
+<title>Valley Plumbing Home Center: Plumbing, Repipes, Remodels &amp; Showroom in Pleasanton, CA</title>
 <meta name="description" content="Family-owned Pleasanton plumber since 1982. Repairs, water heaters, gas lines, repipes, bath and kitchen remodels, plus a real downtown showroom. 24-hour emergency line. Call (925) 462-1639.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600;6..72,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f7f8fa;--bg2:#eceff4;--ink:#151c27;--muted:#586274;--accent:#0d386a;--accent-ink:#ffffff;--line:#d9dee7;--card:#ffffff;--display:'Newsreader',serif;--body:'Inter',system-ui,sans-serif;--radius:14px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font-family:var(--body);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
+:root{
+  --verdigris:#1F4E5F; --verdigris-2:#2A6478; --porcelain:#F4F1EC; --chalk:#FBF9F6;
+  --brass:#B08D57; --ink:#1A1F26; --ink-2:#5B6470; --rule:#DCD6CC;
+  --display:"Fraunces",Georgia,serif; --body:"Public Sans",Helvetica,Arial,sans-serif;
+  --max:1220px; --gutter:clamp(20px,4vw,56px);
+}
+*{box-sizing:border-box} html{color-scheme:light;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--porcelain);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;touch-action:manipulation}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-.wrap.narrow{max-width:820px}
-.preview-bar{background:#111;color:#fff;font:500 13px/1.4 var(--body);text-align:center;padding:8px 12px}
-.preview-bar a{color:#fff}
-header.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
-.brand{font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:.2px;text-decoration:none;display:flex;align-items:center;gap:10px}
-.brand .mark{width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:17px}
-nav.links{display:flex;gap:22px;font-size:15px}
-nav.links a{text-decoration:none;color:var(--muted)}
-nav.links a:hover{color:var(--ink)}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:12px 20px;border-radius:999px;border:1px solid transparent;transition:.15s}
-.btn:hover{filter:brightness(.95)}
-.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
-.btn.small{padding:9px 16px;font-size:14px}
-.hero{position:relative;min-height:620px;display:grid;align-items:end;color:#fff;isolation:isolate}
-.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.35) 45%,rgba(0,0,0,.75) 100%);z-index:-1}
-.hero .wrap{padding-top:96px;padding-bottom:64px}
-.hero .eyebrow{color:#fff;opacity:.9}
-.hero h1{font-family:var(--display);font-size:clamp(38px,6vw,72px);line-height:1.02;margin:0 0 14px;max-width:16ch;font-weight:700;text-wrap:balance}
-.hero p.sub{font-size:clamp(17px,2vw,21px);max-width:56ch;margin:0 0 28px;opacity:.95}
-.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
-.hero .btn.ghost{color:#fff;border-color:rgba(255,255,255,.6)}
-.hero .meta{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:28px;font-size:14px;opacity:.9}
-.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:700;color:var(--accent);margin:0 0 10px}
-.section{padding:88px 0}
-.section.alt{background:var(--bg2)}
-.section h2{font-family:var(--display);font-size:clamp(30px,4vw,44px);line-height:1.1;margin:0 0 18px;font-weight:700;text-wrap:balance}
-.lead{font-size:18px;color:var(--muted);max-width:62ch}
-.highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:-56px;position:relative;z-index:2}
-.hl{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
-.hl-icon{font-size:26px;margin-bottom:10px}
-.hl h3{margin:0 0 6px;font-size:18px}
-.hl p{margin:0;color:var(--muted);font-size:15px}
-.two{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
-.groups{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;margin-top:36px}
-.group-title{font-family:var(--display);font-size:24px;margin:0 0 6px}
-.group-note{margin:0 0 12px;color:var(--muted);font-size:14px}
-ul.items{list-style:none;margin:0;padding:0}
-ul.items li{padding:14px 0;border-bottom:1px dashed var(--line)}
-.item-head{display:flex;align-items:baseline;gap:10px}
-.item-name{font-weight:600}
-.dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px)}
-.item-price{font-weight:600;white-space:nowrap}
-.item-desc{margin:4px 0 0;color:var(--muted);font-size:15px}
-.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
-.review{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
-.review .stars{color:#e0a100;letter-spacing:2px;font-size:15px}
-.review blockquote{margin:12px 0 14px;font-size:16.5px;line-height:1.55}
-.review figcaption{font-weight:600;font-size:14px}
-.review figcaption span{color:var(--muted);font-weight:400}
-.rating-line{margin-top:14px;color:var(--muted);font-size:15px}
-.about-facts{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.about-facts li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:2px}
-.about-facts strong{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
-.about-facts span{font-weight:600}
-ul.checks{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px}
-ul.checks li{padding-left:30px;position:relative}
-ul.checks li::before{content:"✓";position:absolute;left:0;top:0;color:var(--accent);font-weight:700}
-.visit{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
-table.hours{border-collapse:collapse;width:100%;margin-top:14px}
-table.hours th{text-align:left;font-weight:600;padding:10px 0;border-bottom:1px solid var(--line);width:40%}
-table.hours td{padding:10px 0;border-bottom:1px solid var(--line);color:var(--muted)}
-.map{border:0;width:100%;height:100%;min-height:380px;border-radius:var(--radius);filter:saturate(.9)}
-.contact-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;margin-top:22px}
-.contact-card p{margin:6px 0}
-.contact-card a{text-decoration:none;font-weight:600}
-.cta-band{background:var(--accent);color:var(--accent-ink);padding:72px 0;text-align:center}
-.cta-band h2{font-family:var(--display);font-size:clamp(28px,4vw,40px);margin:0 0 12px}
-.cta-band p{margin:0 auto 24px;max-width:56ch;opacity:.92;font-size:18px}
-.cta-band .btn{background:var(--accent-ink);color:var(--accent)}
-footer{padding:36px 0;font-size:14px;color:var(--muted)}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-footer .socials{display:flex;gap:16px}
-footer a{text-decoration:none}
-.mobile-cta{display:none}
-@media (max-width:860px){
-  nav.links{display:none}
-  .highlights,.reviews,.groups,.two,.visit,.about-facts{grid-template-columns:1fr}
-  .highlights{margin-top:24px}
-  .hero{min-height:540px}
-  .section{padding:64px 0}
-  .map{min-height:300px}
-  .item-price{white-space:normal;text-align:right;max-width:58%}
-  .brand{font-size:19px;line-height:1.1}
-  .nav .btn.small{white-space:nowrap;padding:8px 12px;font-size:13px}
-  .mobile-cta{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:30;background:var(--card);border-top:1px solid var(--line);padding:10px 14px;gap:10px}
-  .mobile-cta .btn{flex:1;justify-content:center}
-  body{padding-bottom:64px}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;letter-spacing:-.015em;margin:0;text-wrap:balance;font-variation-settings:"opsz" 96}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter)}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--verdigris);color:#fff;padding:8px 12px;z-index:60}
+.skip:focus{left:8px}
+
+.preview{background:var(--ink);color:#DAD4CA;font-size:13px;padding:7px var(--gutter);display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap}
+.preview a{color:#fff;text-underline-offset:3px;text-decoration-thickness:1px}
+
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 0 18px;border-bottom:1px solid var(--rule)}
+.mark{font-family:var(--display);font-weight:600;font-size:23px;letter-spacing:-.01em;text-decoration:none;line-height:1.1}
+.mark small{display:block;font-family:var(--body);font-weight:500;font-size:13px;color:var(--ink-2);letter-spacing:0;margin-top:2px}
+.nav ul{list-style:none;display:flex;gap:26px;margin:0;padding:0;font-weight:500;font-size:16px}
+.nav ul a{text-decoration:none;color:var(--ink-2)}
+.nav ul a:hover{color:var(--ink)}
+.nav .phone{font-family:var(--display);font-weight:600;font-size:22px;text-decoration:none;color:var(--verdigris);white-space:nowrap}
+@media (max-width:900px){.nav ul{display:none}}
+@media (max-width:560px){.nav .phone{display:none}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,5vw,72px);align-items:stretch;padding:clamp(40px,6vw,80px) 0 clamp(36px,5vw,60px)}
+.hero h1{font-size:clamp(44px,6.6vw,92px);color:var(--verdigris);max-width:11ch;font-weight:600}
+.hero .lede{font-size:clamp(18px,1.45vw,21px);color:var(--ink-2);max-width:48ch;margin-top:24px}
+.callnow{margin-top:34px;display:flex;flex-direction:column;gap:6px}
+.callnow span{font-size:15px;color:var(--ink-2)}
+.callnow a{font-family:var(--display);font-weight:600;font-size:clamp(34px,4.2vw,58px);color:var(--ink);text-decoration:none;letter-spacing:-.02em;line-height:1;font-variant-numeric:tabular-nums}
+.callnow a:hover{color:var(--verdigris)}
+.actions{display:flex;gap:18px;align-items:center;margin-top:26px;flex-wrap:wrap}
+.btn{font-weight:600;font-size:16.5px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:3px;transition:background-color .18s ease,color .18s ease,transform .18s ease;border:1.5px solid transparent}
+.btn-primary{background:var(--verdigris);color:#fff}
+.btn-primary:hover{background:var(--verdigris-2)}
+.btn-ghost{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+.btn:active{transform:translateY(1px)}
+.figure{position:relative;min-height:440px;margin:0;border-right:6px solid var(--brass)}
+.figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:45% 50%}
+.figure figcaption{position:absolute;left:0;bottom:0;background:var(--verdigris);color:#fff;font-size:13.5px;padding:8px 12px;max-width:85%}
+@media (max-width:900px){.hero{grid-template-columns:1fr}.figure{min-height:300px;border-right:0;border-top:6px solid var(--brass)}}
+
+/* two doors strip */
+.doors{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--verdigris);border-bottom:1px solid var(--rule)}
+.doors div{padding:22px 24px 24px 0}
+.doors div + div{border-left:1px solid var(--rule);padding-left:24px}
+.doors h3{font-size:26px;color:var(--verdigris);font-weight:600}
+.doors p{color:var(--ink-2);font-size:16px;margin-top:8px;max-width:46ch}
+.doors b{color:var(--ink);font-weight:600}
+@media (max-width:700px){.doors{grid-template-columns:1fr}.doors div + div{border-left:0;border-top:1px solid var(--rule);padding-left:0}}
+
+section{padding:clamp(56px,7vw,100px) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(20px,4vw,64px);align-items:end;margin-bottom:clamp(26px,4vw,44px)}
+.sec-head h2{font-size:clamp(34px,4.4vw,60px);color:var(--verdigris)}
+.sec-head p{color:var(--ink-2);font-size:18px;max-width:54ch}
+@media (max-width:760px){.sec-head{grid-template-columns:1fr}}
+
+/* services table */
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px)}
+.svc h3{font-size:24px;color:var(--ink);font-weight:600;padding-bottom:12px;border-bottom:2px solid var(--verdigris)}
+.svc dl{margin:0}
+.svc .row{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--rule)}
+.svc dt{font-weight:600;font-size:16.5px}
+.svc dd{margin:0;color:var(--ink-2);font-size:15.5px}
+.tag{display:inline-block;margin-top:6px;font-size:12.5px;font-weight:600;color:var(--brass);border:1px solid var(--brass);padding:2px 8px;border-radius:999px}
+.brands{margin-top:26px;color:var(--ink-2);font-size:15px;max-width:80ch}
+@media (max-width:820px){.svc{grid-template-columns:1fr}}
+@media (max-width:480px){.svc .row{grid-template-columns:1fr;gap:4px}}
+
+/* showroom band */
+.showroom{background:var(--verdigris);color:#fff}
+.showroom .inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:center}
+.showroom h2{font-size:clamp(34px,4.4vw,60px);color:#fff}
+.showroom .kick{color:#CFE1E6;font-size:15px;margin-bottom:14px}
+.showroom p{color:#D9E7EB;font-size:18px;margin-top:18px;max-width:52ch}
+.showroom ul{margin:22px 0 0;padding:0;list-style:none}
+.showroom li{padding:10px 0;border-top:1px solid rgba(255,255,255,.22);color:#ECF3F5;font-size:16px}
+.showroom img{width:100%;aspect-ratio:3/2;object-fit:cover;border-left:6px solid var(--brass)}
+.showroom .hours{margin-top:22px;font-size:15px;color:#CFE1E6}
+@media (max-width:880px){.showroom .inner{grid-template-columns:1fr}.showroom img{order:-1}}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,4vw,64px);align-items:start}
+.about h2{font-size:clamp(34px,4.4vw,60px);color:var(--verdigris);margin-bottom:20px}
+.about p{color:var(--ink-2);font-size:17.5px;max-width:60ch}
+.about p + p{margin-top:14px}
+.facts{border-top:2px solid var(--verdigris)}
+.facts div{display:grid;grid-template-columns:130px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--rule);font-size:16px}
+.facts div span:first-child{color:var(--ink-2)}
+.facts div span:last-child{font-weight:600}
+.about img{width:100%;aspect-ratio:3/2;object-fit:cover;margin-top:22px}
+@media (max-width:880px){.about{grid-template-columns:1fr}}
+
+/* reviews */
+.reviews{background:var(--chalk);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.qgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,44px);margin-top:clamp(22px,3vw,36px)}
+blockquote{margin:0;font-family:var(--display);font-weight:500;font-size:clamp(19px,1.6vw,23px);line-height:1.35;letter-spacing:-.005em;font-variation-settings:"opsz" 24}
+blockquote footer{margin-top:14px;font-family:var(--body);font-size:15px;color:var(--ink-2);font-weight:400}
+.rating{color:var(--ink-2);font-size:15.5px;margin-top:8px}
+@media (max-width:820px){.qgrid{grid-template-columns:1fr}}
+
+/* hours + map */
+.visit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:start}
+.visit h2{font-size:clamp(34px,4.4vw,60px);color:var(--verdigris);margin-bottom:18px}
+table{width:100%;border-collapse:collapse;font-size:16px}
+th,td{text-align:left;padding:11px 12px 11px 0;border-top:1px solid var(--rule);vertical-align:top}
+th{font-weight:500;color:var(--ink-2);font-size:14.5px;border-top:0;padding-top:0}
+td:first-child{font-weight:600;white-space:nowrap;width:120px}
+tbody tr:last-child td{border-bottom:1px solid var(--verdigris)}
+.visit .note{color:var(--ink-2);font-size:15.5px;margin-top:14px;max-width:56ch}
+.visit .addr{margin-top:18px;font-size:16px}
+.visit iframe{width:100%;aspect-ratio:4/3;border:0;filter:saturate(.85)}
+.visit .links{display:flex;gap:18px;flex-wrap:wrap;margin-top:16px;font-size:15px}
+.visit .links a{color:var(--verdigris);text-underline-offset:4px}
+@media (max-width:880px){.visit{grid-template-columns:1fr}}
+
+/* final */
+.final{background:var(--ink);color:#fff}
+.final .inner{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(24px,4vw,64px);align-items:center}
+.final h2{font-size:clamp(38px,5vw,72px);color:#fff}
+.final p{color:#C9C4BB;font-size:18px;margin-top:16px;max-width:50ch}
+.final a.big{font-family:var(--display);font-weight:600;font-size:clamp(34px,4.6vw,60px);color:var(--brass);text-decoration:none;letter-spacing:-.02em;display:block;line-height:1}
+.final a.big:hover{color:#D8B577}
+.final .sub{color:#C9C4BB;font-size:15px;margin-top:10px}
+@media (max-width:880px){.final .inner{grid-template-columns:1fr}}
+
+footer.site{padding:30px 0 96px;color:var(--ink-2);font-size:15px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (min-width:761px){footer.site{padding-bottom:44px}}
+
+/* sticky mobile call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;display:none;background:var(--verdigris);color:#fff;padding:12px var(--gutter) calc(12px + env(safe-area-inset-bottom));z-index:40;gap:12px;justify-content:space-between;align-items:center}
+.callbar a{color:#fff;text-decoration:none;font-weight:600;font-size:16px}
+.callbar a.num{font-family:var(--display);font-size:22px}
+@media (max-width:760px){.callbar{display:flex}}
+
+@media (prefers-reduced-motion:no-preference){
+  .hero > *{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+  .hero .figure{animation-delay:.12s}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 }
 </style>
 </head>
 <body>
-<div class="preview-bar">Design preview built by Sky Yang for Valley Plumbing Home Center · photos are placeholders until your own are added · <a href="tel:6505188626">650-518-8626</a></div>
-<header class="nav"><div class="wrap">
-  <a class="brand" href="#top"><span class="mark">💧</span>Valley Plumbing Home Center</a>
-  <nav class="links"><a href="#services">Services</a><a href="#about">About</a><a href="#showroom">Showroom</a><a href="#reviews">Reviews</a><a href="#visit">Hours &amp; location</a></nav>
-  <a class="btn small" href="tel:9254621639">Call (925) 462-1639</a>
-</div></header>
+<a class="skip" href="#main">Skip to content</a>
+<div class="preview" role="note">
+  <span>Design preview built by Sky Yang for Valley Plumbing Home Center. Everything here comes from your listings; photos are placeholders until we get yours.</span>
+  <a href="mailto:skyyang333@gmail.com">skyyang333@gmail.com</a>
+</div>
 
-<section class="hero" id="top">
-  <img src="hero.jpg" alt="A bright plumbing showroom with rows of faucets, a farmhouse sink and a freestanding tub" fetchpriority="high">
-  <div class="wrap">
-    <p class="eyebrow">Pleasanton's plumber since 1982</p>
-    <h1>Integrity before profit.</h1>
-    <p class="sub">Repairs, water heaters, repipes and full bath and kitchen remodels from a family-owned company, plus a real showroom one block off Main Street. Owned by Mike and Sharol Cheney, who grew up right here in Pleasanton.</p>
-    <div class="cta"><a class="btn" href="tel:9254621639">Call (925) 462-1639</a><a class="btn ghost" href="#visit">Free remodel estimate</a></div>
-    <div class="meta"><span>Licensed &amp; bonded, CSLB #437867</span><span>24-hour emergency line</span><span>Free remodel &amp; repipe estimates</span><span>Downtown showroom</span><span>4.9 stars on Google</span></div>
-  </div>
-</section>
+<header class="wrap">
+  <nav class="nav" aria-label="Primary">
+    <a class="mark" href="#top">Valley Plumbing Home Center <small>Pleasanton, since 1982</small></a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#showroom">Showroom</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#visit">Hours</a></li>
+    </ul>
+    <a class="phone" href="tel:9254621639">(925) 462-1639</a>
+  </nav>
+</header>
 
-<div class="wrap"><div class="highlights">
-      <div class="hl">
-        <div class="hl-icon">🔧</div>
-        <h3>Repairs, answered around the clock</h3>
-        <p>Clogs, leaks, water heaters, disposals, gas lines and main-line stoppages. Our office staff answer during business hours and a service technician after hours, 365 days a year.</p>
-      </div>
-      <div class="hl">
-        <div class="hl-icon">🛁</div>
-        <h3>Bath and kitchen remodels, start to finish</h3>
-        <p>A dedicated estimator, a free consultation, and every material in hand before work begins. Most remodels take one to two weeks once we start.</p>
-      </div>
-      <div class="hl">
-        <div class="hl-icon">🏪</div>
-        <h3>A real showroom, not a catalog</h3>
-        <p>Faucets in nearly every color and finish, toilets, sinks, vanities, grab bars and stone samples on display in downtown Pleasanton. Special orders don't upset us.</p>
-      </div></div></div>
-
-<section id="services" class="section">
-  <div class="wrap">
-    <p class="eyebrow">Services</p>
-    <h2>From a dripping faucet to a whole-house repipe</h2>
-    <p class="lead">We serve homeowners, property managers, insurance adjusters and commercial businesses across Pleasanton, Dublin, Livermore, Danville, San Ramon and the rest of the Tri-Valley.</p>
-    <div class="groups">
-      <div class="group">
-        <h3 class="group-title">Service &amp; repair</h3>
-        
-        <ul class="items">
-          <li>
-            <div class="item-head"><span class="item-name">Clogs &amp; main-line stoppages</span></div>
-            <p class="item-desc">Toilets, showers, sinks and main sewer lines, plus hydro jetting and sewer video inspection.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Water heaters, tank &amp; tankless</span></div>
-            <p class="item-desc">Installation and repair. Authorized service provider for Bradford White and Rinnai.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Leak location</span></div>
-            <p class="item-desc">Electronic sensing equipment traces the problem pipe. We do leak locations every week.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Gas lines</span></div>
-            <p class="item-desc">Polyethylene, flexible and steel gas line installation and repair; steel pipe cut and threaded up to 4 inches.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Backflow testing &amp; certification</span></div>
-            <p class="item-desc">Testing, certification and repair of backflow preventers.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Disposals, faucets &amp; fixtures</span></div>
-            <p class="item-desc">Garbage disposals, dripping faucets, earthquake shut-off valves and product installation of all kinds.</p>
-          </li>
-        </ul>
-      </div>
-      <div class="group">
-        <h3 class="group-title">Remodels, repipes &amp; commercial</h3>
-        
-        <ul class="items">
-          <li>
-            <div class="item-head"><span class="item-name">Bath remodels</span><span class="dots"></span><span class="item-price">Free estimate</span></div>
-            <p class="item-desc">Free consultation and estimate. Stone and cultured shower walls, vanities, tubs and shower doors you can see in the showroom first.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Kitchen remodels</span><span class="dots"></span><span class="item-price">Free estimate</span></div>
-            <p class="item-desc">Sinks, faucets, counter tops and disposals, planned with a dedicated estimator and finished in one to two weeks once work begins.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Repipes, copper or PEX</span><span class="dots"></span><span class="item-price">Free estimate</span></div>
-            <p class="item-desc">Low water pressure, rusty water or frequent leaks? Repipes include sheetrock and texture. Chances are we have repiped a home with your exact floor plan.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Trenchless water service</span></div>
-            <p class="item-desc">Replacement or repair of your water service, in many cases without digging up the front yard.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Commercial &amp; property management</span></div>
-            <p class="item-desc">Tenant improvements, floor drains, grease traps and hydro jetting. Long-term property-management clients rely on us exclusively; references on request.</p>
-          </li>
-        </ul>
-      </div></div>
-    <p class="group-note" style="margin-top:22px">Showroom brands include Toto, Kohler, Moen, Delta, Grohe, Hansgrohe, Rohl, Brizo, Elkay, Blanco, American Standard, Bradford White, Rinnai and Noritz.</p>
-  </div>
-</section>
-
-<section id="about" class="section alt">
-  <div class="wrap two">
+<main id="main" class="wrap">
+  <section class="hero" id="top" style="padding-bottom:0">
     <div>
-      <p class="eyebrow">About us</p>
+      <h1>Integrity before profit.</h1>
+      <p class="lede">Repairs, water heaters, repipes and full bath and kitchen remodels from a family-owned company, plus a real showroom one block off Main Street. Owned by Mike and Sharol Cheney, who grew up right here in Pleasanton.</p>
+      <div class="callnow">
+        <span>Service and 24-hour emergency line</span>
+        <a href="tel:9254621639">(925) 462-1639</a>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="tel:9254621639">Call for service</a>
+        <a class="btn btn-ghost" href="#visit">Free remodel estimate</a>
+      </div>
+    </div>
+    <figure class="figure">
+      <img src="hero.jpg" width="1800" height="1200" alt="A bright plumbing showroom with rows of faucets, a farmhouse sink and a freestanding tub" fetchpriority="high">
+      <figcaption>Placeholder photo. Your Rose Avenue showroom goes here.</figcaption>
+    </figure>
+  </section>
+
+  <div class="doors" style="margin-top:clamp(36px,5vw,64px)">
+    <div>
+      <h3>Something's leaking</h3>
+      <p>Office staff answer <b>6:30 am to 4:15 pm</b> weekdays. After hours, weekends and holidays a service technician picks up. <b>365 days a year.</b></p>
+    </div>
+    <div>
+      <h3>Planning a remodel</h3>
+      <p>Walk the downtown showroom <b>Monday to Friday, 9 to 5</b>, or book a free consultation with a dedicated estimator. Free estimates on remodels and repipes.</p>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="sec-head">
+      <h2>From a dripping faucet to a whole-house repipe</h2>
+      <p>We serve homeowners, property managers, insurance adjusters and commercial businesses across Pleasanton, Dublin, Livermore, Danville, San Ramon and the rest of the Tri-Valley.</p>
+    </div>
+    <div class="svc">
+      <div>
+        <h3>Service and repair</h3>
+        <dl>
+          <div class="row"><dt>Clogs and main-line stoppages</dt><dd>Toilets, showers, sinks and main sewer lines, plus hydro jetting and sewer video inspection.</dd></div>
+          <div class="row"><dt>Water heaters, tank and tankless</dt><dd>Installation and repair. Authorized service provider for Bradford White and Rinnai.</dd></div>
+          <div class="row"><dt>Leak location</dt><dd>Electronic sensing equipment traces the problem pipe. We do leak locations every week.</dd></div>
+          <div class="row"><dt>Gas lines</dt><dd>Polyethylene, flexible and steel gas line installation and repair; steel pipe cut and threaded up to 4 inches.</dd></div>
+          <div class="row"><dt>Backflow testing and certification</dt><dd>Testing, certification and repair of backflow preventers.</dd></div>
+          <div class="row"><dt>Disposals, faucets and fixtures</dt><dd>Garbage disposals, dripping faucets, earthquake shut-off valves and product installation of all kinds.</dd></div>
+        </dl>
+      </div>
+      <div>
+        <h3>Remodels, repipes and commercial</h3>
+        <dl>
+          <div class="row"><dt>Bath remodels <span class="tag">Free estimate</span></dt><dd>Free consultation and estimate. Stone and cultured shower walls, vanities, tubs and shower doors you can see in the showroom first.</dd></div>
+          <div class="row"><dt>Kitchen remodels <span class="tag">Free estimate</span></dt><dd>Sinks, faucets, counter tops and disposals, planned with a dedicated estimator and finished in one to two weeks once work begins.</dd></div>
+          <div class="row"><dt>Repipes, copper or PEX <span class="tag">Free estimate</span></dt><dd>Low water pressure, rusty water or frequent leaks? Repipes include sheetrock and texture. Chances are we have repiped a home with your exact floor plan.</dd></div>
+          <div class="row"><dt>Trenchless water service</dt><dd>Replacement or repair of your water service, in many cases without digging up the front yard.</dd></div>
+          <div class="row"><dt>Commercial and property management</dt><dd>Tenant improvements, floor drains, grease traps and hydro jetting. Long-term property-management clients rely on us exclusively; references on request.</dd></div>
+        </dl>
+      </div>
+    </div>
+    <p class="brands">Showroom brands include Toto, Kohler, Moen, Delta, Grohe, Hansgrohe, Rohl, Brizo, Elkay, Blanco, American Standard, Bradford White, Rinnai and Noritz.</p>
+  </section>
+</main>
+
+<section class="showroom" id="showroom">
+  <div class="wrap inner">
+    <div>
+      <p class="kick">Downtown showroom, 272 Rose Avenue</p>
+      <h2>See it and touch it before you buy</h2>
+      <p>Most plumbers hand you a catalog. We keep thousands of products in inventory and a showroom you can walk through, one block off Main Street in downtown Pleasanton, open Monday through Friday, 9 to 5.</p>
+      <ul>
+        <li>Kitchen and bathroom faucets in just about every color and finish available</li>
+        <li>Toilets, sinks, shower fixtures, vanities, grab bars and bathroom accessories on display</li>
+        <li>Samples of cultured marble, onyx and granite for shower walls and counters</li>
+        <li>Hard-to-find parts and special orders for do-it-yourself projects</li>
+        <li>Ask about current showroom specials on toilets and sinks</li>
+      </ul>
+      <p class="hours">Under one of only six old-time neon signs left in downtown Pleasanton.</p>
+    </div>
+    <img src="img-2.jpg" width="1400" height="933" alt="Five kitchen faucets in different finishes standing on a showroom counter" loading="lazy">
+  </div>
+</section>
+
+<main class="wrap" aria-label="About, reviews and hours">
+  <section id="about" class="about">
+    <div>
       <h2>Family-owned in Pleasanton for 44 years</h2>
-      <p>Valley Plumbing Home Center was established in 1982 and has grown from a family-owned business into a corporation with the same family feeling. In 2005 we moved to our downtown home on Rose Avenue, one block off Main Street, under one of only six old-time neon signs left in downtown Pleasanton.</p><p>Owners Mike and Sharol Cheney both grew up in Pleasanton, live here and raised their family here. Our motto, &quot;Integrity Before Profit,&quot; comes straight from our mission: superior service through the highest standards of quality, reliability and dependability.</p><p>Our technicians arrive in marked vans, text ahead with their name and arrival time, and explain the options before any work starts. No hard sell, just honest expert advice.</p>
+      <p>Valley Plumbing Home Center was established in 1982 and has grown from a family-owned business into a corporation with the same family feeling. In 2005 we moved to our downtown home on Rose Avenue, one block off Main Street, under one of only six old-time neon signs left in downtown Pleasanton.</p>
+      <p>Owners Mike and Sharol Cheney both grew up in Pleasanton, live here and raised their family here. Our motto, “Integrity Before Profit,” comes straight from our mission: superior service through the highest standards of quality, reliability and dependability.</p>
+      <p>Our technicians arrive in marked vans, text ahead with their name and arrival time, and explain the options before any work starts. No hard sell, just honest expert advice.</p>
     </div>
     <div>
-      <ul class="about-facts"><li><strong>Established</strong><span>1982</span></li><li><strong>Owners</strong><span>Mike &amp; Sharol Cheney</span></li><li><strong>License</strong><span>CSLB #437867 (B, C36)</span></li><li><strong>Bonded</strong><span>$25,000 contractor's bond</span></li><li><strong>BBB rating</strong><span>A+</span></li><li><strong>Team</strong><span>About 23 people</span></li></ul>
-    </div>
-  </div>
-</section>
-
-
-    <section id="showroom" class="section ">
-      <div class="wrap narrow">
-        <p class="eyebrow">Downtown showroom</p>
-        <h2>See it and touch it before you buy</h2>
-        <p class="lead">Most plumbers hand you a catalog. We keep thousands of products in inventory and a showroom you can walk through, one block off Main Street in downtown Pleasanton, open Monday through Friday, 9 to 5.</p>
-        <ul class="checks"><li>Kitchen and bathroom faucets in just about every color and finish available</li><li>Toilets, sinks, shower fixtures, vanities, grab bars and bathroom accessories on display</li><li>Samples of cultured marble, onyx and granite for shower walls and counters</li><li>Hard-to-find parts and special orders for do-it-yourself projects</li><li>Ask about current showroom specials on toilets and sinks</li></ul>
+      <div class="facts">
+        <div><span>Established</span><span>1982</span></div>
+        <div><span>Owners</span><span>Mike &amp; Sharol Cheney</span></div>
+        <div><span>License</span><span>CSLB #437867 (B, C36)</span></div>
+        <div><span>Bonded</span><span>$25,000 contractor's bond</span></div>
+        <div><span>BBB rating</span><span>A+</span></div>
+        <div><span>Team</span><span>About 23 people</span></div>
       </div>
-    </section>
+      <img src="img-3.jpg" width="1200" height="800" alt="A newly installed tankless water heater with neat copper lines in a garage" loading="lazy">
+    </div>
+  </section>
+</main>
 
-<section id="reviews" class="section">
+<section class="reviews" id="reviews">
   <div class="wrap">
-    <p class="eyebrow">Reviews</p>
-    <h2>What Pleasanton neighbors say</h2>
-    <div class="reviews">
-      <figure class="review">
-        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <blockquote>“This is my second time using Valley Plumbing. My technician was Paul. He was prompt, efficient, clearly explained all the details and process, and worked cleanly. I will definitely be using Valley Plumbing for all future plumbing projects.”</blockquote>
-        <figcaption>Tina G. <span>· Google</span></figcaption>
-      </figure>
-      <figure class="review">
-        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <blockquote>“We needed a new water heater. I was able to set an appointment up very easily with someone on the phone... Richy was great. He kept my husband informed of the work being done... This is the 2nd water heater we have had installed by Valley Plumbing. Several of our neighbors use them as well. They are a reputable Pleasanton hometown business.”</blockquote>
-        <figcaption>Charlene E. <span>· Yelp</span></figcaption>
-      </figure>
-      <figure class="review">
-        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <blockquote>“I called on a Septic Tank Pump replacement on a Sunday PM and they had a technician there 4 hours later. The owners are both first class individuals who really care about the customer... Would and have used them many times over during the past 40 plus years. HIGHLY recommend”</blockquote>
-        <figcaption>Robert R. <span>· Yelp</span></figcaption>
-      </figure></div>
-    <p class="rating-line">4.9 stars on Google (484 reviews) · A+ rating with the Better Business Bureau · CSLB #437867, licensed and bonded</p>
+    <h2 style="font-size:clamp(34px,4.4vw,60px);color:var(--verdigris)">What Pleasanton neighbors say</h2>
+    <p class="rating">4.9 stars on Google (484 reviews), A+ rating with the Better Business Bureau, CSLB #437867, licensed and bonded.</p>
+    <div class="qgrid">
+      <blockquote>“This is my second time using Valley Plumbing. My technician was Paul. He was prompt, efficient, clearly explained all the details and process, and worked cleanly. I will definitely be using Valley Plumbing for all future plumbing projects.”<footer>Tina G., Google</footer></blockquote>
+      <blockquote>“We needed a new water heater. I was able to set an appointment up very easily with someone on the phone... Richy was great. He kept my husband informed of the work being done... This is the 2nd water heater we have had installed by Valley Plumbing. Several of our neighbors use them as well. They are a reputable Pleasanton hometown business.”<footer>Charlene E., Yelp</footer></blockquote>
+      <blockquote>“I called on a Septic Tank Pump replacement on a Sunday PM and they had a technician there 4 hours later. The owners are both first class individuals who really care about the customer... Would and have used them many times over during the past 40 plus years. HIGHLY recommend”<footer>Robert R., Yelp</footer></blockquote>
+    </div>
   </div>
 </section>
 
-<section id="visit" class="section alt">
-  <div class="wrap visit">
+<main class="wrap" aria-label="Hours and location">
+  <section id="visit" class="visit">
     <div>
-      <p class="eyebrow">Hours &amp; location</p>
       <h2>Showroom and service hours</h2>
-      <table class="hours"><tbody><tr><th>Monday</th><td>Showroom 9:00 am – 5:00 pm · Service 6:30 am – 4:15 pm</td></tr><tr><th>Tuesday</th><td>Showroom 9:00 am – 5:00 pm · Service 6:30 am – 4:15 pm</td></tr><tr><th>Wednesday</th><td>Showroom 9:00 am – 5:00 pm · Service 6:30 am – 4:15 pm</td></tr><tr><th>Thursday</th><td>Showroom 9:00 am – 5:00 pm · Service 6:30 am – 4:15 pm</td></tr><tr><th>Friday</th><td>Showroom 9:00 am – 5:00 pm · Service 6:30 am – 4:15 pm</td></tr><tr><th>Saturday</th><td>Closed · emergency line open</td></tr><tr><th>Sunday</th><td>Closed · emergency line open</td></tr></tbody></table>
-      <p class="group-note" style="margin-top:10px">Emergency service is available 24 hours a day, 365 days a year. During business hours our office staff answer the phone; after hours a service technician does.</p>
-      <div class="contact-card">
-        <p><strong>Valley Plumbing Home Center</strong></p>
-        <p>272 Rose Ave, Pleasanton, CA 94566</p>
-        <p><a href="tel:9254621639">(925) 462-1639</a> · <a href="mailto:info@valleyplumbinginc.com">info@valleyplumbinginc.com</a></p>
-        <p style="margin-top:14px"><a class="btn small" href="https://www.google.com/maps/search/?api=1&query=Valley%20Plumbing%20Home%20Center%2C%20272%20Rose%20Ave%2C%20Pleasanton%2C%20CA%2094566" target="_blank" rel="noopener">Get directions</a></p>
+      <table>
+        <thead><tr><th>Day</th><th>Showroom</th><th>Service</th></tr></thead>
+        <tbody>
+          <tr><td>Monday</td><td>9:00 am to 5:00 pm</td><td>6:30 am to 4:15 pm</td></tr>
+          <tr><td>Tuesday</td><td>9:00 am to 5:00 pm</td><td>6:30 am to 4:15 pm</td></tr>
+          <tr><td>Wednesday</td><td>9:00 am to 5:00 pm</td><td>6:30 am to 4:15 pm</td></tr>
+          <tr><td>Thursday</td><td>9:00 am to 5:00 pm</td><td>6:30 am to 4:15 pm</td></tr>
+          <tr><td>Friday</td><td>9:00 am to 5:00 pm</td><td>6:30 am to 4:15 pm</td></tr>
+          <tr><td>Saturday</td><td>Closed</td><td>Emergency line open</td></tr>
+          <tr><td>Sunday</td><td>Closed</td><td>Emergency line open</td></tr>
+        </tbody>
+      </table>
+      <p class="note">Emergency service is available 24 hours a day, 365 days a year. During business hours our office staff answer the phone; after hours a service technician does.</p>
+      <p class="addr"><strong>272 Rose Ave, Pleasanton, CA 94566</strong><br>(925) 462-1639<br>info@valleyplumbinginc.com</p>
+      <div class="links">
+        <a href="https://www.facebook.com/ValleyPlumbingHomeCenter/">Facebook</a>
+        <a href="https://www.google.com/maps/search/Valley+Plumbing+Home+Center+272+Rose+Ave+Pleasanton+CA+94566/">Google reviews</a>
+        <a href="https://www.yelp.com/biz/valley-plumbing-home-center-pleasanton-3">Yelp</a>
       </div>
     </div>
-    <iframe class="map" title="Map to Valley Plumbing Home Center" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Valley%20Plumbing%20Home%20Center%2C%20272%20Rose%20Ave%2C%20Pleasanton%2C%20CA%2094566&output=embed"></iframe>
+    <iframe title="Map to Valley Plumbing Home Center, 272 Rose Ave, Pleasanton" src="https://www.google.com/maps?q=Valley%20Plumbing%20Home%20Center%2C%20272%20Rose%20Ave%2C%20Pleasanton%2C%20CA%2094566&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+</main>
+
+<section class="final">
+  <div class="wrap inner">
+    <div>
+      <h2>Need a plumber today?</h2>
+      <p>Call for service, or stop by the Rose Avenue showroom to plan your remodel. Free estimates on remodels and repipes.</p>
+    </div>
+    <div>
+      <a class="big" href="tel:9254621639">(925) 462-1639</a>
+      <p class="sub">24-hour emergency line. Showroom Monday to Friday, 9 to 5.</p>
+    </div>
   </div>
 </section>
 
-<section class="cta-band">
-  <div class="wrap">
-    <h2>Need a plumber today?</h2>
-    <p>Call (925) 462-1639 for service, or stop by the Rose Avenue showroom to plan your remodel. Free estimates on remodels and repipes.</p>
-    <a class="btn" href="tel:9254621639">Call (925) 462-1639</a>
-  </div>
-</section>
+<footer class="wrap site">
+  <span>Valley Plumbing Home Center, 272 Rose Ave, Pleasanton, CA 94566</span>
+  <span>Design preview by Sky Yang, San Francisco</span>
+</footer>
 
-<footer><div class="wrap">
-  <div>© 2026 Valley Plumbing Home Center · 272 Rose Ave, Pleasanton, CA 94566</div>
-  <div class="socials"><a href="https://www.facebook.com/ValleyPlumbingHomeCenter/" target="_blank" rel="noopener">Facebook</a><a href="https://www.google.com/maps/search/Valley+Plumbing+Home+Center+272+Rose+Ave+Pleasanton+CA+94566/" target="_blank" rel="noopener">Google reviews</a><a href="https://www.yelp.com/biz/valley-plumbing-home-center-pleasanton-3" target="_blank" rel="noopener">Yelp</a></div>
-</div></footer>
-
-<div class="mobile-cta"><a class="btn" href="tel:9254621639">Call</a><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Valley%20Plumbing%20Home%20Center%2C%20272%20Rose%20Ave%2C%20Pleasanton%2C%20CA%2094566" target="_blank" rel="noopener">Directions</a></div>
+<div class="callbar" aria-label="Call Valley Plumbing">
+  <a class="num" href="tel:9254621639">(925) 462-1639</a>
+  <a href="#visit">Showroom hours</a>
+</div>
 </body>
 </html>
