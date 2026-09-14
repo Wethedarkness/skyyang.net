@@ -4,305 +4,339 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Monroe Automotive and Fleet Specialists · Auto Repair &amp; Fleet Service in Downtown Chandler, AZ</title>
+<meta name="theme-color" content="#E9E9E4">
+<title>Monroe Automotive and Fleet Specialists: Auto Repair & Fleet Service in Downtown Chandler, AZ</title>
 <meta name="description" content="Monroe Automotive and Fleet Specialists is an independent auto, truck and fleet repair shop at 799 S Arizona Ave in downtown Chandler, AZ. Diagnostics, brakes, A/C, oil changes, suspension, transmission and full fleet repair, backed by a 36-month/36,000-mile nationwide warranty. (480) 470-8400.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,400;100,500;125,700;125,800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f7f6f8;--bg2:#eeebf0;--ink:#15131a;--muted:#5d5764;--accent:#c8006a;--accent-ink:#ffffff;--line:#e1dce5;--card:#ffffff;--display:'Oswald',serif;--body:'Barlow',system-ui,sans-serif;--radius:12px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font-family:var(--body);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
+:root{
+  --bg:#E9E9E4; --panel:#F3F3EF; --petrol:#12343B; --petrol-2:#1D4A53; --ink:#171B1C; --ink-2:#4C5557;
+  --rule:#CFD2CB; --yellow:#F2B01E; --yellow-ink:#2A2000;
+  --font:"Archivo",system-ui,sans-serif; --max:1240px; --gutter:clamp(18px,4vw,56px);
+}
+*{box-sizing:border-box} html{color-scheme:light;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-stretch:100%;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;touch-action:manipulation;padding-bottom:64px}
+@media (min-width:761px){body{padding-bottom:0}}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-.wrap.narrow{max-width:820px}
-.preview-bar{background:#111;color:#fff;font:500 13px/1.4 var(--body);text-align:center;padding:8px 12px}
-.preview-bar a{color:#fff}
-header.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
-.brand{font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:.2px;text-decoration:none;display:flex;align-items:center;gap:10px}
-.brand .mark{width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:17px}
-nav.links{display:flex;gap:22px;font-size:15px}
-nav.links a{text-decoration:none;color:var(--muted)}
-nav.links a:hover{color:var(--ink)}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:12px 20px;border-radius:999px;border:1px solid transparent;transition:.15s}
-.btn:hover{filter:brightness(.95)}
-.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
-.btn.small{padding:9px 16px;font-size:14px}
-.hero{position:relative;min-height:620px;display:grid;align-items:end;color:#fff;isolation:isolate}
-.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.35) 45%,rgba(0,0,0,.75) 100%);z-index:-1}
-.hero .wrap{padding-top:96px;padding-bottom:64px}
-.hero .eyebrow{color:#fff;opacity:.9}
-.hero h1{font-family:var(--display);font-size:clamp(38px,6vw,72px);line-height:1.02;margin:0 0 14px;max-width:16ch;font-weight:700;text-wrap:balance}
-.hero p.sub{font-size:clamp(17px,2vw,21px);max-width:56ch;margin:0 0 28px;opacity:.95}
-.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
-.hero .btn.ghost{color:#fff;border-color:rgba(255,255,255,.6)}
-.hero .meta{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:28px;font-size:14px;opacity:.9}
-.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:700;color:var(--accent);margin:0 0 10px}
-.section{padding:88px 0}
-.section.alt{background:var(--bg2)}
-.section h2{font-family:var(--display);font-size:clamp(30px,4vw,44px);line-height:1.1;margin:0 0 18px;font-weight:700;text-wrap:balance}
-.lead{font-size:18px;color:var(--muted);max-width:62ch}
-.highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:-56px;position:relative;z-index:2}
-.hl{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
-.hl-icon{font-size:26px;margin-bottom:10px}
-.hl h3{margin:0 0 6px;font-size:18px}
-.hl p{margin:0;color:var(--muted);font-size:15px}
-.two{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start}
-.groups{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;margin-top:36px}
-.group-title{font-family:var(--display);font-size:24px;margin:0 0 6px}
-.group-note{margin:0 0 12px;color:var(--muted);font-size:14px}
-ul.items{list-style:none;margin:0;padding:0}
-ul.items li{padding:14px 0;border-bottom:1px dashed var(--line)}
-.item-head{display:flex;align-items:baseline;gap:10px}
-.item-name{font-weight:600}
-.dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px)}
-.item-price{font-weight:600;white-space:nowrap}
-.item-desc{margin:4px 0 0;color:var(--muted);font-size:15px}
-.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
-.review{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
-.review .stars{color:#e0a100;letter-spacing:2px;font-size:15px}
-.review blockquote{margin:12px 0 14px;font-size:16.5px;line-height:1.55}
-.review figcaption{font-weight:600;font-size:14px}
-.review figcaption span{color:var(--muted);font-weight:400}
-.rating-line{margin-top:14px;color:var(--muted);font-size:15px}
-.about-facts{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.about-facts li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:2px}
-.about-facts strong{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
-.about-facts span{font-weight:600}
-ul.checks{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px}
-ul.checks li{padding-left:30px;position:relative}
-ul.checks li::before{content:"✓";position:absolute;left:0;top:0;color:var(--accent);font-weight:700}
-.visit{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
-table.hours{border-collapse:collapse;width:100%;margin-top:14px}
-table.hours th{text-align:left;font-weight:600;padding:10px 0;border-bottom:1px solid var(--line);width:40%}
-table.hours td{padding:10px 0;border-bottom:1px solid var(--line);color:var(--muted)}
-.map{border:0;width:100%;height:100%;min-height:380px;border-radius:var(--radius);filter:saturate(.9)}
-.contact-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;margin-top:22px}
-.contact-card p{margin:6px 0}
-.contact-card a{text-decoration:none;font-weight:600}
-.cta-band{background:var(--accent);color:var(--accent-ink);padding:72px 0;text-align:center}
-.cta-band h2{font-family:var(--display);font-size:clamp(28px,4vw,40px);margin:0 0 12px}
-.cta-band p{margin:0 auto 24px;max-width:56ch;opacity:.92;font-size:18px}
-.cta-band .btn{background:var(--accent-ink);color:var(--accent)}
-footer{padding:36px 0;font-size:14px;color:var(--muted)}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-footer .socials{display:flex;gap:16px}
-footer a{text-decoration:none}
-.mobile-cta{display:none}
-@media (max-width:860px){
-  nav.links{display:none}
-  .highlights,.reviews,.groups,.two,.visit,.about-facts{grid-template-columns:1fr}
-  .highlights{margin-top:24px}
-  .hero{min-height:540px}
-  .section{padding:64px 0}
-  .map{min-height:300px}
-  .item-price{white-space:normal;text-align:right;max-width:58%}
-  .brand{font-size:19px;line-height:1.1}
-  .nav .btn.small{white-space:nowrap;padding:8px 12px;font-size:13px}
-  .mobile-cta{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:30;background:var(--card);border-top:1px solid var(--line);padding:10px 14px;gap:10px}
-  .mobile-cta .btn{flex:1;justify-content:center}
-  body{padding-bottom:64px}
+h1,h2,h3{font-stretch:125%;font-weight:700;line-height:1;letter-spacing:-.01em;margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter)}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--petrol);color:#fff;padding:8px 12px;z-index:50}
+.skip:focus{left:8px}
+
+.preview{background:var(--ink);color:#D9DBD4;font-size:13px;padding:7px var(--gutter);display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap}
+.preview a{color:#fff;text-underline-offset:3px;text-decoration-thickness:1px}
+
+.nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0 16px;border-bottom:2px solid var(--petrol)}
+.mark{text-decoration:none;font-stretch:125%;font-weight:800;font-size:20px;letter-spacing:-.01em;color:var(--petrol);line-height:1.05}
+.mark small{display:block;font-stretch:100%;font-weight:500;font-size:13px;color:var(--ink-2);letter-spacing:0;margin-top:3px}
+.nav ul{list-style:none;display:flex;gap:26px;margin:0;padding:0;font-weight:500;font-size:16px}
+.nav ul a{text-decoration:none;color:var(--ink-2)}
+.nav ul a:hover{color:var(--petrol)}
+.nav .call{text-decoration:none;font-weight:700;color:var(--petrol);border:2px solid var(--petrol);padding:9px 14px}
+.nav .call:hover{background:var(--petrol);color:#fff}
+@media (max-width:860px){.nav ul{display:none}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,4vw,64px);align-items:center;padding:clamp(36px,5vw,72px) 0 clamp(28px,4vw,56px)}
+.hero h1{font-size:clamp(42px,6.4vw,92px);color:var(--petrol);max-width:12ch}
+.hero .lede{font-size:clamp(17px,1.4vw,20px);color:var(--ink-2);max-width:50ch;margin-top:24px}
+.actions{display:flex;gap:14px;align-items:center;margin-top:30px;flex-wrap:wrap}
+.btn{text-decoration:none;font-weight:700;font-size:17px;display:inline-flex;align-items:center;padding:15px 24px;border:2px solid var(--petrol);transition:background-color .18s ease,color .18s ease,transform .18s ease}
+.btn-solid{background:var(--petrol);color:#fff}
+.btn-solid:hover{background:var(--petrol-2);border-color:var(--petrol-2)}
+.btn-ghost{color:var(--petrol);background:transparent}
+.btn-ghost:hover{background:var(--petrol);color:#fff}
+.btn:active{transform:translateY(1px)}
+.hero-fig{position:relative;margin:0}
+.hero-fig img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.stamp{position:absolute;left:-14px;bottom:-18px;width:168px;height:168px;border:5px solid var(--yellow);border-radius:50%;color:var(--yellow-ink);background:rgba(242,176,30,.92);display:flex;align-items:center;justify-content:center;text-align:center;font-stretch:125%;font-weight:800;font-size:19px;line-height:1.05;letter-spacing:.02em;transform:rotate(-9deg);padding:14px}
+.hero-fig figcaption{position:absolute;right:0;bottom:0;background:var(--petrol);color:#fff;font-size:13px;padding:7px 11px}
+@media (max-width:880px){.hero{grid-template-columns:1fr}.hero-fig{order:-1}.stamp{width:132px;height:132px;font-size:15px;left:8px;bottom:-14px}}
+
+/* facts strip */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--petrol);border-bottom:1px solid var(--rule);margin-top:clamp(28px,4vw,48px)}
+.facts div{padding:18px 18px 18px 0;border-right:1px solid var(--rule)}
+.facts div + div{padding-left:18px}
+.facts div:last-child{border-right:0}
+.facts b{display:block;font-stretch:125%;font-weight:700;font-size:clamp(20px,2vw,26px);color:var(--petrol);line-height:1.1}
+.facts span{display:block;color:var(--ink-2);font-size:15px;margin-top:6px}
+@media (max-width:760px){.facts{grid-template-columns:1fr 1fr}.facts div{border-right:0;border-bottom:1px solid var(--rule);padding-left:0}.facts div + div{padding-left:0}.facts div:nth-child(odd){border-right:1px solid var(--rule);padding-right:14px}.facts div:nth-child(even){padding-left:14px}}
+
+section{padding:clamp(52px,7vw,96px) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(20px,4vw,64px);align-items:end;margin-bottom:clamp(24px,3vw,40px)}
+.sec-head h2{font-size:clamp(34px,4.4vw,60px);color:var(--petrol)}
+.sec-head p{color:var(--ink-2);font-size:18px;max-width:54ch}
+@media (max-width:760px){.sec-head{grid-template-columns:1fr}}
+
+/* estimate sheet */
+.sheet{background:var(--panel);border:1px solid var(--rule);border-top:3px solid var(--petrol)}
+.sheet-head{display:grid;grid-template-columns:1fr auto;padding:16px 22px;border-bottom:1px solid var(--rule);font-size:14px;color:var(--ink-2);gap:16px}
+.sheet-head b{color:var(--ink);font-weight:700}
+.group{padding:18px 22px 6px}
+.group h3{font-size:22px;color:var(--petrol);margin-bottom:6px}
+.group table{width:100%;border-collapse:collapse}
+.group td{padding:11px 0;border-top:1px dashed var(--rule);vertical-align:top;font-size:16px}
+.group tr:first-child td{border-top:0}
+.group td:first-child{width:34%;font-weight:600;padding-right:18px}
+.group td:last-child{width:120px;text-align:right;color:var(--petrol);font-weight:600;white-space:nowrap}
+.group td.free{color:var(--yellow-ink);background:linear-gradient(transparent 55%,rgba(242,176,30,.55) 55%,rgba(242,176,30,.55) 92%,transparent 92%)}
+.sheet-foot{padding:16px 22px;border-top:1px solid var(--rule);color:var(--ink-2);font-size:15px}
+@media (max-width:640px){.group td{display:block;width:auto!important;text-align:left!important;padding:6px 0}.group td:first-child{padding-top:12px}.group td:last-child{padding-bottom:12px}}
+
+/* fleet band */
+.fleet{background:var(--petrol);color:#fff}
+.fleet .inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:center}
+.fleet h2{font-size:clamp(36px,4.8vw,66px);color:#fff}
+.fleet p{color:#C9D6D8;font-size:18px;margin-top:18px;max-width:50ch}
+.fleet ul{list-style:none;margin:0;padding:0;font-size:17px}
+.fleet li{padding:13px 0;border-top:1px solid rgba(255,255,255,.22)}
+.fleet li:last-child{border-bottom:1px solid rgba(255,255,255,.22)}
+.fleet .btn{border-color:var(--yellow);background:var(--yellow);color:var(--yellow-ink);margin-top:26px}
+.fleet .btn:hover{background:#FFC542;border-color:#FFC542}
+@media (max-width:880px){.fleet .inner{grid-template-columns:1fr}}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,4vw,64px);align-items:start}
+.about img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.about h2{font-size:clamp(32px,4vw,54px);color:var(--petrol);margin-bottom:18px}
+.about p{color:var(--ink-2);font-size:17px}
+.about p + p{margin-top:12px}
+.kv{width:100%;border-collapse:collapse;margin-top:22px;font-size:16px}
+.kv td{padding:9px 0;border-top:1px solid var(--rule)}
+.kv td:first-child{color:var(--ink-2);width:36%}
+.kv tr:last-child td{border-bottom:1px solid var(--petrol)}
+@media (max-width:880px){.about{grid-template-columns:1fr}}
+
+/* reviews */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,3vw,44px)}
+blockquote{margin:0;font-size:clamp(19px,1.6vw,23px);line-height:1.35;letter-spacing:-.005em;border-top:3px solid var(--petrol);padding-top:18px}
+blockquote footer{margin-top:14px;font-size:15px;color:var(--ink-2)}
+.rating{margin-top:28px;color:var(--ink-2);font-size:15px}
+@media (max-width:820px){.quotes{grid-template-columns:1fr}}
+
+/* hours + map */
+.visit{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,4vw,64px);align-items:start}
+.visit h2{font-size:clamp(32px,4vw,54px);color:var(--petrol);margin-bottom:18px}
+.hours{width:100%;border-collapse:collapse;font-size:16px;font-variant-numeric:tabular-nums}
+.hours td{padding:8px 0;border-top:1px solid var(--rule)}
+.hours td:last-child{text-align:right}
+.hours tr:last-child td{border-bottom:1px solid var(--petrol)}
+.visit .note{color:var(--ink-2);font-size:15.5px;margin-top:16px}
+.map{width:100%;aspect-ratio:4/3;border:0;filter:grayscale(.2)}
+.addr{margin-top:12px;font-size:16px}
+@media (max-width:880px){.visit{grid-template-columns:1fr}}
+
+/* final cta */
+.final{border-top:2px solid var(--petrol);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(20px,4vw,64px);align-items:center;padding:clamp(40px,5vw,72px) 0}
+.final h2{font-size:clamp(36px,4.6vw,64px);color:var(--petrol)}
+.final p{color:var(--ink-2);font-size:18px;margin-top:14px;max-width:46ch}
+.final .btns{display:flex;flex-direction:column;gap:12px}
+.final .btn{justify-content:center}
+@media (max-width:880px){.final{grid-template-columns:1fr}}
+
+footer.site{padding:26px 0 40px;font-size:15px;color:var(--ink-2);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:1px solid var(--rule)}
+footer.site nav{display:flex;gap:16px;flex-wrap:wrap}
+
+/* sticky mobile call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr;background:var(--petrol);z-index:40;padding-bottom:env(safe-area-inset-bottom)}
+.callbar a{color:#fff;text-decoration:none;font-weight:700;text-align:center;padding:16px 10px;font-size:16px}
+.callbar a + a{border-left:1px solid rgba(255,255,255,.25)}
+@media (min-width:761px){.callbar{display:none}}
+
+@media (prefers-reduced-motion:no-preference){
+  .hero > *{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+  .hero-fig{animation-delay:.12s}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 }
 </style>
 </head>
 <body>
-<div class="preview-bar">Design preview built by Sky Yang for Monroe Automotive and Fleet Specialists · photos are placeholders until your own are added · <a href="tel:6505188626">650-518-8626</a></div>
-<header class="nav"><div class="wrap">
-  <a class="brand" href="#top"><span class="mark">🔧</span>Monroe Automotive</a>
-  <nav class="links"><a href="#services">Services</a><a href="#about">About</a><a href="#fleet">Fleet repair</a><a href="#reviews">Reviews</a><a href="#visit">Hours &amp; location</a></nav>
-  <a class="btn small" href="tel:4804708400">Call (480) 470-8400</a>
-</div></header>
+<a class="skip" href="#main">Skip to content</a>
+<div class="preview" role="note">
+  <span>Design preview built by Sky Yang for Monroe Automotive and Fleet Specialists. Everything comes from your public listings; photos are placeholders until we get yours.</span>
+  <a href="mailto:skyyang333@gmail.com">skyyang333@gmail.com</a>
+</div>
 
-<section class="hero" id="top">
-  <img src="hero.jpg" alt="A pickup truck and a fleet van on lifts inside a clean, modern independent repair shop" fetchpriority="high">
-  <div class="wrap">
-    <p class="eyebrow">Downtown Chandler · Cars, trucks &amp; fleets</p>
-    <h1>Auto repair done right.</h1>
-    <p class="sub">Monroe Automotive and Fleet Specialists is an independent repair shop on S Arizona Ave, owned by Jose Aranda. Diagnostics, brakes, A/C, oil changes, suspension, transmission and full fleet repair for all industries, backed by a 36-month, 36,000-mile nationwide warranty.</p>
-    <div class="cta"><a class="btn" href="tel:4804708400">Call (480) 470-8400</a><a class="btn ghost" href="#services">See our services</a></div>
-    <div class="meta"><span>Mon–Fri 7:30 am – 5 pm</span><span>Free inspection &amp; free second opinion</span><span>36-month / 36,000-mile nationwide warranty</span><span>Fleet repair for all industries</span><span>BBB Accredited, A rating</span></div>
-  </div>
-</section>
+<header class="wrap">
+  <nav class="nav" aria-label="Primary">
+    <a class="mark" href="#top">Monroe Automotive<small>and Fleet Specialists, downtown Chandler</small></a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#fleet">Fleet repair</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#visit">Hours and location</a></li>
+    </ul>
+    <a class="call" href="tel:4804708400">(480) 470-8400</a>
+  </nav>
+</header>
 
-<div class="wrap"><div class="highlights">
-      <div class="hl">
-        <div class="hl-icon">🛡️</div>
-        <h3>Backed by a real warranty</h3>
-        <p>With a 3-year, 36,000-mile nationwide warranty, you can drive with confidence knowing your vehicle is in expert hands.</p>
-      </div>
-      <div class="hl">
-        <div class="hl-icon">🚚</div>
-        <h3>Fleet specialists</h3>
-        <p>Auto, truck and bus repair and maintenance, with full fleet repair for all industries. Keep your work vehicles on the road with one shop that knows them.</p>
-      </div>
-      <div class="hl">
-        <div class="hl-icon">🤝</div>
-        <h3>Straight answers</h3>
-        <p>Come on in for a free inspection or free second opinion. Customers say we explain everything clearly and don't push extra work you don't need.</p>
-      </div></div></div>
-
-<section id="services" class="section">
-  <div class="wrap">
-    <p class="eyebrow">Services</p>
-    <h2>From oil changes to engine repair</h2>
-    <p class="lead">Our state-of-the-art facility is equipped with advanced vehicle diagnostic tools for cars, trucks, vans and buses. Appointments are recommended, and we'll fit in same-day work whenever the schedule allows.</p>
-    <div class="groups">
-      <div class="group">
-        <h3 class="group-title">Maintenance</h3>
-        
-        <ul class="items">
-          <li>
-            <div class="item-head"><span class="item-name">Oil change &amp; fluid changes</span></div>
-            <p class="item-desc">Conventional and synthetic oil, plus coolant, transmission and brake fluid services.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Tire rotations &amp; wheel alignment</span></div>
-            <p class="item-desc">Even wear and straight tracking, checked with every service.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Brake checks &amp; inspection</span></div>
-            <p class="item-desc">Pads, rotors and fluid inspected before they become a problem.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Heating &amp; air check</span></div>
-            <p class="item-desc">Cabin comfort tested and A/C performance checked before the Arizona heat.</p>
-          </li>
-        </ul>
-      </div>
-      <div class="group">
-        <h3 class="group-title">Repair</h3>
-        
-        <ul class="items">
-          <li>
-            <div class="item-head"><span class="item-name">Diagnostics</span></div>
-            <p class="item-desc">Check-engine lights, electrical faults and drivability problems traced with advanced diagnostic tools.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Brake repair</span></div>
-            <p class="item-desc">Pads, rotors, calipers and hydraulics.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Auto A/C repair</span></div>
-            <p class="item-desc">Leak detection, recharge, compressor and blower repairs.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Engine &amp; transmission repair</span></div>
-            <p class="item-desc">From sensors and gaskets to major repairs, with a written estimate first.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Suspension check &amp; repair</span></div>
-            <p class="item-desc">Shocks, struts, bushings and steering components.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Second opinion</span></div>
-            <p class="item-desc">Not sure about a quote from another shop? Bring it in. The second opinion is free.</p>
-          </li>
-        </ul>
-      </div>
-      <div class="group">
-        <h3 class="group-title">Glass &amp; tint</h3>
-        
-        <ul class="items">
-          <li>
-            <div class="item-head"><span class="item-name">Window tinting</span></div>
-            <p class="item-desc">Heat and glare control for cars and work vehicles.</p>
-          </li><li>
-            <div class="item-head"><span class="item-name">Windshield replacement</span></div>
-            <p class="item-desc">Chips and cracks handled in the same visit as your service.</p>
-          </li>
-        </ul>
-      </div></div>
-    <p class="group-note" style="margin-top:22px">Call (480) 470-8400 for an estimate. We accept credit, debit and contactless payments. Language assistance available.</p>
-  </div>
-</section>
-
-<section id="about" class="section alt">
-  <div class="wrap two">
+<main id="main" class="wrap">
+  <section class="hero" id="top" style="padding-bottom:0">
     <div>
-      <p class="eyebrow">About</p>
+      <h1>Auto repair done right.</h1>
+      <p class="lede">Monroe Automotive and Fleet Specialists is an independent repair shop on S Arizona Ave, owned by Jose Aranda. Diagnostics, brakes, A/C, oil changes, suspension, transmission and full fleet repair for all industries, backed by a 36-month, 36,000-mile nationwide warranty.</p>
+      <div class="actions">
+        <a class="btn btn-solid" href="tel:4804708400">Call (480) 470-8400</a>
+        <a class="btn btn-ghost" href="#services">See our services</a>
+      </div>
+    </div>
+    <figure class="hero-fig">
+      <img src="hero.jpg" width="1800" height="1200" alt="A pickup truck and a fleet van on lifts inside a clean, modern independent repair shop" fetchpriority="high">
+      <div class="stamp" aria-hidden="true">Free second opinion</div>
+      <figcaption>Placeholder photo. Your shop goes here.</figcaption>
+    </figure>
+  </section>
+
+  <div class="facts" aria-label="Shop facts">
+    <div><b>Mon to Fri, 7:30 to 5</b><span>Appointments recommended, same-day when the schedule allows</span></div>
+    <div><b>36 months, 36,000 miles</b><span>Nationwide warranty on the work</span></div>
+    <div><b>Free inspection</b><span>And a free second opinion on any other shop's quote</span></div>
+    <div><b>BBB Accredited, A rating</b><span>Chandler Chamber of Commerce member</span></div>
+  </div>
+
+  <section id="services">
+    <div class="sec-head">
+      <h2>From oil changes to engine repair</h2>
+      <p>Our state-of-the-art facility is equipped with advanced vehicle diagnostic tools for cars, trucks, vans and buses. Appointments are recommended, and we'll fit in same-day work whenever the schedule allows.</p>
+    </div>
+    <div class="sheet" role="region" aria-label="Services, laid out like a written estimate">
+      <div class="sheet-head"><span><b>Monroe Automotive and Fleet Specialists</b>, 799 S Arizona Ave, Chandler, AZ 85225</span><span>Written estimate before any repair</span></div>
+      <div class="group">
+        <h3>Maintenance</h3>
+        <table>
+          <tr><td>Oil change and fluid changes</td><td>Conventional and synthetic oil, plus coolant, transmission and brake fluid services.</td><td>Call for price</td></tr>
+          <tr><td>Tire rotations and wheel alignment</td><td>Even wear and straight tracking, checked with every service.</td><td>Call for price</td></tr>
+          <tr><td>Brake checks and inspection</td><td>Pads, rotors and fluid inspected before they become a problem.</td><td class="free">Free with service</td></tr>
+          <tr><td>Heating and air check</td><td>Cabin comfort tested and A/C performance checked before the Arizona heat.</td><td>Call for price</td></tr>
+        </table>
+      </div>
+      <div class="group">
+        <h3>Repair</h3>
+        <table>
+          <tr><td>Diagnostics</td><td>Check-engine lights, electrical faults and drivability problems traced with advanced diagnostic tools.</td><td>Call for price</td></tr>
+          <tr><td>Brake repair</td><td>Pads, rotors, calipers and hydraulics.</td><td>Call for price</td></tr>
+          <tr><td>Auto A/C repair</td><td>Leak detection, recharge, compressor and blower repairs.</td><td>Call for price</td></tr>
+          <tr><td>Engine and transmission repair</td><td>From sensors and gaskets to major repairs, with a written estimate first.</td><td>Estimate first</td></tr>
+          <tr><td>Suspension check and repair</td><td>Shocks, struts, bushings and steering components.</td><td>Call for price</td></tr>
+          <tr><td>Second opinion</td><td>Not sure about a quote from another shop? Bring it in.</td><td class="free">Free</td></tr>
+        </table>
+      </div>
+      <div class="group">
+        <h3>Glass and tint</h3>
+        <table>
+          <tr><td>Window tinting</td><td>Heat and glare control for cars and work vehicles.</td><td>Call for price</td></tr>
+          <tr><td>Windshield replacement</td><td>Chips and cracks handled in the same visit as your service.</td><td>Call for price</td></tr>
+        </table>
+      </div>
+      <div class="sheet-foot">Call (480) 470-8400 for an estimate. We accept credit, debit and contactless payments. Language assistance available.</div>
+    </div>
+  </section>
+</main>
+
+<section class="fleet" id="fleet">
+  <div class="wrap inner">
+    <div>
+      <h2>One shop for every vehicle you run</h2>
+      <p>This business offers auto, truck and bus repair and maintenance services, with full fleet repair for all industries. Call (480) 470-8400 to talk through your fleet's needs and set up a service schedule.</p>
+      <a class="btn" href="tel:4804708400">Talk fleet service</a>
+    </div>
+    <ul>
+      <li>Cars, pickups, vans, box trucks and buses</li>
+      <li>Preventive maintenance, fluid changes and inspections on a schedule</li>
+      <li>Diagnostics and repair with a written estimate first</li>
+      <li>Onsite services available</li>
+      <li>Window tinting and windshield replacement for work vehicles</li>
+    </ul>
+  </div>
+</section>
+
+<main class="wrap" aria-label="About, reviews and hours">
+  <section class="about" id="about">
+    <div>
       <h2>An independent shop in downtown Chandler</h2>
-      <p>Monroe Automotive and Fleet Specialists is your trusted partner for all your auto repair and car maintenance needs. Owner Jose Aranda opened the business in 2024 and moved it to its current home at 799 S Arizona Ave in downtown Chandler in early 2026, with a grand opening in February.</p><p>Customers know Jose by name. Reviews describe a shop that gets you in the same day when it can, explains what needs to be done and what doesn't, and keeps a comfortable lobby for the wait. The shop is BBB Accredited with an A rating and a member of the Chandler Chamber of Commerce.</p><p>Whether you drive one car or run a fleet of trucks and buses, the work is backed by the same 36-month, 36,000-mile nationwide warranty.</p>
+      <p>Monroe Automotive and Fleet Specialists is your trusted partner for all your auto repair and car maintenance needs. Owner Jose Aranda opened the business in 2024 and moved it to its current home at 799 S Arizona Ave in downtown Chandler in early 2026, with a grand opening in February.</p>
+      <p>Customers know Jose by name. Reviews describe a shop that gets you in the same day when it can, explains what needs to be done and what doesn't, and keeps a comfortable lobby for the wait. The shop is BBB Accredited with an A rating and a member of the Chandler Chamber of Commerce.</p>
+      <p>Whether you drive one car or run a fleet of trucks and buses, the work is backed by the same 36-month, 36,000-mile nationwide warranty.</p>
+      <table class="kv">
+        <tr><td>Owner</td><td>Jose Aranda</td></tr>
+        <tr><td>Established</td><td>2024</td></tr>
+        <tr><td>Location</td><td>799 S Arizona Ave, downtown Chandler</td></tr>
+        <tr><td>Warranty</td><td>36 months / 36,000 miles, nationwide</td></tr>
+        <tr><td>BBB</td><td>Accredited, A rating</td></tr>
+        <tr><td>Member</td><td>Chandler Chamber of Commerce</td></tr>
+      </table>
     </div>
     <div>
-      <ul class="about-facts"><li><strong>Owner</strong><span>Jose Aranda</span></li><li><strong>Established</strong><span>2024</span></li><li><strong>Location</strong><span>799 S Arizona Ave, downtown Chandler</span></li><li><strong>Warranty</strong><span>36 months / 36,000 miles, nationwide</span></li><li><strong>BBB</strong><span>Accredited, A rating</span></li><li><strong>Member</strong><span>Chandler Chamber of Commerce</span></li></ul>
+      <img src="img-3.jpg" width="1400" height="933" alt="A white stucco repair shop with open bay doors on a downtown Chandler street at golden hour" loading="lazy">
+      <img src="img-2.jpg" width="1400" height="933" alt="A diagnostic scan tool resting on a fender cover, plugged into a car" loading="lazy" style="margin-top:16px">
     </div>
-  </div>
-</section>
+  </section>
 
+  <section id="reviews">
+    <div class="sec-head">
+      <h2>What drivers say</h2>
+      <p>Straight answers, same-day when possible, and no pushing extra work. That is the pattern across 128 Google reviews.</p>
+    </div>
+    <div class="quotes">
+      <blockquote>“The team was easy to deal with, honest, and straightforward about what needed to be done. They explained everything clearly and didn't try to push any extra work. The service was done on time, the price was fair, and my car has been running great since.”<footer>Pedro L., Google</footer></blockquote>
+      <blockquote>“I took my truck in for an oil change, was a great experience. They were able to squeeze me in while I waited although I would recommend calling for an appointment. Did not try to upsell me on unnecessary services just shot me straight.”<footer>Jeff J., Google</footer></blockquote>
+      <blockquote>“I called Monroe and I spoke with Jose and he said he can get me right in. To my surprise the shop was so full but he proceeded to pull my car around and git me back on the road same day. Thank you Jose and the Monroe Team.”<footer>Perla J., Google</footer></blockquote>
+    </div>
+    <p class="rating">4.7 stars on Google (128 reviews). BBB Accredited, A rating. Chandler Chamber of Commerce member.</p>
+  </section>
 
-    <section id="fleet" class="section alt">
-      <div class="wrap narrow">
-        <p class="eyebrow">Fleet repair</p>
-        <h2>One shop for every vehicle you run</h2>
-        <p class="lead">This business offers auto, truck and bus repair and maintenance services, with full fleet repair for all industries. Call (480) 470-8400 to talk through your fleet's needs and set up a service schedule.</p>
-        <ul class="checks"><li>Cars, pickups, vans, box trucks and buses</li><li>Preventive maintenance, fluid changes and inspections on a schedule</li><li>Diagnostics and repair with a written estimate first</li><li>Onsite services available</li><li>Window tinting and windshield replacement for work vehicles</li></ul>
-      </div>
-    </section>
-
-<section id="reviews" class="section">
-  <div class="wrap">
-    <p class="eyebrow">Reviews</p>
-    <h2>What drivers say</h2>
-    <div class="reviews">
-      <figure class="review">
-        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <blockquote>“The team was easy to deal with, honest, and straightforward about what needed to be done. They explained everything clearly and didn't try to push any extra work. The service was done on time, the price was fair, and my car has been running great since.”</blockquote>
-        <figcaption>Pedro L. <span>· Google</span></figcaption>
-      </figure>
-      <figure class="review">
-        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <blockquote>“I took my truck in for an oil change, was a great experience. They were able to squeeze me in while I waited although I would recommend calling for an appointment. Did not try to upsell me on unnecessary services just shot me straight.”</blockquote>
-        <figcaption>Jeff J. <span>· Google</span></figcaption>
-      </figure>
-      <figure class="review">
-        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <blockquote>“I called Monroe and I spoke with Jose and he said he can get me right in. To my surprise the shop was so full but he proceeded to pull my car around and git me back on the road same day. Thank you Jose and the Monroe Team.”</blockquote>
-        <figcaption>Perla J. <span>· Google</span></figcaption>
-      </figure>
-      <figure class="review">
-        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <blockquote>“I called for a same day walk in appt and they told us to come right in. The lobby was comfy for my little one and they didn't have to wait very long. The employees were very nice, helpful and knowledgeable.”</blockquote>
-        <figcaption>Charlene D. <span>· Google</span></figcaption>
-      </figure>
-      <figure class="review">
-        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <blockquote>“I had great interaction with Jose and he was very personable and polite.”</blockquote>
-        <figcaption>Daniel E. <span>· Google</span></figcaption>
-      </figure>
-      <figure class="review">
-        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-        <blockquote>“Best place to get your vehicle serviced, honest and timely manner. I've been bringing my truck and car here, they have always been upfront and honest about things that need to be done.”</blockquote>
-        <figcaption>Jordana B. <span>· Yelp</span></figcaption>
-      </figure></div>
-    <p class="rating-line">4.7 stars on Google (128 reviews) · BBB Accredited, A rating · Chandler Chamber of Commerce member</p>
-  </div>
-</section>
-
-<section id="visit" class="section alt">
-  <div class="wrap visit">
+  <section class="visit" id="visit">
     <div>
-      <p class="eyebrow">Hours &amp; location</p>
       <h2>Open weekdays, 7:30 to 5</h2>
-      <table class="hours"><tbody><tr><th>Monday</th><td>7:30 am – 5:00 pm</td></tr><tr><th>Tuesday</th><td>7:30 am – 5:00 pm</td></tr><tr><th>Wednesday</th><td>7:30 am – 5:00 pm</td></tr><tr><th>Thursday</th><td>7:30 am – 5:00 pm</td></tr><tr><th>Friday</th><td>7:30 am – 5:00 pm</td></tr><tr><th>Saturday</th><td>Closed</td></tr><tr><th>Sunday</th><td>Closed</td></tr></tbody></table>
-      <p class="group-note" style="margin-top:10px">On S Arizona Ave in downtown Chandler. Appointments recommended; call ahead for same-day service. Wheelchair-accessible entrance, parking and restroom.</p>
-      <div class="contact-card">
-        <p><strong>Monroe Automotive and Fleet Specialists</strong></p>
-        <p>799 S Arizona Ave, Chandler, AZ 85225</p>
-        <p><a href="tel:4804708400">(480) 470-8400</a> · <a href="mailto:monroeautomotiveaz@gmail.com">monroeautomotiveaz@gmail.com</a></p>
-        <p style="margin-top:14px"><a class="btn small" href="https://www.google.com/maps/search/?api=1&query=Monroe%20Automotive%20and%20Fleet%20Specialists%2C%20799%20S%20Arizona%20Ave%2C%20Chandler%2C%20AZ%2085225" target="_blank" rel="noopener">Get directions</a></p>
-      </div>
+      <table class="hours">
+        <tr><td>Monday</td><td>7:30 am – 5:00 pm</td></tr>
+        <tr><td>Tuesday</td><td>7:30 am – 5:00 pm</td></tr>
+        <tr><td>Wednesday</td><td>7:30 am – 5:00 pm</td></tr>
+        <tr><td>Thursday</td><td>7:30 am – 5:00 pm</td></tr>
+        <tr><td>Friday</td><td>7:30 am – 5:00 pm</td></tr>
+        <tr><td>Saturday</td><td>Closed</td></tr>
+        <tr><td>Sunday</td><td>Closed</td></tr>
+      </table>
+      <p class="note">On S Arizona Ave in downtown Chandler. Appointments recommended; call ahead for same-day service. Wheelchair-accessible entrance, parking and restroom.</p>
     </div>
-    <iframe class="map" title="Map to Monroe Automotive and Fleet Specialists" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Monroe%20Automotive%20and%20Fleet%20Specialists%2C%20799%20S%20Arizona%20Ave%2C%20Chandler%2C%20AZ%2085225&output=embed"></iframe>
+    <div>
+      <iframe class="map" title="Map to Monroe Automotive and Fleet Specialists" src="https://www.google.com/maps?q=Monroe%20Automotive%20and%20Fleet%20Specialists%2C%20799%20S%20Arizona%20Ave%2C%20Chandler%2C%20AZ%2085225&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <p class="addr">799 S Arizona Ave, Chandler, AZ 85225. <a href="tel:4804708400">(480) 470-8400</a>. <a href="mailto:monroeautomotiveaz@gmail.com">monroeautomotiveaz@gmail.com</a></p>
+    </div>
+  </section>
+
+  <div class="final">
+    <div>
+      <h2>Need it looked at today?</h2>
+      <p>Call the shop and ask for Jose. Free inspection, free second opinion, and a 36-month, 36,000-mile warranty on the work.</p>
+    </div>
+    <div class="btns">
+      <a class="btn btn-solid" href="tel:4804708400">Call (480) 470-8400</a>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Monroe%20Automotive%20and%20Fleet%20Specialists%2C%20799%20S%20Arizona%20Ave%2C%20Chandler%2C%20AZ%2085225">Get directions</a>
+    </div>
   </div>
-</section>
+</main>
 
-<section class="cta-band">
-  <div class="wrap">
-    <h2>Need it looked at today?</h2>
-    <p>Call the shop and ask for Jose. Free inspection, free second opinion, and a 36-month, 36,000-mile warranty on the work.</p>
-    <a class="btn" href="tel:4804708400">Call (480) 470-8400</a>
-  </div>
-</section>
+<footer class="wrap site">
+  <span>Monroe Automotive and Fleet Specialists, 799 S Arizona Ave, Chandler, AZ 85225</span>
+  <nav aria-label="Social">
+    <a href="https://www.instagram.com/monroeautomotiveandfleet/">Instagram</a>
+    <a href="https://www.tiktok.com/@monroe.automotive">TikTok</a>
+    <a href="https://www.yelp.com/biz/monroe-automotive-and-fleet-specialist-chandler">Yelp</a>
+    <a href="https://nextdoor.com/pages/monroe-automotive-and-fleet-specialists-mesa-az/">Nextdoor</a>
+  </nav>
+  <span>Design preview by Sky Yang</span>
+</footer>
 
-<footer><div class="wrap">
-  <div>© 2026 Monroe Automotive and Fleet Specialists · 799 S Arizona Ave, Chandler, AZ 85225</div>
-  <div class="socials"><a href="https://www.instagram.com/monroeautomotiveandfleet/" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@monroe.automotive" target="_blank" rel="noopener">TikTok</a><a href="https://www.yelp.com/biz/monroe-automotive-and-fleet-specialist-chandler" target="_blank" rel="noopener">Yelp</a><a href="https://nextdoor.com/pages/monroe-automotive-and-fleet-specialists-mesa-az/" target="_blank" rel="noopener">Nextdoor</a></div>
-</div></footer>
-
-<div class="mobile-cta"><a class="btn" href="tel:4804708400">Call</a><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Monroe%20Automotive%20and%20Fleet%20Specialists%2C%20799%20S%20Arizona%20Ave%2C%20Chandler%2C%20AZ%2085225" target="_blank" rel="noopener">Directions</a></div>
+<div class="callbar" aria-label="Quick actions">
+  <a href="tel:4804708400">Call the shop</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Monroe%20Automotive%20and%20Fleet%20Specialists%2C%20799%20S%20Arizona%20Ave%2C%20Chandler%2C%20AZ%2085225">Directions</a>
+</div>
 </body>
 </html>
