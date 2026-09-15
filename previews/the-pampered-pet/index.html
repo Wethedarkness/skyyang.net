@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#8A7A64">
+<title>The Pampered Pet: dog and cat grooming in Millbrae since 2002 (design preview)</title>
+<meta name="description" content="Design preview by Sky Yang for The Pampered Pet, a family-run dog and cat grooming salon at 111 Park Place, Millbrae. Haircuts, baths, tooth brushing, nails and ears, Monday to Saturday 9 to 5. Call (650) 952-7600.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F3EEE4; --white:#FCFAF5; --card:#FFFDF8;
+  --stucco:#8A7A64; --stucco-deep:#5E5343; --stucco-soft:#EDE4D3;
+  --stone:#C9A26E; --stone-2:#E4CFA6;
+  --red:#C8352B; --red-2:#A82A22;
+  --ink:#2B2620; --ink-2:#574F45; --mute:#7C7368; --rule:#DCD2C2;
+  --display:"Young Serif",Georgia,serif;
+  --body:"Figtree","Helvetica Neue",Helvetica,sans-serif;
+  --max:1180px; --gutter:clamp(18px,4vw,56px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.06;letter-spacing:-.005em;margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter)}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--red);color:#fff;padding:8px 12px;z-index:60;font-weight:700;text-decoration:none}
+.skip:focus{left:8px}
+.fine{font-size:13.5px;color:var(--mute);line-height:1.5}
+
+/* preview strip */
+.preview{background:#1F1B16;color:#CFC6B8;font-size:13px;padding:7px var(--gutter);display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap;line-height:1.45}
+.preview a{color:#fff;text-decoration-thickness:1px;text-underline-offset:3px;white-space:nowrap}
+.preview .short{display:none}
+@media (max-width:720px){.preview .long{display:none}.preview .short{display:inline}}
+
+/* header */
+header{background:rgba(243,238,228,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);position:sticky;top:0;z-index:40}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+.mark{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.mark .sign{width:34px;height:34px;flex:none;background:var(--stucco);border-radius:3px;position:relative;box-shadow:inset 0 -9px 0 var(--stone)}
+.mark .sign::before{content:"";position:absolute;left:9px;right:9px;top:8px;height:10px;background:var(--white);border-radius:1px}
+.mark b{font-family:var(--display);font-weight:400;font-size:21px;line-height:1;display:block}
+.mark small{display:block;font-size:12.5px;color:var(--mute);margin-top:4px}
+.nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0;font-size:15.5px;align-items:center}
+.nav ul a{text-decoration:none;color:var(--ink-2)}
+.nav ul a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+.btn{font-family:var(--body);font-weight:700;font-size:16.5px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 20px;border-radius:6px;border:0;cursor:pointer;line-height:1.15;transition:background-color .18s,color .18s,transform .12s}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-2)}
+.btn-red:active{transform:translateY(1px)}
+.btn-line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn-line:hover{background:var(--ink);color:#fff}
+.btn-paper{background:var(--white);color:var(--ink)}
+.btn-paper:hover{background:#fff}
+.nav .btn{font-size:15px;padding:10px 15px}
+.nav .btn.call-sm{display:none}
+.phone-ic{width:16px;height:16px;flex:none}
+
+/* hero */
+.hero{padding:clamp(36px,6vw,80px) 0 clamp(28px,4vw,48px)}
+.hero-grid{display:grid;grid-template-columns:1fr .92fr;gap:clamp(28px,5vw,64px);align-items:start}
+.hero h1{font-size:clamp(42px,6vw,78px);max-width:12ch}
+.hero .lede{font-size:clamp(18px,1.6vw,21px);line-height:1.55;color:var(--ink-2);max-width:36ch;margin-top:22px}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+.hero .actions .btn{font-size:17.5px;padding:15px 22px}
+.facts{list-style:none;margin:30px 0 0;padding:18px 0 0;border-top:1.5px solid var(--ink);display:grid;grid-template-columns:repeat(2,1fr);gap:14px 24px;max-width:540px}
+.facts li{font-size:15.5px;color:var(--ink-2);line-height:1.45}
+.facts b{display:block;font-family:var(--display);font-weight:400;font-size:20px;color:var(--ink);line-height:1.2;margin-bottom:2px}
+.reveal{opacity:0;transform:translateY(14px);animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}
+.reveal.d1{animation-delay:.08s}.reveal.d2{animation-delay:.18s}.reveal.d3{animation-delay:.3s}
+@keyframes rise{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;animation:none}.btn{transition:none}}
+
+/* hero photo + kennel card */
+.stage{position:relative;padding-bottom:210px}
+.stage .photo{overflow:hidden;border-radius:4px;border-bottom:8px solid var(--stone)}
+.stage .photo img{width:100%;aspect-ratio:4/3.5;object-fit:cover;object-position:60% 50%}
+.card{position:absolute;left:-30px;bottom:0;width:min(322px,86%);background:var(--card);color:var(--ink);padding:34px 16px 16px;border:1px solid var(--rule);box-shadow:0 14px 30px rgba(43,38,32,.16);font-size:14px;line-height:1.45}
+.card::before{content:"";position:absolute;top:-14px;left:50%;width:64px;height:26px;margin-left:-32px;background:var(--red);border-radius:7px 7px 2px 2px;box-shadow:inset 0 -7px 0 var(--red-2),inset 0 2px 0 rgba(255,255,255,.28)}
+.card::after{content:"";position:absolute;top:12px;left:50%;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--paper);box-shadow:inset 0 1px 2px rgba(0,0,0,.25)}
+.card .head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--ink);padding-bottom:8px;margin-bottom:10px}
+.card .head b{font-family:var(--display);font-weight:400;font-size:18px}
+.card .head span{font-size:12.5px;color:var(--mute)}
+.card .line{display:flex;gap:8px;flex-wrap:wrap;align-items:baseline;padding:6px 0;border-bottom:1px dotted var(--rule)}
+.card .line span:first-child{color:var(--mute);min-width:40px}
+.card .line .blank{flex:1;min-width:60px;border-bottom:1px solid var(--ink-2);height:1.1em}
+.card ul{list-style:none;margin:10px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 12px}
+.card li{display:flex;align-items:center;gap:8px}
+.box{width:15px;height:15px;flex:none;border:1.5px solid var(--ink);border-radius:2px;background:#fff;position:relative}
+.box.on::after{content:"";position:absolute;left:3px;top:-3px;width:6px;height:11px;border:solid var(--red);border-width:0 2.5px 2.5px 0;transform:rotate(40deg)}
+.card .quote{margin-top:12px;padding-top:10px;border-top:1px solid var(--ink);display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.card .quote a{font-weight:700;text-decoration:none;color:var(--red)}
+.card .quote a:hover{text-decoration:underline}
+.card .fine{margin-top:8px;font-size:12px}
+
+/* sections */
+section{padding:clamp(48px,7vw,92px) 0}
+.sec-head{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(20px,4vw,56px);align-items:end;margin-bottom:clamp(26px,4vw,44px)}
+.sec-head h2{font-size:clamp(32px,4vw,50px);max-width:12ch}
+.sec-head p{color:var(--ink-2);font-size:18px;max-width:52ch;line-height:1.55}
+
+/* services table */
+table{width:100%;border-collapse:collapse;font-size:16.5px}
+th,td{text-align:left;padding:16px 18px 16px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-weight:600;font-size:14.5px;color:var(--mute);padding-bottom:10px;border-bottom:1.5px solid var(--ink)}
+td.name{font-family:var(--display);font-size:23px;width:32%;line-height:1.15}
+td p{color:var(--ink-2)}
+.services .note{margin-top:18px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.services .note .btn{font-size:15.5px;padding:11px 16px}
+
+/* cats band */
+.cats{background:var(--stucco);color:#F6F0E4}
+.cats-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,5vw,72px);align-items:center}
+.cats figure{margin:0;position:relative}
+.cats figure img{width:100%;aspect-ratio:4/4.5;object-fit:cover;object-position:38% 50%;border-radius:4px}
+.cats figure::before{content:"";position:absolute;left:-12px;top:22px;bottom:22px;width:4px;background:var(--stone)}
+.cats figcaption{font-size:13.5px;color:#D9CFBE;margin-top:10px;line-height:1.5}
+.cats h2{font-size:clamp(32px,4vw,50px);color:#fff;max-width:11ch}
+.cats .own{font-family:var(--display);font-size:clamp(20px,1.9vw,26px);line-height:1.35;color:#fff;margin-top:22px;max-width:34ch}
+.cats .own cite{display:block;font-family:var(--body);font-style:normal;font-size:14.5px;color:#D9CFBE;margin-top:10px}
+.cats .body{color:#E8DFCF;font-size:17px;line-height:1.65;margin-top:18px;max-width:56ch}
+.cats blockquote{margin:24px 0 0;padding-left:18px;border-left:3px solid var(--stone);font-size:17px;line-height:1.6;color:#F6F0E4;max-width:56ch}
+.cats blockquote cite{display:block;font-style:normal;font-size:14.5px;color:#D9CFBE;margin-top:8px}
+
+/* reviews */
+.reviews ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1.1fr .9fr;gap:0 clamp(28px,5vw,72px)}
+.reviews li{padding:22px 0;border-top:1px solid var(--rule)}
+.reviews li:nth-child(1){grid-row:span 2;border-top:1.5px solid var(--ink)}
+.reviews li:nth-child(2){border-top:1.5px solid var(--ink)}
+.reviews blockquote{margin:0;font-size:clamp(18px,1.5vw,21px);line-height:1.45;color:var(--ink)}
+.reviews li:nth-child(1) blockquote{font-family:var(--display);font-size:clamp(24px,2.4vw,33px);line-height:1.28}
+.reviews cite{display:block;font-style:normal;font-size:14.5px;color:var(--mute);margin-top:12px}
+.reviews cite::before{content:"";display:inline-block;width:22px;height:2px;background:var(--red);vertical-align:middle;margin-right:10px}
+.rating{display:inline-flex;align-items:center;gap:10px;margin-top:6px;font-weight:600;color:var(--ink)}
+.rating .g{display:inline-block;padding:3px 9px;background:var(--stone-2);border-radius:3px;font-weight:700;font-size:15px}
+
+/* family */
+.family-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,4vw,64px);align-items:center}
+.family h2{font-size:clamp(32px,4vw,50px);max-width:12ch}
+.family p.body{color:var(--ink-2);font-size:18px;line-height:1.6;margin-top:18px;max-width:52ch}
+.family figure{margin:0}
+.family figure img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px;border-bottom:8px solid var(--stone)}
+.family figcaption{font-size:13.5px;color:var(--mute);margin-top:8px;line-height:1.5}
+
+/* visit */
+.visit{background:var(--white);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:start}
+.visit h2{font-size:clamp(32px,4vw,50px);max-width:12ch}
+.hours{width:100%;margin-top:22px;font-size:17px}
+.hours td{padding:10px 0;border-bottom:1px solid var(--rule)}
+.hours td:last-child{text-align:right;font-weight:600}
+.hours tr.closed td{color:var(--mute)}
+.addr{margin-top:20px;font-size:17px;line-height:1.6}
+.addr a{text-decoration:none;font-weight:600}
+.addr a:hover{text-decoration:underline}
+.addr .big{font-family:var(--display);font-size:clamp(24px,2.4vw,32px);display:block;margin-top:6px;line-height:1.1}
+.map{margin-top:22px;border:1px solid var(--rule);border-radius:4px;overflow:hidden}
+.map iframe{display:block;width:100%;height:240px;border:0}
+.sheet{background:var(--card);border:1px solid var(--rule);border-top:8px solid var(--red);padding:26px 26px 22px}
+.sheet h3{font-size:28px}
+.sheet .why{color:var(--ink-2);font-size:15.5px;margin-top:8px;line-height:1.5}
+.field{display:grid;gap:6px;margin-top:16px}
+.field label{font-weight:600;font-size:14.5px}
+.field input,.field select,.field textarea{font:inherit;font-size:16px;padding:11px 12px;border:1px solid #CFC5B3;border-radius:5px;background:#fff;color:var(--ink);width:100%}
+.field textarea{min-height:84px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--ink);outline:none;box-shadow:0 0 0 3px var(--stone-2)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.sheet .btn{width:100%;margin-top:18px;font-size:17px;padding:15px 20px}
+.sheet .after{margin-top:12px;font-size:14px;color:var(--mute);line-height:1.5}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(20px,4vw,56px);align-items:start}
+.faq details{border-top:1px solid var(--rule)}
+.faq details:last-child{border-bottom:1px solid var(--rule)}
+.faq summary{cursor:pointer;list-style:none;padding:18px 34px 18px 0;font-family:var(--display);font-size:21px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:14px;font-size:26px;color:var(--red)}
+.faq details[open] summary::after{content:"\2013"}
+.faq details p{padding:0 0 20px;color:var(--ink-2);max-width:60ch;line-height:1.6}
+
+/* closing + footer */
+.close{padding:clamp(48px,7vw,92px) 0 clamp(40px,6vw,72px)}
+.close-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(20px,4vw,56px);align-items:center}
+.close h2{font-size:clamp(34px,4.6vw,58px);max-width:12ch}
+.close p{color:var(--ink-2);font-size:18px;margin-top:16px;max-width:40ch}
+.close .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
+.close .side{font-family:var(--display);font-size:clamp(20px,1.9vw,26px);line-height:1.35;color:var(--stucco-deep);max-width:26ch}
+footer{background:var(--stucco-soft);border-top:1px solid var(--rule);padding:26px 0 30px;font-size:14.5px;color:var(--ink-2)}
+.foot-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:start}
+footer nav{display:flex;gap:18px;flex-wrap:wrap}
+footer nav a{text-decoration:none;color:var(--ink-2)}
+footer nav a:hover{text-decoration:underline}
+.foot-note{margin-top:16px;font-size:13.5px;color:var(--mute);max-width:72ch;line-height:1.5}
+.sticky-cta{display:none}
+
+/* responsive */
+@media (max-width:980px){
+  .hero-grid,.cats-grid,.family-grid,.visit-grid,.faq-grid,.close-grid,.sec-head{grid-template-columns:1fr}
+  .sec-head h2,.cats h2,.family h2,.visit h2,.close h2{max-width:none}
+  .reviews ul{grid-template-columns:1fr}
+  .reviews li:nth-child(1){grid-row:auto}
+  .reviews li:nth-child(2){border-top:1px solid var(--rule)}
+  .cats figure{max-width:520px}
+  .family-grid figure{order:-1}
+  .stage{padding-bottom:0}
+  .card{position:static;width:100%;margin-top:30px;left:auto}
+}
+@media (max-width:720px){
+  body{padding-bottom:74px}
+  .nav ul{display:none}
+  .nav .btn.call-lg{display:none}
+  .nav .btn.call-sm{display:inline-flex}
+  .hero{padding-top:30px}
+  .hero h1{font-size:clamp(38px,11vw,52px)}
+  .hero .actions .btn{width:100%}
+  .facts{grid-template-columns:1fr 1fr;gap:12px 16px}
+  .facts b{font-size:18px}
+  .card{padding:34px 16px 16px;font-size:14px}
+  .card ul{grid-template-columns:1fr 1fr;gap:6px 8px}
+  table:not(.hours),table:not(.hours) thead,table:not(.hours) tbody,table:not(.hours) tr,table:not(.hours) td,table:not(.hours) th{display:block}
+  table:not(.hours) thead{display:none}
+  table:not(.hours) tr{border-bottom:1px solid var(--rule);padding:14px 0}
+  table:not(.hours) td{border:0;padding:3px 0}
+  td.name{width:auto;font-size:21px}
+  .hours{display:table}
+  .hours tr{display:table-row}.hours td{display:table-cell}
+  .sheet{padding:22px 18px 18px}
+  .two{grid-template-columns:1fr}
+  .map iframe{height:200px}
+  .sticky-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(243,238,228,.97);border-top:1px solid var(--rule);padding:10px var(--gutter) calc(10px + env(safe-area-inset-bottom));gap:10px}
+  .sticky-cta .btn{flex:1;font-size:16px;padding:14px 12px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="preview" role="note">
+  <span class="long">Design preview built by Sky Yang from The Pampered Pet's Google and Yelp listings and its old website. Photos are placeholders and the form is not wired up yet. Your own photos go in before launch.</span>
+  <span class="short">Design preview by Sky Yang. Placeholder photos, form not wired up.</span>
+  <a href="mailto:skyyang333@gmail.com">skyyang333@gmail.com</a>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="mark" href="#top" aria-label="The Pampered Pet, home">
+      <span class="sign" aria-hidden="true"></span>
+      <span><b>The Pampered Pet</b><small>Dog and cat grooming, Millbrae</small></span>
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#cats">Cats</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#visit">Hours and visit</a></li>
+        <li><a href="#faq">Questions</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-red call-lg" href="tel:+16509527600"><svg class="phone-ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Call (650) 952-7600</a>
+    <a class="btn btn-red call-sm" href="tel:+16509527600">Call</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <h1 class="reveal">Gentle grooming for dogs and cats.</h1>
+      <p class="lede reveal d1">A small family salon on Park Place in Millbrae, open Monday to Saturday. Haircuts, baths, nails, ears and teeth, for every size and coat. Call and we will find you a time.</p>
+      <div class="actions reveal d2">
+        <a class="btn btn-red" href="tel:+16509527600">Call (650) 952-7600</a>
+        <a class="btn btn-line" href="#request">Request a time</a>
+      </div>
+      <ul class="facts reveal d3" aria-label="Quick facts">
+        <li><b>Since 2002</b>on Park Place, Millbrae</li>
+        <li><b>Mon to Sat, 9 to 5</b>closed Sunday</li>
+        <li><b>Dogs and cats</b>all sizes, short to long coats</li>
+        <li><b>4.6 on Google</b>from 53 reviews</li>
+      </ul>
+    </div>
+    <div class="stage reveal d2">
+      <div class="photo"><img src="hero.jpg" alt="A freshly groomed white Maltese standing on a grooming table in a bright salon" width="1800" height="1200" fetchpriority="high"></div>
+      <aside class="card" aria-label="Sample kennel card">
+        <div class="head"><b>Kennel card</b><span>No. 0247, sample</span></div>
+        <div class="line"><span>Pet</span><span class="blank" aria-hidden="true"></span><span class="box on" aria-hidden="true"></span><span>Dog</span><span class="box" aria-hidden="true"></span><span>Cat</span></div>
+        <div class="line"><span>Coat</span><span class="box" aria-hidden="true"></span><span>Short</span><span class="box on" aria-hidden="true"></span><span>Medium</span><span class="box" aria-hidden="true"></span><span>Long</span></div>
+        <ul aria-label="Services on this visit">
+          <li><span class="box on" aria-hidden="true"></span>Haircut</li>
+          <li><span class="box on" aria-hidden="true"></span>Bath</li>
+          <li><span class="box" aria-hidden="true"></span>Tooth brushing</li>
+          <li><span class="box on" aria-hidden="true"></span>Nail trim</li>
+          <li><span class="box" aria-hidden="true"></span>Ear cleaning</li>
+          <li><span class="box" aria-hidden="true"></span>Glands</li>
+        </ul>
+        <div class="quote"><span>Quote by size and coat</span><a href="tel:+16509527600">Call us</a></div>
+        <p class="fine">Sample card to show how a visit is put together. Every box is a service from the salon's own list.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>What a visit can include</h2>
+      <p>Everything below comes from the salon's own service list. Pick what your pet needs, or ask and we will suggest. Prices depend on size and coat, so call for a quote.</p>
+    </div>
+    <table>
+      <thead><tr><th scope="col">Service</th><th scope="col">What it is</th></tr></thead>
+      <tbody>
+        <tr><td class="name">Haircut</td><td><p>A trim to tidy things up, or a short summer cut. All breeds and sizes, with short, medium or long hair.</p></td></tr>
+        <tr><td class="name">Bath and deep cleaning</td><td><p>Shampoo and skin moisturizing, so the coat is clean and the skin is not dried out.</p></td></tr>
+        <tr><td class="name">Tooth brushing</td><td><p>Specialty toothpaste and a flexible brush.</p></td></tr>
+        <tr><td class="name">Nail trimming</td><td><p>Quick trims for dogs and cats. It is the thing owners mention most often in reviews.</p></td></tr>
+        <tr><td class="name">Ear cleaning</td><td><p>A deep clean of the ears.</p></td></tr>
+        <tr><td class="name">Anal gland expression</td><td><p>Available as part of a groom or on its own.</p></td></tr>
+      </tbody>
+    </table>
+    <div class="note">
+      <a class="btn btn-red" href="tel:+16509527600">Call for a quote</a>
+      <p class="fine">Service names are from the salon's former website (2017). The one-line descriptions are draft copy for the owners to correct; the salon has never published a price list, so none is shown here.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cats" id="cats">
+  <div class="wrap cats-grid">
+    <figure>
+      <img src="cat.jpg" alt="A calm grey and white cat wrapped in a white towel after a bath" width="900" height="675" loading="lazy">
+      <figcaption>Placeholder photo. A real after-bath photo from the salon belongs here.</figcaption>
+    </figure>
+    <div>
+      <h2>Cats are welcome here.</h2>
+      <p class="own">While some pet groomers in Millbrae only groom dogs, The Pampered Pet loves your feline friends, too!<cite>From the salon's own website</cite></p>
+      <p class="body">Baths, trims, nails and ears for cats as well as dogs. Several of the salon's Google reviews are from cat owners, including nervous cats and one that came in covered in rat glue and left clean.</p>
+      <blockquote>my kitty has severe anxiety and I have no problem taking her there with no medications.<cite>Heidi, Google review</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>What owners say</h2>
+      <div>
+        <p>Six of the salon's Google reviews, in the owners' own words.</p>
+        <p class="rating"><span class="g">4.6</span>on Google from 53 reviews</p>
+      </div>
+    </div>
+    <ul>
+      <li>
+        <blockquote>when it comes to cat or dog grooming pampered pets is 100% the best place to take your fur baby. my mom introduced me to this place. she takes her Maltese and the dog loves it. Now I take my kitty there which. my kitty has severe anxiety and I have no problem taking her there with no medications.</blockquote>
+        <cite>Heidi, Google review</cite>
+      </li>
+      <li>
+        <blockquote>I had a great experience. Everyone there was really friendly and laid back, and the groomer went out of his way to make sure my dog was comfortable. The price was excellent for the area. Most relevant, my dog received a nice looking haircut!</blockquote>
+        <cite>Jeff, Google review</cite>
+      </li>
+      <li>
+        <blockquote>We took our Maltese here for years and they were wonderful with her. … Everyone here is very friendly and you can tell they just love the pets by the way they treat them. When I used to bring her there, she would literally pull me to the door! Their prices were always very good as well.</blockquote>
+        <cite>Lorrie, Google review</cite>
+      </li>
+      <li>
+        <blockquote>Good service, I loved it. They helped me a lot with my cat that had rat glue on it. They left it very clean. I loved the service. I will come back again.</blockquote>
+        <cite>Tania, Google review</cite>
+      </li>
+      <li>
+        <blockquote>I brought in my Maltese for a nail cut - it was quick and most importantly pain-free for my dog. I recommend this place.</blockquote>
+        <cite>Natalya, Google review</cite>
+      </li>
+      <li>
+        <blockquote>10/10 would recommend!! Amazing price and even better service. Will definitely be back</blockquote>
+        <cite>Lin Lin, Google review</cite>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="family" id="family">
+  <div class="wrap family-grid">
+    <div>
+      <h2>A small family salon since 2002</h2>
+      <p class="body">The salon opened in 2002 and is still run by one family. Reviewers describe the owner, his wife and their sons working the shop together, and regulars ask for Oscar by name. The pace is unhurried, and nervous dogs and cats get the time they need.</p>
+      <p class="fine" style="margin-top:14px">Draft copy. The 2002 date is from the salon's own website; the rest is how customers describe the shop in their reviews, for the owners to correct or rewrite.</p>
+    </div>
+    <figure>
+      <img src="tools.jpg" alt="Clippers, a slicker brush, a nail trimmer and a comb laid out beside a folded white towel" width="900" height="675" loading="lazy">
+      <figcaption>Placeholder photo.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap visit-grid">
+    <div>
+      <h2>Hours and where to find us</h2>
+      <table class="hours" aria-label="Opening hours">
+        <tbody>
+          <tr><td>Monday to Saturday</td><td>9:00 AM to 5:00 PM</td></tr>
+          <tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+        </tbody>
+      </table>
+      <p class="addr">
+        <a href="tel:+16509527600" class="big">(650) 952-7600</a>
+        111 Park Place, Millbrae, CA 94030<br>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=111+Park+Pl,+Millbrae,+CA+94030">Get directions</a>
+      </p>
+      <div class="map"><iframe src="https://www.google.com/maps?q=111+Park+Pl,+Millbrae,+CA+94030&amp;output=embed" title="Map to The Pampered Pet, 111 Park Place, Millbrae" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      <p class="fine" style="margin-top:12px">Hours as listed on Google and Yelp.</p>
+    </div>
+    <form class="sheet" id="request" action="#" method="post" onsubmit="event.preventDefault();this.querySelector('.after').textContent='Thanks. In the finished site this sends your request to the salon; here it is a preview.'">
+      <h3>Request a time</h3>
+      <p class="why">Tell us about your pet and what you need. We will call you back to set a time. Calling works too.</p>
+      <div class="two">
+        <div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
+      </div>
+      <div class="two">
+        <div class="field"><label for="pet">Dog or cat</label>
+          <select id="pet" name="pet"><option>Dog</option><option>Cat</option></select></div>
+        <div class="field"><label for="size">Size and coat</label>
+          <select id="size" name="size"><option>Small, short coat</option><option>Small, long coat</option><option>Medium</option><option>Large</option><option>Not sure</option></select></div>
+      </div>
+      <div class="field"><label for="service">What do they need?</label>
+        <select id="service" name="service"><option>Full groom: bath and haircut</option><option>Bath and deep cleaning</option><option>Nail trim</option><option>Tooth brushing</option><option>Ear cleaning</option><option>Something else</option></select></div>
+      <div class="field"><label for="notes">Anything we should know?</label><textarea id="notes" name="notes" placeholder="Nervous around clippers, first visit, matted coat, a day or time that works best."></textarea></div>
+      <button class="btn btn-red" type="submit">Send request</button>
+      <p class="after">We call back to confirm the time. Nothing is booked until we talk.</p>
+    </form>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap faq-grid">
+    <div class="sec-head" style="grid-template-columns:1fr;margin-bottom:0">
+      <h2>Questions owners ask first</h2>
+      <p>If yours is not here, call or put it in the request form.</p>
+    </div>
+    <div>
+      <details open><summary>Do you groom cats?</summary><p>Yes. In the salon's own words: while some pet groomers in Millbrae only groom dogs, The Pampered Pet loves your feline friends, too. Baths, trims, nails and ears.</p></details>
+      <details><summary>How much does it cost?</summary><p>It depends on your pet's size and coat and on what you choose from the service list. Call (650) 952-7600 with the breed, size and what you need and you will get a quote.</p></details>
+      <details><summary>Do you do teeth?</summary><p>Tooth brushing with a specialty toothpaste and a flexible brush is on the service list. Ask when you call if you want it added to a groom.</p></details>
+      <details><summary>When are you open?</summary><p>Monday to Saturday, 9:00 AM to 5:00 PM. Closed Sunday. The salon is at 111 Park Place in Millbrae, just off Broadway.</p></details>
+    </div>
+  </div>
+</section>
+
+<div class="close">
+  <div class="wrap close-grid">
+    <div>
+      <h2>Ready for a good groom?</h2>
+      <p>Call us with your pet's size and coat, or send the request form and we will call you back.</p>
+      <div class="actions">
+        <a class="btn btn-red" href="tel:+16509527600">Call (650) 952-7600</a>
+        <a class="btn btn-line" href="#request">Request a time</a>
+      </div>
+    </div>
+    <p class="side">Dogs and cats, all sizes, on Park Place since 2002.</p>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><b>The Pampered Pet</b><br>111 Park Place, Millbrae, CA 94030<br><a href="tel:+16509527600">(650) 952-7600</a></div>
+      <nav aria-label="Footer">
+        <a href="#services">Services</a><a href="#cats">Cats</a><a href="#reviews">Reviews</a><a href="#visit">Hours</a><a href="#request">Request a time</a>
+      </nav>
+    </div>
+    <p class="foot-note">Design preview by <a href="mailto:skyyang333@gmail.com">Sky Yang</a>, San Francisco, built from The Pampered Pet's Google and Yelp listings and the salon's former website. Photos are generated placeholders; the request form is not connected; a few descriptions are marked as draft copy. Nothing here is live for customers.</p>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn btn-red" href="tel:+16509527600">Call now</a>
+  <a class="btn btn-line" href="#request">Request a time</a>
+</div>
+</body>
+</html>
