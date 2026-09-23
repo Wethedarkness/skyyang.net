@@ -4,13 +4,14 @@ Static site. **No build step, no dependencies, no node needed.** Edit files, pus
 
 ## How it deploys
 
-- Hosted on **GitHub Pages** from the `main` branch of `Wethedarkness/skyyang.net` (root folder).
-- Every `git push` to `main` auto-deploys to https://skyyang.net in ~1 minute.
-- Domain `skyyang.net` is registered at **Hostinger**; apex ALIAS + `www` CNAME point at
-  `wethedarkness.github.io`.
-- The `CNAME` file in this repo pins the custom domain. **Never delete it.**
-- Email `sky@skyyang.net` runs on Titan Email via Hostinger MX records.
-  **Never touch DNS MX/TXT records** — only A/AAAA/CNAME belong to the website.
+- Source of truth: `main` of `Wethedarkness/skyyang.net`. This repo holds ONLY the personal homepage + blog.
+- Live site: Cloudflare. DNS for `skyyang.net` is on Cloudflare (registrar Hostinger). The Cloudflare Pages
+  project `goodstorefront` owns the domain; its middleware proxies the personal site to the `skyyang-net`
+  Pages project, which `~/.eragon/sites/skyyang-deploy.sh` deploys from this repo. GitHub Pages
+  (wethedarkness.github.io/skyyang.net) still builds via `.github/workflows/static.yml` as a mirror.
+- `/life` (the passphrase-locked dashboard), `/previews` and `/leads` are NOT in this repo and must never be
+  added back (Sep 23 2026). They live in the goodstorefront Cloudflare project.
+- Email `sky@skyyang.net` runs on Titan (MX/SPF records on Cloudflare DNS). **Never touch MX/TXT records.**
 
 ## Workflow
 
