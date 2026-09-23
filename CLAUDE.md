@@ -9,8 +9,9 @@ Static site. **No build step, no dependencies, no node needed.** Edit files, pus
   project `goodstorefront` owns the domain; its middleware proxies the personal site to the `skyyang-net`
   Pages project, which `~/.eragon/sites/skyyang-deploy.sh` deploys from this repo. GitHub Pages
   (wethedarkness.github.io/skyyang.net) still builds via `.github/workflows/static.yml` as a mirror.
-- `/life` (the passphrase-locked dashboard), `/previews` and `/leads` are NOT in this repo and must never be
-  added back (Sep 23 2026). They live in the goodstorefront Cloudflare project.
+- `/life` = the passphrase-locked personal dashboard (ciphertext only), auto-published by
+  `memory/projects/life-dashboard/publish-web.mjs`. `/previews` and `/leads` are NOT in this repo and must never
+  be added back (Sep 23 2026); they live in the goodstorefront Cloudflare project.
 - Email `sky@skyyang.net` runs on Titan (MX/SPF records on Cloudflare DNS). **Never touch MX/TXT records.**
 
 ## Workflow
